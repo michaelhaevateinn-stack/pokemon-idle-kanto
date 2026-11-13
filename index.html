@@ -1,7 +1,7 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#123c51"><title>ポケモン カントー放置冒険 v2.1</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#123c51"><title>ポケモン カントー放置冒険 v2.8</title><style>
 :root{font-family:system-ui,-apple-system,'Hiragino Kaku Gothic ProN',sans-serif;color:#183444;background:#eaf3f3}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}main{max-width:690px;margin:auto;min-height:100dvh;padding:14px 13px 90px}h1,h2,h3,p{margin:0}h1{font-size:25px}h2{font-size:19px;margin-bottom:9px}h3{font-size:16px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:4px 0 14px}.muted{color:#68808d;font-size:12px;line-height:1.6}.small{font-size:13px}.card{background:white;border:1px solid #d6e7e9;border-radius:20px;padding:17px;margin-bottom:12px;box-shadow:0 5px 15px #0e4b6510}.hero{background:linear-gradient(130deg,#12475d,#227d80);color:white;border-radius:22px;padding:22px;margin-bottom:14px}.hero .muted{color:#d5eff0}.btn{border:0;border-radius:12px;background:#187e85;color:white;font-weight:800;padding:12px 15px;min-height:43px}.btn.alt{background:#e9f4f5;color:#17606b}.btn.gold{background:#e8ae32;color:#372500}.btn.dark{background:#153e53}.btn.sm{padding:7px 10px;min-height:34px;font-size:12px}.btn:active{transform:scale(.98)}.wide{width:100%}.row{display:flex;align-items:center;gap:10px}.between{justify-content:space-between}.stack{display:grid;gap:9px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.tag{display:inline-block;background:#e9f3f6;border-radius:99px;padding:4px 9px;color:#276075;font-weight:750;font-size:11px}.stat{background:#f0f7f8;border-radius:13px;padding:11px}.stat b{font-size:22px}.poke{border:1px solid #d8e5e7;border-radius:15px;padding:10px;text-align:center;background:#fff}.poke img{width:90px;height:90px;object-fit:contain;image-rendering:pixelated}.poke .name{font-weight:800;font-size:13px;min-height:23px}.poke.selected{outline:3px solid #1d9a9d;background:#edfcfa}.poke .tiny{font-size:11px;color:#67808c}.nav{position:fixed;z-index:20;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #d6e6e7;display:flex;justify-content:center;padding:6px max(6px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom))}.nav-inner{display:flex;max-width:690px;width:100%;gap:3px}.nav button{flex:1;background:transparent;border:0;color:#607c85;font-size:11px;font-weight:800;padding:7px 1px}.nav button.on{color:#127f82;background:#eaf7f6;border-radius:12px}.nav span{display:block;font-size:20px;margin-bottom:2px}.hidden{display:none!important}.dialog{position:fixed;inset:0;z-index:50;background:#102f3ab8;display:grid;place-items:center;padding:15px}.modal{background:white;border-radius:22px;padding:20px;max-width:440px;width:100%;max-height:85dvh;overflow:auto}.modal h2{margin-bottom:10px}.modal p{line-height:1.7;margin-bottom:13px}.input{width:100%;border:2px solid #c5dcde;border-radius:12px;padding:13px;background:#fff}.progress{height:10px;background:#dbe9eb;border-radius:30px;overflow:hidden}.progress i{display:block;height:100%;background:#37b0a4}.log{background:#f0f6f8;border-radius:12px;padding:10px;min-height:70px;max-height:180px;overflow:auto;font-size:12px;line-height:1.7}.battlemon{display:flex;gap:10px;align-items:center;border:1px solid #e1ebec;border-radius:16px;padding:10px;margin:8px 0}.battlemon img{width:94px;height:94px;image-rendering:pixelated}.battlemon>div{flex:1}.move{border:1px solid #d2e4e6;border-radius:11px;padding:10px;background:#f5fafb;text-align:left;min-height:58px}.move b{display:block}.move small{color:#607c86}.separator{border:0;border-top:1px solid #e0ebed;margin:13px 0}.notice{background:#fff7dd;border-radius:12px;padding:11px;font-size:13px;line-height:1.6}.shiny{color:#c3820e}.level{font-weight:900;color:#177e82}.badge{font-size:27px}.listline{padding:10px 0;border-bottom:1px solid #e5eff0}.listline:last-child{border-bottom:0}.choose{border:2px solid #d4e4e5;background:#fff;border-radius:13px;padding:12px;text-align:left}.choose.on{border-color:#14968b;background:#e7faf6}.toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#173e4d;color:#fff;padding:12px 18px;border-radius:12px;z-index:90;max-width:90%;font-weight:700;text-align:center;box-shadow:0 8px 30px #0003}.flair{font-size:46px;text-align:center;margin:8px}.screen-center{min-height:85dvh;display:flex;flex-direction:column;justify-content:center}.intro{font-size:15px;line-height:1.85;margin:14px 0}.intro img{display:block;margin:auto;width:150px;height:150px;object-fit:contain}.footer{font-size:11px;color:#77919a;text-align:center;margin:14px 0}.battlemon.enemy{background:#fff4ee}.battlemon.ally{background:#edf9f8}.locked{opacity:.55}
 
-/* v2.1: 親子ポケモンバトルDXの配色・カード・ボタンに寄せたタップUI。十字キーなし */
+/* v2.8: 親子ポケモンバトルDXの配色・カード・ボタンに寄せたタップUI。十字キーなし */
 :root{color:#233044;background:#f5f3eb}
 body{background:linear-gradient(160deg,#edf6f7,#fff7e8 70%);min-height:100dvh}
 main{max-width:740px;padding:14px 13px 100px}
@@ -74,7 +74,7 @@ h1{letter-spacing:.02em;font-size:23px}h2{font-size:18px}
 .battle-heal-list{display:grid;gap:9px;margin:14px 0}.battle-heal-choice{display:flex;align-items:center;gap:10px;width:100%;border:2px solid #dce6f3;border-radius:13px;background:#f8fbff;padding:9px;text-align:left;color:#263a50}
 .battle-heal-choice img{width:58px;height:58px;object-fit:contain;image-rendering:pixelated}.battle-heal-choice span:nth-child(2){flex:1}.battle-heal-choice small{display:block;color:#718397;margin-top:5px}.battle-heal-choice:disabled{opacity:.45}
 
-/* ポケエネの残高を目立たせる（v2.1） */
+/* ポケエネの残高を目立たせる（v2.8） */
 .energy-wallet{background:linear-gradient(125deg,#1765d4,#3994f4);color:white;border-radius:17px;padding:15px 17px;margin:12px 0 15px;box-shadow:0 6px 17px #246ed044}
 .energy-wallet-label{font-size:13px;font-weight:800;opacity:.95}.energy-wallet-amount{font-size:32px;line-height:1.3;font-weight:950;letter-spacing:.2px;font-variant-numeric:tabular-nums}
 .energy-wallet-amount small{font-size:15px;font-weight:800}.energy-wallet-foot{font-size:12px;margin-top:5px;opacity:.95}
@@ -87,12 +87,52 @@ h1{letter-spacing:.02em;font-size:23px}h2{font-size:18px}
 @keyframes battleShake{0%{transform:translateX(0);filter:brightness(1.6)}20%{transform:translateX(-8px);filter:brightness(1.7)}45%{transform:translateX(8px)}70%{transform:translateX(-4px)}100%{transform:translateX(0)}}
 @keyframes battleDamageFloat{0%{opacity:0;transform:translateY(12px) scale(.8)}20%{opacity:1;transform:translateY(0) scale(1.15)}100%{opacity:0;transform:translateY(-38px) scale(1)}}
 .battle-stats .progress i{transition:width .7s ease-out,background-color .4s}.battle-feed{min-height:74px;font-size:15px;display:flex;align-items:center}
-</style></head><body><main id="app"></main><div id="nav" class="nav hidden"><div class="nav-inner"><button data-tab="home"><span>🏠</span>ホーム</button><button data-tab="eggs"><span>🥚</span>タマゴ</button><button data-tab="team"><span>🐾</span>ポケモン</button><button data-tab="story"><span>🏅</span>ぼうけん</button><button data-tab="dex"><span>📖</span>ずかん</button><button data-tab="settings"><span>⚙️</span>せってい</button></div></div><div id="modal" class="dialog hidden"><div class="modal" id="modalContent"></div></div><div id="toast" class="toast hidden"></div><script>
+
+.battle-stage-list{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.battle-stage-chip{font-size:10px;font-weight:800;line-height:1.4;border-radius:7px;padding:3px 5px;white-space:nowrap}
+.battle-stage-chip.stage-up{background:#d8f5e4;color:#176c3c}
+.battle-stage-chip.stage-down{background:#ffe4df;color:#a13b2b}
+
+/* 進化演出：旧ポケモンから新ポケモンへ発光・変化 */
+.evolution-stage{height:225px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:17px;background:radial-gradient(circle at center,#ffffff 0%,#d9e8ff 38%,#a9c8fa 100%);margin:13px 0}
+.evolution-stage img{position:absolute;width:164px;height:164px;object-fit:contain;image-rendering:pixelated;z-index:2;filter:drop-shadow(0 5px 8px #334d6655)}
+.evolution-before{animation:evoBefore 3.4s forwards}.evolution-after{opacity:0;animation:evoAfter 3.4s forwards}
+.evolution-light{position:absolute;width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 0 30px 30px #fff9,0 0 80px 65px #f6f7ff88;animation:evoLight 3.4s ease-in-out forwards}
+.evolution-sparkles{position:absolute;top:18px;color:#fff;font-size:28px;letter-spacing:20px;text-shadow:0 0 10px #3f87ee;animation:evoSpark 3.4s forwards}
+.evolution-caption{text-align:center;font-weight:800;font-size:16px;min-height:48px}
+.evolution-complete{background:radial-gradient(circle,#fff7cc,#d9e8ff 65%,#9dc3f4)}
+.evolution-complete .evolution-before{display:none}.evolution-complete .evolution-after{animation:none;opacity:1;transform:scale(1.1)}
+@keyframes evoBefore{0%,20%{opacity:1;transform:scale(1)}35%,55%{opacity:.9;filter:brightness(4) drop-shadow(0 0 20px #fff)}65%{opacity:.7;transform:scale(.95)}90%,100%{opacity:0;transform:scale(.5)}}
+@keyframes evoAfter{0%,52%{opacity:0;transform:scale(.5)}72%{opacity:.15;filter:brightness(5)}88%{opacity:1;filter:brightness(2);transform:scale(1.2)}100%{opacity:1;transform:scale(1.1)}}
+@keyframes evoLight{0%{transform:scale(.5);opacity:.1}40%{transform:scale(2);opacity:.9}70%{transform:scale(5);opacity:1}100%{transform:scale(1);opacity:.1}}
+@keyframes evoSpark{0%,30%{opacity:0;transform:rotate(-15deg)}50%,85%{opacity:1;transform:rotate(15deg)}100%{opacity:.2}}
+@media(prefers-reduced-motion:reduce){.evolution-stage img,.evolution-light,.evolution-sparkles{animation-duration:.1s}}
+
+/* v2.8: ジムリーダーの会話イベント */
+.gym-dialogue{display:flex;align-items:center;gap:12px;padding:12px;margin:12px 0;border:2px solid #a6d6e7;border-radius:14px;background:linear-gradient(135deg,#eefaff,#fff);color:#24445c}
+.gym-dialogue img{width:100px;height:125px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}
+.gym-dialogue-text{flex:1;min-width:0;line-height:1.75}
+.gym-dialogue-text b{font-size:17px}
+.gym-dialogue-text p{margin:6px 0;font-size:15px;font-weight:700}
+
+/* v3.0 カントー でんどういり */
+.hall-stage{background:linear-gradient(155deg,#172c58,#3759a2 55%,#8b6bd5);border-radius:18px;padding:18px 12px;color:#fff;text-align:center;box-shadow:inset 0 0 0 2px #ffffff45}
+.hall-stage h2{color:#fff;font-size:23px;margin:10px 0}.hall-stage .hall-date{font-size:12px;opacity:.9}
+.hall-team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:15px 0}
+.hall-mon{min-width:0;background:#ffffffed;color:#263b57;border-radius:12px;padding:9px 3px;font-weight:800;font-size:12px}
+.hall-mon img{width:100%;max-width:100px;height:94px;object-fit:contain;image-rendering:pixelated;animation:hallRise .65s ease-out both}
+.hall-mon:nth-child(2) img{animation-delay:.15s}.hall-mon:nth-child(3) img{animation-delay:.3s}
+.hall-mon small{display:block;font-size:11px;color:#516985;margin-top:3px}
+.hall-mon .hall-name{overflow-wrap:anywhere}
+.hall-trophy{font-size:48px;animation:hallShine 2.4s ease-in-out infinite}
+@keyframes hallRise{from{opacity:0;transform:translateY(18px) scale(.86)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes hallShine{50%{filter:drop-shadow(0 0 14px #ffed94);transform:scale(1.08)}}
+</style></head><body><main id="app"></main><div id="nav" class="nav hidden"><div class="nav-inner"><button data-tab="home"><span>🏠</span>ホーム</button><button data-tab="eggs"><span>🥚</span>タマゴ</button><button data-tab="team"><span>🐾</span>ポケモン</button><button data-tab="story"><span>🏅</span>ストーリー</button><button data-tab="events"><span>🎁</span>ぼうけん</button><button data-tab="dex"><span>📖</span>ずかん</button><button data-tab="settings"><span>⚙️</span>せってい</button></div></div><div id="modal" class="dialog hidden"><div class="modal" id="modalContent"></div></div><div id="toast" class="toast hidden"></div><script>
 'use strict';
 const SAVE='kanto-idle-v01', CACHE='kanto-idle-api-v01';
 const NAMES=['フシギダネ','フシギソウ','フシギバナ','ヒトカゲ','リザード','リザードン','ゼニガメ','カメール','カメックス','キャタピー','トランセル','バタフリー','ビードル','コクーン','スピアー','ポッポ','ピジョン','ピジョット','コラッタ','ラッタ','オニスズメ','オニドリル','アーボ','アーボック','ピカチュウ','ライチュウ','サンド','サンドパン','ニドラン♀','ニドリーナ','ニドクイン','ニドラン♂','ニドリーノ','ニドキング','ピッピ','ピクシー','ロコン','キュウコン','プリン','プクリン','ズバット','ゴルバット','ナゾノクサ','クサイハナ','ラフレシア','パラス','パラセクト','コンパン','モルフォン','ディグダ','ダグトリオ','ニャース','ペルシアン','コダック','ゴルダック','マンキー','オコリザル','ガーディ','ウインディ','ニョロモ','ニョロゾ','ニョロボン','ケーシィ','ユンゲラー','フーディン','ワンリキー','ゴーリキー','カイリキー','マダツボミ','ウツドン','ウツボット','メノクラゲ','ドククラゲ','イシツブテ','ゴローン','ゴローニャ','ポニータ','ギャロップ','ヤドン','ヤドラン','コイル','レアコイル','カモネギ','ドードー','ドードリオ','パウワウ','ジュゴン','ベトベター','ベトベトン','シェルダー','パルシェン','ゴース','ゴースト','ゲンガー','イワーク','スリープ','スリーパー','クラブ','キングラー','ビリリダマ','マルマイン','タマタマ','ナッシー','カラカラ','ガラガラ','サワムラー','エビワラー','ベロリンガ','ドガース','マタドガス','サイホーン','サイドン','ラッキー','モンジャラ','ガルーラ','タッツー','シードラ','トサキント','アズマオウ','ヒトデマン','スターミー','バリヤード','ストライク','ルージュラ','エレブー','ブーバー','カイロス','ケンタロス','コイキング','ギャラドス','ラプラス','メタモン','イーブイ','シャワーズ','サンダース','ブースター','ポリゴン','オムナイト','オムスター','カブト','カブトプス','プテラ','カビゴン','フリーザー','サンダー','ファイヤー','ミニリュウ','ハクリュー','カイリュー','ミュウツー','ミュウ'];
 const name=id=>NAMES[id-1]||'#'+id, sprite=(id,shiny=false)=>`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny?'shiny/':''}${id}.png`;
-const EGG=[{name:'まっさらなタマゴ',price:10,ids:[16,19,21,10,13,25,43,69,29,32],weights:[18,16,10,14,14,2,8,8,5,5]},{name:'ニビ色のタマゴ',price:20,ids:[41,74,35,46,39,27,56]},{name:'ハナダ色のタマゴ',price:30,ids:[63,48,54,60,118]},{name:'クチバ色のタマゴ',price:40,ids:[50,52,81,100,72,98]},{name:'タマムシ色のタマゴ',price:50,ids:[37,58,77,84,92,96]},{name:'セキチク色のタマゴ',price:60,ids:[102,111,115,113,128,123,127,147]},{name:'ヤマブキ色のタマゴ',price:70,ids:[122,108,88,109,104]},{name:'グレン色のタマゴ',price:80,ids:[90,120,116,86,124,126]},{name:'トキワ色のタマゴ',price:90,ids:[95,114,125,132]}];
+const EGG=[{name:'まっさらなタマゴ',price:10,ids:[16,19,21,10,13,25,43,69,29,32],weights:[18,16,10,14,14,2,8,8,5,5]},{name:'ニビ色のタマゴ',price:20,ids:[41,74,35,46,39,27,56,23]},{name:'ハナダ色のタマゴ',price:30,ids:[63,48,54,60,118,79]},{name:'クチバ色のタマゴ',price:40,ids:[50,52,81,100,72,98,83]},{name:'タマムシ色のタマゴ',price:50,ids:[37,58,77,84,92,96]},{name:'セキチク色のタマゴ',price:60,ids:[102,111,115,113,128,123,127,147]},{name:'ヤマブキ色のタマゴ',price:70,ids:[122,108,88,109,104,66]},{name:'グレン色のタマゴ',price:80,ids:[90,120,116,86,124,126]},{name:'トキワ色のタマゴ',price:90,ids:[95,114,125,132]}];
 function badgeSvg(i){
  const palette=['#9aa4ae','#48b9e7','#f6a23d','#9b75dc','#f38cb8','#d8b54c','#c74843','#49b977'];
  const color=palette[i%palette.length];
@@ -107,16 +147,81 @@ function cityBanner(i){const b=BOSSES[Math.min(7,i)];return `<div class="city-ba
 const TRAINER_KEYS=['brock','misty','ltsurge','erika','koga','sabrina','blaine','giovanni'];
 function trainerImage(i){return 'https://play.pokemonshowdown.com/sprites/trainers/'+TRAINER_KEYS[i]+'.png'}
 const BOSSES=[{name:'タケシ',city:'ニビ',type:'いわ',lv:10,team:[74,75,95],badge:'グレーバッジ'},{name:'カスミ',city:'ハナダ',type:'みず',lv:15,team:[118,120,121],badge:'ブルーバッジ'},{name:'マチス',city:'クチバ',type:'でんき',lv:20,team:[100,25,26],badge:'オレンジバッジ'},{name:'エリカ',city:'タマムシ',type:'くさ',lv:25,team:[114,71,45],badge:'レインボーバッジ'},{name:'キョウ',city:'セキチク',type:'どく',lv:30,team:[109,89,110],badge:'ピンクバッジ'},{name:'ナツメ',city:'ヤマブキ',type:'エスパー',lv:35,team:[122,97,65],badge:'ゴールドバッジ'},{name:'カツラ',city:'グレン',type:'ほのお',lv:40,team:[77,78,59],badge:'クリムゾンバッジ'},{name:'サカキ',city:'トキワ',type:'じめん',lv:45,team:[51,34,112],badge:'グリーンバッジ'}];
+// 親子ポケモンバトルDX v4.9.3のカントー編の手持ちを参考にした追加ボス
+const EXTRA_BOSSES=[
+ {key:'rocket',name:'サカキ',city:'ロケット団アジト',type:'ノーマル',lv:48,team:[52,115,53],before:'わたしは ロケット団の サカキ！ じゃまを するなら ようしゃは しない！',after:'この わたしが まけるとは……。きみの つよさは ほんものだな'},
+ {key:'lorelei',name:'カンナ',city:'ポケモンリーグ',type:'こおり',lv:52,team:[87,124,131],before:'わたしは カンナ！ こおりポケモンの つよさを みせてあげる！',after:'すごいわね！ あなたの じつりょくを みとめるわ'},
+ {key:'bruno',name:'シバ',city:'ポケモンリーグ',type:'かくとう',lv:54,team:[107,106,68],before:'ウー！ ハーッ！ おれの きたえぬいた ポケモンを うけてみろ！',after:'ウー！ ハーッ！ みごとだ！ おれの まけだ！'},
+ {key:'agatha',name:'キクコ',city:'ポケモンリーグ',type:'ゴースト',lv:56,team:[92,93,94],before:'ヒョッヒョッ！ わしの ポケモンは ひとあじ ちがうよ！',after:'まいったねえ！ あんた たいした こだよ！'},
+ {key:'lance',name:'ワタル',city:'ポケモンリーグ',type:'ドラゴン',lv:58,team:[148,148,149],before:'ぼくは ドラゴンつかいの ワタル！ さいきょうの しょうぶを しよう！',after:'すばらしい！ きみなら チャンピオンに かてるかもしれない！'},
+ {key:'champion',name:'グリーン',city:'チャンピオン',type:'さまざま',lv:62,team:[3,6,9],before:'よう！ おそかったな！ オレが チャンピオンだ！ さいごの しょうぶだぜ！',after:'なんでだよ！ オレの さいきょうの ポケモンが……！'},
+ {key:'blue',name:'ブルー',city:'カントーの つわもの',type:'さまざま',lv:65,team:[36,94,9],before:'あら！ つよそうな トレーナー はっけん！ わたしと しょうぶしよ！',after:'えーっ！ まけちゃった！ あなたって ほんとに つよいのね！'}
+];
+const LEGEND_BOSSES=[
+ {key:'bird144',name:'フリーザー',city:'ふたごじま',type:'こおり',lv:55,team:[144],reward:144,hpMultiplier:1.8,before:'こおりの つばさが かがやいている！',after:'フリーザーが なかまに なった！'},
+ {key:'bird145',name:'サンダー',city:'むじんはつでんしょ',type:'でんき',lv:55,team:[145],reward:145,hpMultiplier:1.8,before:'かみなりが とどろいている！',after:'サンダーが なかまに なった！'},
+ {key:'bird146',name:'ファイヤー',city:'チャンピオンロード',type:'ほのお',lv:55,team:[146],reward:146,hpMultiplier:1.8,before:'もえる つばさが ひろがった！',after:'ファイヤーが なかまに なった！'},
+ {key:'mewtwo',name:'ミュウツー',city:'ハナダのどうくつ',type:'エスパー',lv:70,team:[150],reward:150,hpMultiplier:2,before:'つよい ちからが あたりを つつむ……！',after:'ミュウツーが なかまに なった！'}
+];
+function extraProgress(){return Math.max(0,Math.min(7,Number(state.extraCleared)||0))}
+function isLegendWon(b){return !!state.events['legend_'+b.key]}
+function legendLoseReward(b){return b.key==='mewtwo'?100:50}
+function dex150(){return new Set(state.seen.filter(id=>id>=1&&id<=150)).size}
+function claimMew(){if(dex150()<150||state.events.mew)return;state.events.mew=true;const p=add(151,5,false);save();render();showModal(`<h2>✨ ずかん かんせい！</h2><div class="gym-dialogue"><img src="https://play.pokemonshowdown.com/sprites/trainers/oak.png" alt="オーキドはかせ"><div class="gym-dialogue-text"><b>オーキドはかせ</b><p>「よくぞ ここまで あつめたのう！」</p></div></div><p>150しゅるいを あつめた ごほうび！</p><div class="dex-detail-image">${img(151)}</div><p><b>ミュウが なかまに なった！</b></p><button class="btn wide" onclick="closeModal()">やったー！</button>`)}
+function bossPortrait(b){if(b.key==='snorlax')return sprite(143);const key={rocket:'giovanni',lorelei:'lorelei',bruno:'bruno',agatha:'agatha',lance:'lance',champion:'blue',blue:'leaf'}[b.key];return key?'https://play.pokemonshowdown.com/sprites/trainers/'+key+'.png':sprite(b.reward||b.team[0])}
+function extraDialogue(b,after=false){const words=after?b.after:b.before;const line=b.reward?esc(words||''):`「${esc(words||'さあ、しょうぶだ！')}」`;return `<div class="gym-dialogue"><img src="${bossPortrait(b)}" onerror="this.style.display='none'"><div class="gym-dialogue-text"><b>${esc(b.name)}</b><p>${line}</p></div></div>`}
+function extraCard(b,enabled,done=false){return `<div class="card"><div class="row" style="align-items:center"><img src="${bossPortrait(b)}" style="width:82px;height:95px;object-fit:contain;image-rendering:pixelated"><div><h3>${esc(b.city)} · ${esc(b.name)}</h3><p class="muted">${esc(b.type)} ／ Lv.${b.lv}</p></div></div><div class="grid3">${b.team.map(id=>`<div class="poke">${img(id)}<div class="name">${name(id)}</div><div class="tiny">Lv.${b.lv}</div></div>`).join('')}</div><button class="btn ${done?'alt':'gold'} wide" style="margin-top:12px" ${!enabled?'disabled':''} onclick="startExtraBattle('${b.key}')">${!enabled?'🔒 まだ ちょうせんできない':done?'🏅 クリアずみ':'⚔️ しょうぶする！'}</button></div>`}
+const SNORLAX_BOSS={key:'snorlax',name:'カビゴン',city:'12ばんどうろ',type:'ノーマル',lv:45,team:[143],reward:143,hpMultiplier:1.5,before:'おおきな カビゴンが みちを ふさいでいる！ ポケモンのふえを ふくと…… カビゴンが めを さました！',after:'カビゴンが なかまに なった！'};
+function snorlaxStoryCard(){const done=!!state.events.snorlax,enabled=state.cleared>=4;return `<div class="card"><h2>🎵 ねむる カビゴンを おこせ！</h2><p class="small">エリカに かったあと かいほう。カビゴンを たおすと なかまになり、キョウへの みちが ひらくよ。</p><div class="row" style="align-items:center;gap:14px">${img(143)}<div><b>カビゴン Lv.45</b><div class="muted">3たい たい 1たい ／ ボスHP 1.5ばい</div></div></div><button class="btn ${done?'alt':'gold'} wide" style="margin-top:12px" ${!enabled||done?'disabled':''} onclick="startExtraBattle('snorlax')">${done?'🏅 クリアずみ':enabled?'⚔️ カビゴンを おこす！':'🔒 エリカに かつと かいほう'}</button></div>`}
+function renderExtraStory(){const progress=extraProgress();let next=EXTRA_BOSSES[progress];let birds=LEGEND_BOSSES.slice(0,3);return `${snorlaxStoryCard()}<div class="card"><h2>🚀 ロケット団・ポケモンリーグ</h2><p class="small">ジムバッジ8こで かいほう。ロケット団ボス → 四天王 → グリーン → ブルー の じゅんばんだよ。</p><p class="muted">すすみぐあい：${progress} / 7</p></div>${progress<7?extraCard(next,state.cleared>=8):'<div class="card"><h2>🏆 カントーの つよものを せいは！</h2><p>グリーンと ブルーにも かったよ！</p></div>'}<div class="card"><h2>🪽 でんせつの さんちょう チャレンジ</h2><p class="small">ロケット団ボスを たおすと かいほう。かったら なかまに！ まけても まいかい 50ポケエネ もらえるよ。</p></div>${birds.map(b=>extraCard(b,progress>=1,isLegendWon(b))).join('')}<div class="card"><h2>🧬 ミュウツー チャレンジ</h2><p class="small">チャンピオンの グリーンを たおすと かいほう。まけても まいかい 100ポケエネ もらえるよ。</p></div>${extraCard(LEGEND_BOSSES[3],progress>=6,isLegendWon(LEGEND_BOSSES[3]))}<div class="card"><h2>✨ ミュウへの みち</h2><p>カントーずかん：<b>${dex150()} / 150しゅるい</b></p><p class="small">ミュウ いがいの 150しゅるいを そろえよう！</p><button class="btn gold wide" ${dex150()<150||state.events.mew?'disabled':''} onclick="claimMew()">${state.events.mew?'✨ ミュウ ゲットずみ！':'🎁 ミュウを うけとる'}</button></div>`}
+async function startExtraBattle(key){const b=[...EXTRA_BOSSES,...LEGEND_BOSSES,SNORLAX_BOSS].find(x=>x.key===key);if(!b||!state.team.length)return;if(b===SNORLAX_BOSS){if(state.cleared<4||state.events.snorlax)return}else if(EXTRA_BOSSES.includes(b)){if(state.cleared<8||EXTRA_BOSSES[extraProgress()]!==b)return}else{if(b.key==='mewtwo'?extraProgress()<6:extraProgress()<1)return;if(isLegendWon(b))return}showModal(`<h2>⚔️ ${b.name}に ちょうせん！</h2><p>じゅんび しているよ…</p>`);try{const allies=await Promise.all(state.team.map(uid=>byUid(uid)).filter(Boolean).map(p=>fighter(p.id,p.lv,p.uid)));const enemies=await Promise.all(b.team.map(id=>fighter(id,b.lv)));if(b.hpMultiplier){for(const enemy of enemies){enemy.maxHp=Math.round(enemy.maxHp*b.hpMultiplier);enemy.hp=enemy.maxHp}}battle={allies,enemies,ai:0,ei:0,turn:1,boss:b,log:[`${b.name}が しょうぶを しかけてきた！`],busy:true,potionUsed:false,awaitingIntro:true,extra:true};showModal(`<h2>⚔️ ${esc(b.city)}</h2>${extraDialogue(b)}<button class="btn gold wide" onclick="beginGymBattle()">⚔️ しょうぶする！</button>`)}catch(e){battle=null;closeModal();toast('バトルの じゅんびに しっぱいしたよ')}}
+// はじめて グリーンに かったときの パーティーを そのまま保存する。
+function captureHallOfFame(){
+ if(state.hallOfFame)return false;
+ const party=(battle?.allies||[]).map(p=>{
+  const original=byUid(p.uid);
+  return {id:p.id,lv:p.lv,shiny:!!original?.shiny};
+ }).filter(p=>p.id>0).slice(0,3);
+ if(!party.length)return false;
+ state.hallOfFame={date:new Date().toISOString(),player:state.player,team:party};
+ return true;
+}
+function hallRecordHtml(){
+ const h=state.hallOfFame;if(!h)return '<p>まだ でんどういりしていないよ。</p>';
+ const date=new Date(h.date);
+ const dateText=Number.isNaN(date.getTime())?'きろく あり':date.toLocaleDateString('ja-JP',{year:'numeric',month:'long',day:'numeric'});
+ return `<div class="hall-stage"><div class="hall-trophy">🏆</div><h2>カントー でんどういり！</h2><div class="hall-date">${esc(dateText)} · ${esc(h.player||'トレーナー')}</div><div class="hall-team">${(h.team||[]).map(p=>`<div class="hall-mon">${img(p.id,p.shiny)}<div class="hall-name">${esc(name(p.id))}${p.shiny?' ✨':''}</div><small>Lv.${Number(p.lv)||1}</small></div>`).join('')}</div><b>おめでとう！</b></div>`;
+}
+function showHallOfFame(){showModal(`${hallRecordHtml()}<button class="btn wide" style="margin-top:13px" onclick="closeModal()">とじる</button>`)}
+function showHallCeremony(){
+ showModal(`<h2>👨‍🔬 オーキドはかせ</h2><div class="gym-dialogue"><img src="https://play.pokemonshowdown.com/sprites/trainers/oak.png" alt="オーキドはかせ" onerror="this.style.display='none'"><div class="gym-dialogue-text"><b>オーキドはかせ</b><p>「おお！ グリーンに かったのか！」</p><p>「ポケモンを たいせつに そだてた きみの しょうりじゃ！」</p></div></div><button class="btn gold wide" onclick="showHallOfFame()">🏆 でんどういりへ！</button><button class="btn alt wide" style="margin-top:8px" onclick="closeModal()">えんしゅつを スキップ</button>`);
+}
+function winExtraBattle(){const b=battle.boss;let message='';if(b.reward){if(b===SNORLAX_BOSS?!state.events.snorlax:!isLegendWon(b)){if(b===SNORLAX_BOSS)state.events.snorlax=true;else state.events['legend_'+b.key]=true;const p=add(b.reward,b.lv,false);message=`<div class="dex-detail-image">${img(b.reward)}</div><p>${p?name(b.reward)+'が なかまに なった！':'すでに なかまに いるよ！'}</p>`}}else{if(EXTRA_BOSSES[extraProgress()]===b)state.extraCleared=extraProgress()+1;state.energy+=b.lv*10;message=`<p>✨ ${b.lv*10} ポケエネ ゲット！</p>`}const firstHall=b.key==='champion'&&captureHallOfFame();save();battle=null;tab='story';render();if(firstHall){showHallCeremony();return}showModal(`<h2>🏆 ${esc(b.name)}に かった！</h2>${extraDialogue(b,true)}${message}<button class="btn wide" onclick="closeModal()">つぎへ！</button>`)}
+// ジムリーダーのバトル前・敗北後のセリフ（原作の雰囲気を参考にした短いアレンジ）
+const GYM_DIALOGUES=[
+ {before:'オレの いしの しんねん！ その かたさを みせてやる！',after:'まいった！ きみの つよさは ほんものだ！'},
+ {before:'わたしの ポリシーは みずポケモンで せめること！ マーイ ステディ！',after:'あーあ！ わたしの まけね！'},
+ {before:'ヘイ、ベイビー！ オレの でんきで しびれさせてやるぜ！',after:'オー、ノー！ ユーは つよいな！'},
+ {before:'あら…… おきゃくさまですの？ それでは おあいて いたしますわ',after:'まあ…… わたくしの まけですわ'},
+ {before:'せっしゃの にんじゅつ！ どくの おそろしさを とくと みよ！',after:'むう！ みごとな うでまえ！'},
+ {before:'あなたが くることは わかっていたわ。では はじめましょう',after:'……あなたの ちからを みくびっていたわ'},
+ {before:'カッカッカ！ もえる ほのおの しょうぶじゃ！',after:'うおお！ わしの まけじゃ！'},
+ {before:'わたしが ジムリーダーとして さいごの しょうぶを してやろう',after:'みごとだ。きみこそ しんの つよさを もつ トレーナーだ'}
+];
+function gymDialogueCard(idx,kind){
+ const b=BOSSES[idx],d=GYM_DIALOGUES[idx];
+ return `<div class="gym-dialogue"><img src="${trainerImage(idx)}" alt="${esc(b.name)}" onerror="this.style.display='none'"><div class="gym-dialogue-text"><b>${esc(b.name)}</b><p>「${esc(d[kind])}」</p></div></div>`;
+}
 const INCOME=[1,3,6,10,15,21,28,36,45];
 const EVO={1:[2,16],2:[3,32],4:[5,16],5:[6,36],7:[8,16],8:[9,36],10:[11,7],11:[12,10],13:[14,7],14:[15,10],16:[17,18],17:[18,36],19:[20,20],21:[22,20],23:[24,22],27:[28,22],29:[30,16],30:[31,0,'moon'],32:[33,16],33:[34,0,'moon'],35:[36,0,'moon'],37:[38,0,'fire'],39:[40,0,'moon'],41:[42,22],43:[44,21],44:[45,0,'leaf'],46:[47,24],48:[49,31],50:[51,26],52:[53,28],54:[55,33],56:[57,28],58:[59,0,'fire'],60:[61,25],61:[62,0,'water'],63:[64,16],64:[65,0,'link'],66:[67,28],67:[68,0,'link'],69:[70,21],70:[71,0,'leaf'],72:[73,30],74:[75,25],75:[76,0,'link'],77:[78,40],79:[80,37],81:[82,30],84:[85,31],86:[87,34],88:[89,38],90:[91,0,'water'],92:[93,25],93:[94,0,'link'],96:[97,26],98:[99,28],100:[101,30],102:[103,0,'leaf'],104:[105,28],109:[110,35],111:[112,42],116:[117,32],118:[119,33],120:[121,0,'water'],129:[130,20],133:[134,0,'water'],138:[139,40],140:[141,40],147:[148,30],148:[149,55],25:[26,0,'thunder']};
 const STONE={moon:'つきのいし',fire:'ほのおのいし',water:'みずのいし',leaf:'リーフのいし',thunder:'かみなりのいし',link:'つながりのヒモ'};
 const FALLBACK={normal:['たいあたり',40,'physical'],grass:['つるのムチ',45,'physical'],fire:['ひのこ',40,'special'],water:['みずでっぽう',40,'special'],electric:['でんきショック',40,'special'],rock:['いわおとし',50,'physical'],ground:['どろかけ',20,'special'],flying:['つつく',35,'physical'],poison:['どくばり',15,'physical'],bug:['むしくい',60,'physical'],psychic:['ねんりき',50,'special'],fighting:['けたぐり',50,'physical'],ghost:['したでなめる',30,'physical'],ice:['こなゆき',40,'special'],dragon:['たつまき',40,'special']};
 const TYPE_JP={normal:'ノーマル',fire:'ほのお',water:'みず',grass:'くさ',electric:'でんき',rock:'いわ',ground:'じめん',flying:'ひこう',poison:'どく',bug:'むし',psychic:'エスパー',fighting:'かくとう',ghost:'ゴースト',ice:'こおり',dragon:'ドラゴン',fairy:'フェアリー',steel:'はがね',dark:'あく'};
 const CHART={normal:{rock:.5,ghost:0,steel:.5},fire:{grass:2,ice:2,bug:2,steel:2,fire:.5,water:.5,rock:.5,dragon:.5},water:{fire:2,ground:2,rock:2,water:.5,grass:.5,dragon:.5},electric:{water:2,flying:2,electric:.5,grass:.5,dragon:.5,ground:0},grass:{water:2,ground:2,rock:2,fire:.5,grass:.5,poison:.5,flying:.5,bug:.5,dragon:.5,steel:.5},rock:{fire:2,ice:2,flying:2,bug:2,fighting:.5,ground:.5,steel:.5},ground:{fire:2,electric:2,poison:2,rock:2,steel:2,grass:.5,bug:.5,flying:0},flying:{grass:2,fighting:2,bug:2,electric:.5,rock:.5,steel:.5},poison:{grass:2,fairy:2,poison:.5,ground:.5,rock:.5,ghost:.5,steel:0},bug:{grass:2,psychic:2,dark:2,fire:.5,fighting:.5,poison:.5,flying:.5,ghost:.5,steel:.5,fairy:.5},psychic:{fighting:2,poison:2,psychic:.5,steel:.5,dark:0},fighting:{normal:2,ice:2,rock:2,dark:2,steel:2,poison:.5,flying:.5,psychic:.5,bug:.5,fairy:.5,ghost:0},ghost:{psychic:2,ghost:2,dark:.5,normal:0},ice:{grass:2,ground:2,flying:2,dragon:2,fire:.5,water:.5,ice:.5,steel:.5},dragon:{dragon:2,steel:.5,fairy:0},fairy:{fighting:2,dragon:2,dark:2,fire:.5,poison:.5,steel:.5}};
-const $=s=>document.querySelector(s);let cryEnabled=true,battleVisual=null,battleSequence=0,cryAudio=null;let cloudReady=false,cloudUser=null,cloudStatus='ログインを まっているよ',cloudTimer=null,cloudApplying=false,cloudDirty=false,cloudBusy=false;let state=null,tab='home',dexFilter='all',apiCache={},battle=null,apiBusy=false,modalClose=null;
+const $=s=>document.querySelector(s);let cryEnabled=true,battleVisual=null,battleSequence=0,cryAudio=null;let cloudReady=false,cloudUser=null,cloudStatus='ログインを まっているよ',cloudTimer=null,cloudApplying=false,cloudDirty=false,cloudBusy=false;let saveMode='normal',modeSwitching=false;let state=null,tab='home',dexFilter='all',apiCache={},battle=null,apiBusy=false,modalClose=null;
 try{apiCache=JSON.parse(localStorage.getItem(CACHE)||'{}')}catch{}
-function fresh(){return {version:1,player:'',step:0,starter:null,energy:100,last:Date.now(),cleared:0,owned:[],team:[],seen:[],shinySeen:[],events:{},admin:false,log:[]}}
-// v2.1は旧データを移行せず、クラウドから開始する
+function fresh(){return {version:1,player:'',step:0,starter:null,energy:100,last:Date.now(),cleared:0,owned:[],team:[],seen:[],shinySeen:[],events:{},extraCleared:0,hallOfFame:null,admin:false,log:[]}}
+// v2.8は旧データを移行せず、クラウドから開始する
 state=fresh();
 function save(){
  state.last=Date.now();
@@ -124,26 +229,50 @@ function save(){
  cloudDirty=true;clearTimeout(cloudTimer);cloudTimer=setTimeout(syncSave,800);
 }
 async function syncSave(){
+ if(modeSwitching)return;
  if(!cloudReady||cloudBusy||!cloudDirty)return;
  cloudDirty=false;cloudBusy=true;
- try{await window.firebaseBridge.write(JSON.parse(JSON.stringify(state)));cloudStatus='☁️ ほぞんしたよ'}
+ try{await window.firebaseBridge.write(JSON.parse(JSON.stringify(state)),saveMode);cloudStatus='☁️ ほぞんしたよ'}
  catch(e){cloudDirty=true;cloudStatus='⚠️ ほぞんできなかったよ';console.error(e)}
  finally{cloudBusy=false;if(cloudDirty)cloudTimer=setTimeout(syncSave,1500)}
 }
 function cloudLogin(){window.firebaseBridge?.login().catch(e=>{cloudStatus='ログインできなかったよ';console.error(e);render()})}
 function cloudLogout(){if(confirm('ログアウトする？'))window.firebaseBridge.logout()}
 function cloudGate(){return `<div class="screen-center"><div class="card intro"><h1>⚡ ポケモン放置冒険</h1><p>だい1しょう カントーちほう</p><div class="notice">${esc(cloudStatus)}</div><button class="btn wide" onclick="cloudLogin()" ${window.firebaseBridge?'':'disabled'}>Googleで ログイン</button><p class="muted small">はじめては あたらしい ぼうけんから スタート！</p></div></div>`}
-function cloudLoad(user,data){
+function cloudLoad(user,data,mode='normal'){
+ saveMode=mode;
  clearTimeout(cloudTimer);cloudDirty=false;cloudUser=user;cloudReady=!!user;cloudApplying=true;
  state=data&&data.version===1?data:fresh();
+ state.admin=mode==='admin';
  if(!Array.isArray(state.seen))state.seen=[];
  if(!Array.isArray(state.shinySeen))state.shinySeen=[];
  cloudStatus=user?'☁️ どうき できたよ':'Googleで ログインしてね';
  battle=null;tab='home';closeModal();cloudApplying=false;render();
 }
-function cloudUpdate(data){
+function cloudUpdate(data,mode='normal'){
+ if(mode!==saveMode||modeSwitching)return;
  if(!cloudReady||cloudDirty||cloudBusy||battle||!data||data.version!==1)return;
- cloudApplying=true;state=data;cloudStatus='☁️ どうき できたよ';cloudApplying=false;render();
+ cloudApplying=true;state=data;state.admin=saveMode==='admin';cloudStatus='☁️ どうき できたよ';cloudApplying=false;render();
+}
+async function switchSaveMode(next){
+ if(modeSwitching||next===saveMode)return;
+ if(cloudBusy)return toast('ほぞん中だよ。すこし まってね');
+ if(!cloudReady)return toast('ログインしてから きりかえてね');
+ if(battle)return toast('バトルを おえてから きりかえてね');
+ modeSwitching=true;clearTimeout(cloudTimer);
+ try{
+  // Switching must not discard any pending writes for the current slot.
+  if(cloudDirty){cloudDirty=false;cloudBusy=true;try{await window.firebaseBridge.write(JSON.parse(JSON.stringify(state)),saveMode)}finally{cloudBusy=false}}
+  const data=await window.firebaseBridge.read(next);
+  cloudLoad(cloudUser,data,next);
+  if(!data){cloudDirty=true;await syncSaveAfterSwitch(next)}
+  toast(next==='admin'?'🧪 テストデータに きりかえたよ':'🏠 いつもの ぼうけんに もどったよ');
+ }catch(e){cloudStatus='⚠️ モードの きりかえに しっぱい';console.error(e);toast('きりかえに しっぱいしたよ');render()}
+ finally{modeSwitching=false}
+}
+async function syncSaveAfterSwitch(mode){
+ await window.firebaseBridge.write(JSON.parse(JSON.stringify(state)),mode);
+ cloudDirty=false;
 }
 function earn(){let now=Date.now(),dt=Math.max(0,Math.min(now-state.last,365*864e5));if(!state.admin)state.energy+=dt/3600000*INCOME[Math.min(state.cleared,8)];state.last=now;if(dt>60000)save()}
 function money(n){return state.admin?'∞':Math.floor(n).toLocaleString('ja-JP')}
@@ -152,14 +281,14 @@ function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 function img(id,shiny=false){return `<img loading="lazy" src="${sprite(id,shiny)}" alt="${esc(name(id))}">`}
 function toast(t){let el=$('#toast');el.textContent=t;el.classList.remove('hidden');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.add('hidden'),2500)}
 function showModal(html,cb){$('#modalContent').innerHTML=html;$('#modal').classList.remove('hidden');modalClose=cb||null}
-function closeModal(){ $('#modal').classList.add('hidden');modalClose=null }
+function closeModal(){ if(evolutionBusy)return;$('#modal').classList.add('hidden');modalClose=null }
 function pay(n){if(state.admin)return true;if(state.energy+1e-8<n){toast('ポケエネが足りない！');return false}state.energy-=n;return true}
 function own(id){return state.owned.find(p=>p.id===id)}
 function add(id,lv=5,shiny=Math.random()<.1){if(own(id))return false;let p={uid:Date.now()+'-'+Math.random().toString(36).slice(2,7),id,lv,shiny,moves:[],auto:true};state.owned.push(p);if(state.team.length<3)state.team.push(p.uid);state.seen=[...new Set([...state.seen,id])];if(shiny)state.shinySeen=[...new Set([...state.shinySeen,id])];save();preparePoke(id);return p}
 function byUid(uid){return state.owned.find(p=>p.uid===uid)}
 function cardPoke(p){return `<div class="poke">${img(p.id,p.shiny)}<div class="name">${esc(name(p.id))}${p.shiny?'<span class="shiny"> ✨</span>':''}</div><div class="tiny">Lv.${p.lv}</div></div>`}
 function nav(){let show=state.step>=3;$('#nav').classList.toggle('hidden',!show||!!battle);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('on',x.dataset.tab===tab))}
-function render(){if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v2.1</div></div><span class="tag">${state.cleared}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · だい1しょう カントー v2.1</div>`}
+function render(){if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v3.1 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${state.cleared}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · だい1しょう カントー v3.1</div>`}
 function renderIntro(){if(state.step===0)return `<div class="screen-center"><div class="hero" style="text-align:center"><div class="opening-symbol">◉</div><h1>ポケモンの世界へ<br>ようこそ！</h1><p class="intro">ここは ふしぎな いきもの<br>ポケモンたちが くらす せかい。<br>きみだけの ぼうけんが いま はじまる！</p><button class="btn gold wide" onclick="advance(1)">ぼうけんを はじめる →</button></div></div>`;
 if(state.step===1)return `<div class="screen-center"><div class="card intro"><div class="professor"><img src="https://play.pokemonshowdown.com/sprites/trainers/oak.png" alt="オーキド博士" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="professor-fallback" style="display:none">👨‍🔬</div></div><h2>オーキド博士</h2><p>はじめまして！ わしは オーキド。<br>みんなからは ポケモンはかせと よばれておる。</p><p>まずは きみの なまえを おしえてくれるかな？</p><input id="playerName" class="input" maxlength="12" placeholder="トレーナーのなまえ" value="${esc(state.player)}"><button class="btn wide" style="margin-top:12px" onclick="setPlayer()">これで いいよ！</button></div></div>`;
 return `<div class="screen-center"><div class="card"><h2>🌟 パートナーをえらぼう！</h2><p class="intro">この3匹から 1匹を えらぶんじゃ。<br>どのポケモンも Lv.5 から スタート！</p><div class="grid3">${[1,4,7].map(id=>`<button class="poke" onclick="chooseStarter(${id})">${img(id)}<div class="name">${name(id)}</div><div class="tiny">${{1:'くさ',4:'ほのお',7:'みず'}[id]}</div></button>`).join('')}</div></div></div>`}
@@ -167,7 +296,7 @@ function advance(n){state.step=n;save();render()}
 function setPlayer(){let s=($('#playerName')?.value||'').trim();if(!s)return toast('なまえを いれてね');state.player=s;advance(2)}
 function chooseStarter(id){showModal(`<h2>${name(id)}をえらぶ？</h2><div style="text-align:center">${img(id)}</div><p>さいしょの パートナーは ${name(id)} Lv.5！</p><div class="grid2"><button class="btn alt" onclick="closeModal()">もどる</button><button class="btn" onclick="confirmStarter(${id})">この子にする！</button></div>`)}
 function confirmStarter(id){state.starter=id;add(id,5,false);state.step=3;save();closeModal();tab='home';render();setTimeout(()=>showModal(`<h2>🏅 めざせ、ポケモンチャンピオン！</h2><p>${esc(state.player)}よ！ 8つのジムバッジを あつめ、ポケモンリーグの チャンピオンを めざすんじゃ！</p><div class="notice"><b>さいしょの もくひょう：ニビジムのタケシ</b><br>タイプ：いわ ／ おすすめレベル：10<br>あいてのポケモンは みんな Lv.10</div><p>まずはポケエネをためて、ポケモンをそだててみよう。ジムにはいつでもちょうせんできるぞ！</p><button class="btn wide" onclick="closeModal()">ぼうけんに出発！</button>`),150)}
-function renderHome(){let b=BOSSES[Math.min(state.cleared,7)];return `<div class="hero"><div class="muted">⚡ ためて、そだてて、チャンピオンへ</div><div style="font-size:35px;font-weight:900;margin:5px 0">${money(state.energy)} <span style="font-size:16px">ポケエネ</span></div><div class="row between"><span>⏱️ ${INCOME[Math.min(state.cleared,8)]} / じかん</span><span>🥚 タマゴ ${EGG[Math.min(state.cleared,8)].price}〜</span></div><div class="muted" style="margin-top:7px">アプリを閉じている間もたまる・じょうげんなし</div></div>${cityBanner(state.cleared)}<div class="card"><h2>🎯 いまの目標</h2>${state.cleared>=8?'<p>8つのバッジをあつめた！ 四天王編は次回アップデートで追加よてい。</p>':`<div class="row between"><div><h3>${b.city}ジム · ${b.name}</h3><p class="muted">${b.type}タイプ ／ 推奨 Lv.${b.lv}</p><p class="muted">かつと もらえる：${b.lv*10}ポケエネ</p></div><span class="badge-home-art">${badgeSvg(state.cleared)}</span></div><button class="btn wide" style="margin-top:12px" onclick="changeTab('story')">ジムじょうほう・ちょうせんへ →</button>`}</div><div class="card"><h2>🐾 パーティー</h2><div class="grid3">${state.team.map(uid=>byUid(uid)).filter(Boolean).map(cardPoke).join('')}${Array.from({length:Math.max(0,3-state.team.length)},()=>'<div class="poke" style="display:grid;place-items:center;min-height:140px;color:#9ab0b7">＋<br>空き</div>').join('')}</div><button class="btn alt wide" style="margin-top:12px" onclick="changeTab('team')">ポケモンをそだてる →</button></div><div class="card"><h2>📖 ぼうけんのきろく</h2><p class="small">ゲットしたポケモン：${new Set(state.seen.filter(id=>id>=1&&id<=151)).size} / 151種</p><button class="btn alt wide" style="margin:9px 0" onclick="changeTab('dex')">📖 ポケモンずかんを見る →</button><p class="small">あつめたバッジ：${state.cleared} / 8</p><div class="progress" style="margin-top:10px"><i style="width:${state.cleared/8*100}%"></i></div></div>`}
+function renderHome(){let b=BOSSES[Math.min(state.cleared,7)];return `<div class="hero"><div class="muted">⚡ ためて、そだてて、チャンピオンへ</div><div style="font-size:35px;font-weight:900;margin:5px 0">${money(state.energy)} <span style="font-size:16px">ポケエネ</span></div><div class="row between"><span>⏱️ ${INCOME[Math.min(state.cleared,8)]} / じかん</span><span>🥚 タマゴ ${EGG[Math.min(state.cleared,8)].price}〜</span></div><div class="muted" style="margin-top:7px">アプリを閉じている間もたまる・じょうげんなし</div></div>${cityBanner(state.cleared)}<div class="card"><h2>🎯 いまの目標</h2>${state.cleared>=8?'<p>8つのバッジをあつめた！ ロケット団・四天王・でんせつに ちょうせんしよう！</p>':`<div class="row between"><div><h3>${b.city}ジム · ${b.name}</h3><p class="muted">${b.type}タイプ ／ 推奨 Lv.${b.lv}</p><p class="muted">かつと もらえる：${b.lv*10}ポケエネ</p></div><span class="badge-home-art">${badgeSvg(state.cleared)}</span></div><button class="btn wide" style="margin-top:12px" onclick="changeTab('story')">ジムじょうほう・ちょうせんへ →</button>`}</div><div class="card"><h2>🐾 パーティー</h2><div class="grid3">${state.team.map(uid=>byUid(uid)).filter(Boolean).map(cardPoke).join('')}${Array.from({length:Math.max(0,3-state.team.length)},()=>'<div class="poke" style="display:grid;place-items:center;min-height:140px;color:#9ab0b7">＋<br>空き</div>').join('')}</div><button class="btn alt wide" style="margin-top:12px" onclick="changeTab('team')">ポケモンをそだてる →</button></div><div class="card"><h2>📖 ぼうけんのきろく</h2><p class="small">ゲットしたポケモン：${new Set(state.seen.filter(id=>id>=1&&id<=151)).size} / 151種</p><button class="btn alt wide" style="margin:9px 0" onclick="changeTab('dex')">📖 ポケモンずかんを見る →</button><p class="small">あつめたバッジ：${state.cleared} / 8</p><div class="progress" style="margin-top:10px"><i style="width:${state.cleared/8*100}%"></i></div></div>`}
 function changeTab(t){tab=t;render();window.scrollTo(0,0)}
 const EGG_RARITIES=[{title:'★ ノーマル',className:'normal'},{title:'★★ アンコモン',className:'uncommon'},{title:'★★★ レア',className:'rare'},{title:'★★★★ スーパーレア',className:'superrare'}];
 // レア度はタマゴごとに固定。抽選確率はこれまでの weights を維持する。
@@ -178,7 +307,7 @@ function eggRarity(eggIndex,id){
  const pos=idx/Math.max(1,e.ids.length-1);
  return pos>=.94?3:pos>=.70?2:pos>=.38?1:0;
 }
-function eggObtained(id){return state.owned.some(p=>familyRoot(p.id)===familyRoot(id))}
+function eggObtained(id){return state.seen.some(seenId=>familyRoot(seenId)===familyRoot(id))}
 function eggComplete(e){return e.ids.every(eggObtained)}
 function eggCard(e,i,unlock){
  const locked=i>unlock,complete=eggComplete(e),count=e.ids.filter(eggObtained).length;
@@ -202,7 +331,7 @@ function renderEggs(){
 function hatch(i){if(i>state.cleared)return;let e=EGG[i],avail=e.ids.filter(id=>!eggObtained(id));if(!avail.length)return toast('このタマゴは ぜんぶゲットずみ！');if(!pay(e.price))return;let weights=avail.map(id=>e.weights?.[e.ids.indexOf(id)]||1),sum=weights.reduce((a,b)=>a+b,0),r=Math.random()*sum,id=avail.at(-1);for(let j=0;j<avail.length;j++){r-=weights[j];if(r<0){id=avail[j];break}}let p=add(id);save();render();showModal(`<h2>🥚 タマゴが かえった！</h2><div style="text-align:center">${img(id,p.shiny)}<h2>${name(id)} ${p.shiny?'✨いろちがい！':''}</h2><p>Lv.5 の ${name(id)} が なかまになった！</p></div><button class="btn wide" onclick="closeModal()">やったー！</button>`)}
 
 function familyRoot(id){let cur=id,seen=new Set();while(true){let from=Object.keys(EVO).find(k=>EVO[k][0]===cur&&!seen.has(+k));if(!from)return cur;seen.add(+from);cur=+from}}
-function hatch(i){if(i>state.cleared)return;let e=EGG[i],avail=e.ids.filter(id=>!state.owned.some(p=>familyRoot(p.id)===familyRoot(id)));if(!avail.length)return toast('このタマゴのポケモンはぜんぶゲット済み！');if(!pay(e.price))return;let weights=avail.map(id=>e.weights?.[e.ids.indexOf(id)]||1),sum=weights.reduce((a,b)=>a+b,0),r=Math.random()*sum,id=avail.at(-1);for(let j=0;j<avail.length;j++){r-=weights[j];if(r<0){id=avail[j];break}}let p=add(id);save();render();showModal(`<h2>🥚 タマゴが かえった！</h2><div style="text-align:center">${img(id,p.shiny)}<h2>${name(id)} ${p.shiny?'✨いろちがい！':''}</h2><p>Lv.5 の ${name(id)} が なかまになった！</p></div><button class="btn wide" onclick="closeModal()">やったー！</button>`)}
+function hatch(i){if(i>state.cleared)return;let e=EGG[i],avail=e.ids.filter(id=>!eggObtained(id));if(!avail.length)return toast('このタマゴのポケモンはぜんぶゲット済み！');if(!pay(e.price))return;let weights=avail.map(id=>e.weights?.[e.ids.indexOf(id)]||1),sum=weights.reduce((a,b)=>a+b,0),r=Math.random()*sum,id=avail.at(-1);for(let j=0;j<avail.length;j++){r-=weights[j];if(r<0){id=avail[j];break}}let p=add(id);save();render();showModal(`<h2>🥚 タマゴが かえった！</h2><div style="text-align:center">${img(id,p.shiny)}<h2>${name(id)} ${p.shiny?'✨いろちがい！':''}</h2><p>Lv.5 の ${name(id)} が なかまになった！</p></div><button class="btn wide" onclick="closeModal()">やったー！</button>`)}
 let boxType='all',boxSort='caught',boxShiny=false,boxTypeLoading=false,boxTypeAttempted=new Set();
 const BOX_TYPES=['normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'];
 function setBoxType(v){boxType=v;render()}
@@ -221,9 +350,37 @@ function renderTeam(){
  <div class="card"><div class="row between"><h2>📦 ポケモンボックス</h2><span class="tag">${filtered.length}/${owned.length}ひき</span></div><p class="muted">タイプを えらんで さがせるよ。ふたつのタイプを もつポケモンは どちらでも でるよ。</p><div class="box-controls"><label>タイプで さがす<select class="input" onchange="setBoxType(this.value)">${typeOptions.map(([v,l])=>`<option value="${v}" ${boxType===v?'selected':''}>${l}</option>`).join('')}</select></label><label>ならびかえ<select class="input" onchange="setBoxSort(this.value)"><option value="caught" ${boxSort==='caught'?'selected':''}>ゲットした じゅん</option><option value="number" ${boxSort==='number'?'selected':''}>ずかんばんごう</option><option value="level" ${boxSort==='level'?'selected':''}>レベルが たかいじゅん</option><option value="name" ${boxSort==='name'?'selected':''}>なまえじゅん</option></select></label></div><button class="btn ${boxShiny?'':'alt'} sm" style="margin:10px 0" onclick="toggleBoxShiny()">✨ ${boxShiny?'いろちがいだけ ✓':'いろちがいだけ みる'}</button>${needTypes?'<p class="muted">タイプじょうほうを よみこみちゅう…</p>':''}<div class="grid3" style="margin-top:12px">${filtered.map(p=>`<button class="poke ${state.team.includes(p.uid)?'selected':''}" onclick="openPoke('${p.uid}')">${img(p.id,p.shiny)}<div class="name">${name(p.id)}${p.shiny?' ✨':''}</div><div class="tiny">Lv.${p.lv}${state.team.includes(p.uid)?' · チーム中':''}</div></button>`).join('')||'<p class="muted" style="grid-column:1/-1">あてはまる ポケモンが いないよ。</p>'}</div></div>`;
 }
 function levelCap(){return Math.min(100,Math.max(20,(BOSSES[Math.min(state.cleared,7)]?.lv||70)*2))}
-function openPoke(uid){let p=byUid(uid);if(!p)return;let evo=EVO[p.id],can=evo&&(evo[1]===0||p.lv>=evo[1]),ec=evo?.[2]?50:0;let eText=evo?`${name(evo[0])} ${evo[1]?`Lv.${evo[1]}でしんか`:`${STONE[evo[2]]}（${ec}エネ）`}`:'初代ではこれ以上しんかしない';showModal(`<h2>${name(p.id)} ${p.shiny?'✨':''}</h2><div class="row">${img(p.id,p.shiny)}<div><b class="level">Lv.${p.lv}</b><p class="muted">レベルじょうげん：${levelCap()}</p><p class="muted">レベルを あげると ポケエネを つかうよ</p></div></div>${energyWallet('レベルアップの まえに のこりを かくにんしよう')}${energySpend(cost(p.lv),'Lv.'+p.lv+' → Lv.'+(p.lv+1))}<div class="grid2"><button class="btn" ${p.lv>=levelCap()||(!state.admin&&state.energy<cost(p.lv))?'disabled':''} onclick="levelUp('${uid}',1)">⚡ Lv +1<br><small>${cost(p.lv)} ポケエネ</small></button></div><hr class="separator"><p class="small">しんか：${eText}</p>${evo?`<button class="btn alt wide" ${can?'':'disabled'} onclick="evolve('${uid}')">${can?'しんかさせる':'まだしんかできない'}</button>`:''}<hr class="separator"><div class="grid2"><button class="btn alt" onclick="editMoves('${uid}')">⚔️ わざをえらぶ</button><button class="btn ${state.team.includes(uid)?'alt':'dark'}" onclick="toggleTeam('${uid}')">${state.team.includes(uid)?'チームから外す':'パーティーに入れる'}</button></div><button class="btn alt wide" style="margin-top:12px" onclick="closeModal()">閉じる</button>`)}
+function openPoke(uid){let p=byUid(uid);if(!p)return;let evo=EVO[p.id],can=evo&&(evo[1]===0||p.lv>=evo[1]),ec=evo?.[2]?50:0;let eText=evo?`${name(evo[0])} ${evo[1]?`Lv.${evo[1]}でしんか`:`${STONE[evo[2]]}（${ec}エネ）`}`:'初代ではこれ以上しんかしない';showModal(`<h2>${name(p.id)} ${p.shiny?'✨':''}</h2><div class="row">${img(p.id,p.shiny)}<div><b class="level">Lv.${p.lv}</b><p class="muted">レベルじょうげん：${levelCap()}</p><p class="muted">レベルを あげると ポケエネを つかうよ</p></div></div>${energyWallet('レベルアップの まえに のこりを かくにんしよう')}${energySpend(cost(p.lv),'Lv.'+p.lv+' → Lv.'+(p.lv+1))}<div class="grid2"><button class="btn" ${p.lv>=levelCap()||(!state.admin&&state.energy<cost(p.lv))?'disabled':''} onclick="levelUp('${uid}',1)">⚡ Lv +1<br><small>${cost(p.lv)} ポケエネ</small></button></div><hr class="separator"><p class="small">しんか：${eText}</p>${p.id===133?`<div class="stack">${[[134,"みずのいし"],[135,"かみなりのいし"],[136,"ほのおのいし"]].map(([to,stone])=>`<button class="btn alt wide" ${own(to)?"disabled":""} onclick="evolve('${uid}',${to})">${name(to)}に しんか（${stone}・50エネ）${own(to)?" ✓":""}</button>`).join("")}</div>`:evo?`<button class="btn alt wide" ${can?"":"disabled"} onclick="evolve('${uid}')">${can?"しんかさせる":"まだしんかできない"}</button>`:""}<hr class="separator"><div class="grid2"><button class="btn alt" onclick="editMoves('${uid}')">⚔️ わざをえらぶ</button><button class="btn ${state.team.includes(uid)?'alt':'dark'}" onclick="toggleTeam('${uid}')">${state.team.includes(uid)?'チームから外す':'パーティーに入れる'}</button></div><button class="btn alt wide" style="margin-top:12px" onclick="closeModal()">閉じる</button>`)}
 function levelUp(uid,amount){let p=byUid(uid);if(!p)return;let n=Math.min(amount,levelCap()-p.lv),spent=0,gain=0;for(let i=1;i<=n;i++){let c=cost(p.lv+i-1);if(!state.admin&&state.energy<spent+c)break;spent+=c;gain++}if(!gain)return toast('ポケエネたりないかレベルじょうげんだよ');pay(spent);p.lv+=gain;save();render();openPoke(uid);toast(`${name(p.id)}が Lv.${p.lv} になった！`);preparePoke(p.id)}
-function evolve(uid){let p=byUid(uid),e=EVO[p?.id];if(!e)return;let [to,lv,kind]=e;if(lv&&p.lv<lv)return;if(own(to))return toast('しんか したあとのポケモンをすでに持っているよ');let c=kind?50:0;if(!pay(c))return;let old=name(p.id);p.id=to;p.moves=[];p.auto=true;state.seen=[...new Set([...state.seen,to])];if(p.shiny)state.shinySeen=[...new Set([...state.shinySeen,to])];save();render();showModal(`<h2>✨ おめでとう！</h2><div style="text-align:center">${img(to,p.shiny)}<p>${old}は ${name(to)} に しんかした！</p></div><button class="btn wide" onclick="closeModal()">やったー！</button>`);preparePoke(to)}
+let evolutionBusy=false,evolutionTimer=null;
+function finishEvolution(){
+ if(!evolutionBusy)return;
+ clearTimeout(evolutionTimer);evolutionBusy=false;
+ const btn=document.getElementById('evolutionDone');if(btn)btn.disabled=false;
+ const stage=document.getElementById('evolutionStage');if(stage)stage.classList.add('evolution-complete');
+ const caption=document.getElementById('evolutionCaption');if(caption)caption.textContent='おめでとう！ しんかしたよ！';
+}
+function evolve(uid,selectedTo=null){
+ if(evolutionBusy)return;
+ let p=byUid(uid),e=EVO[p?.id];if(!e)return;
+ if(p.id===133){
+   if(![134,135,136].includes(selectedTo))return toast('しんかさきを えらんでね');
+   const stones={134:'water',135:'thunder',136:'fire'};
+   e=[selectedTo,0,stones[selectedTo]];
+ }
+ let [to,lv,kind]=e;if(lv&&p.lv<lv)return;
+ if(own(to))return toast('しんか したあとのポケモンをすでに持っているよ');
+ let c=kind?50:0;if(!pay(c))return;
+ const from=p.id,old=name(from),next=name(to),shiny=!!p.shiny;
+ p.id=to;p.moves=[];p.auto=true;
+ state.seen=[...new Set([...state.seen,to])];
+ if(shiny)state.shinySeen=[...new Set([...state.shinySeen,to])];
+ save();render();preparePoke(to);
+ evolutionBusy=true;
+ showModal(`<h2>✨ しんかが はじまった！</h2><div class="evolution-stage" id="evolutionStage"><div class="evolution-light"></div><img class="evolution-before" src="${sprite(from,shiny)}" alt="${esc(old)}"><img class="evolution-after" src="${sprite(to,shiny)}" alt="${esc(next)}"><div class="evolution-sparkles">✦ ✨ ✦</div></div><p class="evolution-caption" id="evolutionCaption">おや？ ${esc(old)}の ようすが…！</p><button id="evolutionDone" class="btn wide" disabled onclick="closeModal()">やったー！</button>`);
+ if(cryEnabled)playPokemonCry({id:from});
+ evolutionTimer=setTimeout(()=>{if(cryEnabled)playPokemonCry({id:to});finishEvolution()},3400);
+}
 let swapCandidate=null,swapSlot=-1;
 function toggleTeam(uid){
  const p=byUid(uid);if(!p)return;
@@ -307,19 +464,26 @@ function renderMovePicker(){let p=byUid(window._moveUid),moves=window._moveList|
 }
 function toggleMove(slug){let a=window._moveSelected||[];if(a.includes(slug))window._moveSelected=a.filter(x=>x!==slug);else if(a.length<4)window._moveSelected=[...a,slug];else return toast('技は4つまで！');renderMovePicker()}
 function saveMoves(){let p=byUid(window._moveUid);if(!p||!(window._moveSelected||[]).length)return;p.moves=[...window._moveSelected];p.auto=false;save();toast('わざをほぞんしたよ');openPoke(p.uid)}
-function renderStory(){let i=state.cleared,b=BOSSES[Math.min(i,7)];return `${cityBanner(i)}<div class="card"><h2>🏅 ジムバッジ</h2><div class="badge-art-case">${BOSSES.map((x,j)=>`<div class="badge-art-slot ${j<i?'':'locked'}">${badgeSvg(j)}<div>${x.badge}</div><div class="muted">${x.city} · ${x.name}</div></div>`).join('')}</div></div>${i>=8?'<div class="card"><h2>🎉 8つのバッジをゲット！</h2><p>四天王編は次回のアップデートで追加するよていだよ。</p></div>':`<div class="card"><div class="tag">第${i+1}ジム</div><div class="row" style="align-items:center;margin-top:8px"><img src="${trainerImage(i)}" alt="${b.name}" style="width:100px;height:110px;object-fit:contain;image-rendering:pixelated" onerror="this.style.display='none'"><h2>${b.city}ジム · ${b.name}</h2></div><p class="small">とくいな タイプ：<b>${b.type}</b></p><p class="small">おすすめレベル：<b>Lv.${b.lv}</b>（あいてみんな同じレベル）</p><p class="small">かつと もらえる：<b>${b.lv*10} ポケエネ</b></p><p class="small">まけても もらえる：<b>${Math.floor(b.lv*10/2)} ポケエネ</b></p><div class="grid3" style="margin-top:13px">${b.team.map(id=>`<div class="poke">${img(id)}<div class="name">${name(id)}</div><div class="tiny">Lv.${b.lv}</div></div>`).join('')}</div><div class="notice" style="margin:12px 0">ちょうせん条件なし。1〜3匹で挑めるよ！ まけても しょうりボーナスの はんぶんが もらえるよ！</div><button class="btn gold wide" onclick="startBattle()">⚔️ ${b.name}にちょうせん！</button></div>`}<div class="card"><h2>📍 とくべつな イベント</h2>${renderEvents()}</div>`}
+function renderStory(){let i=state.cleared,b=BOSSES[Math.min(i,7)];return `${cityBanner(i)}<div class="card"><h2>🏅 ジムバッジ</h2><div class="badge-art-case">${BOSSES.map((x,j)=>`<div class="badge-art-slot ${j<i?'':'locked'}">${badgeSvg(j)}<div>${x.badge}</div><div class="muted">${x.city} · ${x.name}</div></div>`).join('')}</div></div>${i>=8?'<div class="card"><h2>🎉 8つのバッジをゲット！</h2><p>ロケット団・ポケモンリーグへ すすもう！</p></div>':`<div class="card"><div class="tag">第${i+1}ジム</div><div class="row" style="align-items:center;margin-top:8px"><img src="${trainerImage(i)}" alt="${b.name}" style="width:100px;height:110px;object-fit:contain;image-rendering:pixelated" onerror="this.style.display='none'"><h2>${b.city}ジム · ${b.name}</h2></div><p class="small">とくいな タイプ：<b>${b.type}</b></p><p class="small">おすすめレベル：<b>Lv.${b.lv}</b>（あいてみんな同じレベル）</p><p class="small">かつと もらえる：<b>${b.lv*10} ポケエネ</b></p><p class="small">まけても もらえる：<b>${Math.floor(b.lv*10/2)} ポケエネ</b></p><div class="grid3" style="margin-top:13px">${b.team.map(id=>`<div class="poke">${img(id)}<div class="name">${name(id)}</div><div class="tiny">Lv.${b.lv}</div></div>`).join('')}</div><div class="notice" style="margin:12px 0">ちょうせん条件なし。1〜3匹で挑めるよ！ まけても しょうりボーナスの はんぶんが もらえるよ！</div><button class="btn gold wide" ${i===4&&!state.events.snorlax?'disabled':''} onclick="startBattle()">${i===4&&!state.events.snorlax?'🔒 カビゴンを たおそう！':'⚔️ '+b.name+'にちょうせん！'}</button></div>`}${renderExtraStory()}${state.hallOfFame?`<div class="card"><h2>🏆 でんどういりの きろく</h2><p>グリーンに かったときの なかまたちを みられるよ！</p><button class="btn gold wide" onclick="showHallOfFame()">🏆 きろくを みる</button></div>`:''}`}
+function renderAdventure(){return `<div class="card"><h2>🎁 ぼうけんの であい</h2><p>ストーリーを すすめると ポケモンを むりょうで うけとれるよ！</p><p class="small">バトルのある カビゴンは ストーリーに いるよ。</p>${renderEvents()}</div>`}
 function eventButton(id,title,detail,available,done){return `<div class="listline"><div class="row between"><div><b>${title}</b><div class="muted">${detail}</div></div><button class="btn sm ${done?'alt':''}" ${!available||done?'disabled':''} onclick="runEvent('${id}')">${done?'受取済':available?'受け取る':'🔒'}</button></div></div>`}
-function renderEvents(){let i=state.cleared,ev=state.events;return `${eventButton('magikarp','コイキング','タケシに かった後・おつきみやま',i>=1,!!ev.magikarp)}${eventButton('bulbasaur','フシギダネ','タケシに かった後・ハナダへの道',i>=1,!!ev.bulbasaur)}${eventButton('charmander','ヒトカゲ','カスミに かった後',i>=2,!!ev.charmander)}${eventButton('squirtle','ゼニガメ','マチスに かった後',i>=3,!!ev.squirtle)}${eventButton('eevee','イーブイ3匹','エリカに かった後・タマムシ',i>=4,!!ev.eevee)}${eventButton('porygon','ポリゴン','エリカに かった後・ゲームコーナー',i>=4,!!ev.porygon)}${eventButton('snorlax','カビゴン Lv.30','エリカに かった後・とくべつな バトル（次回）',false,!!ev.snorlax)}${eventButton('lapras','ラプラス','ナツメに かった後・シルフカンパニー',i>=6,!!ev.lapras)}${eventButton('fossils','化石ポケモン','カツラに かった後・復元イベント（次回）',false,!!ev.fossils)}`}
-function runEvent(key){let ids={magikarp:[129],bulbasaur:[1],charmander:[4],squirtle:[7],eevee:[133,133,133],porygon:[137],lapras:[131]}[key];if(!ids||state.events[key])return;let got=[];if(key==='eevee'){let existing=state.owned.filter(p=>p.id===133).length;for(let j=existing;j<3;j++){let p={uid:Date.now()+'-'+j+'-'+Math.random(),id:133,lv:5,shiny:false,moves:[],auto:true};state.owned.push(p);got.push(p);if(state.team.length<3)state.team.push(p.uid)}state.seen=[...new Set([...state.seen,133])]}else{for(let id of ids){let p=add(id,5,false);if(p)got.push(p)}}state.events[key]=true;save();render();showModal(`<h2>🎁 特別な出会い！</h2><p>${got.length?got.map(p=>name(p.id)).join('・')+'が仲間になった！':'すでに仲間にいるので受け取り済みにしたよ。'}</p><div class="row" style="justify-content:center">${got.slice(0,3).map(p=>img(p.id)).join('')}</div><button class="btn wide" onclick="closeModal()">ありがとう！</button>`)}
+function renderEvents(){let i=state.cleared,ev=state.events;return `${eventButton('magikarp','コイキング Lv.5','タケシに かった後・おつきみやま',i>=1,!!ev.magikarp)}${eventButton('bulbasaur','フシギダネ Lv.15','カスミに かった後・ハナダシティ',i>=2,!!ev.bulbasaur)}${eventButton('charmander','ヒトカゲ Lv.15','カスミに かった後・24ばんどうろ',i>=2,!!ev.charmander)}${eventButton('squirtle','ゼニガメ Lv.20','マチスに かった後・クチバシティ',i>=3,!!ev.squirtle)}${eventButton('eevee','イーブイ 3びき Lv.25','エリカに かった後・タマムシマンション',i>=4,!!ev.eevee)}${eventButton('porygon','ポリゴン Lv.25','エリカに かった後・ゲームコーナー',i>=4,!!ev.porygon)}${eventButton('dojo','サワムラーと エビワラー Lv.40','ナツメに かった後・かくとうどうじょう',i>=6,!!ev.dojo)}${eventButton('lapras','ラプラス Lv.45','ロケット団ボス・サカキに かった後',extraProgress()>=1,!!ev.lapras)}${eventButton('fossils','オムナイト・カブト・プテラ Lv.45','カツラに かった後・グレンの けんきゅうじょ',i>=7,!!ev.fossils)}`}
+function runEvent(key){
+ const specs={magikarp:{ids:[129],lv:5,words:'おじさんの コイキングを たいせつに そだてておくれ！'},bulbasaur:{ids:[1],lv:15,words:'このこを たいせつに そだててくれる？'},charmander:{ids:[4],lv:15,words:'こいつを りっぱに そだててくれ！'},squirtle:{ids:[7],lv:20,words:'この ゼニガメを おねがいできる？'},eevee:{ids:[133,133,133],lv:25,words:'イーブイ 3びきを たいせつに そだててね！'},porygon:{ids:[137],lv:25,words:'ポリゴンを プレゼント！'},dojo:{ids:[106,107],lv:40,words:'よくぞ ここまで きた！ サワムラーと エビワラー、2ひきを たくそう！'},lapras:{ids:[131],lv:45,words:'たすけてくれて ありがとう！ この ラプラスを つれていって！'},fossils:{ids:[138,140,142],lv:45,words:'カセキの ふくげんに せいこうしたぞ！'}};
+ const x=specs[key];if(!x||state.events[key])return;
+ const ok={magikarp:state.cleared>=1,bulbasaur:state.cleared>=2,charmander:state.cleared>=2,squirtle:state.cleared>=3,eevee:state.cleared>=4,porygon:state.cleared>=4,dojo:state.cleared>=6,lapras:extraProgress()>=1,fossils:state.cleared>=7};if(!ok[key])return;
+ const got=[];for(const id of x.ids){let p;if(key==='eevee'){p={uid:Date.now()+'-'+Math.random().toString(36).slice(2,8),id,lv:x.lv,shiny:false,moves:[],auto:true};state.owned.push(p);if(state.team.length<3)state.team.push(p.uid);state.seen=[...new Set([...state.seen,id])];preparePoke(id)}else{p=add(id,x.lv,false)}if(p)got.push(p)}
+ state.events[key]=true;save();render();showModal(`<h2>🎁 とくべつな であい！</h2><p>「${x.words}」</p><div class="row" style="justify-content:center">${got.slice(0,3).map(p=>img(p.id)).join('')}</div><p>${got.length?got.map(p=>name(p.id)).join('・')+'が なかまに なった！':'すでに なかまに いるよ！'}</p><button class="btn wide" onclick="closeModal()">ありがとう！</button>`)
+}
 
 function dexAcquisition(id){
  const eggNames=EGG.filter(e=>e.ids.includes(id)).map(e=>e.name);
  const eventMap={1:'御三家えらぶ／タケシに かった後のプレゼント',4:'御三家えらぶ／カスミに かった後のプレゼント',7:'御三家えらぶ／マチスに かった後のプレゼント',129:'タケシに かった後のイベント',133:'タマムシのプレゼント',137:'タマムシのゲームコーナー',131:'シルフカンパニーのイベント',106:'格闘道場イベント（よてい）',107:'格闘道場イベント（よてい）',138:'化石復元イベント（よてい）',140:'化石復元イベント（よてい）',142:'ひみつのコハク復元（よてい）',143:'カビゴンLv.30のとくべつな バトル（よてい）',144:'伝説の三鳥・とくべつな バトル（よてい）',145:'伝説の三鳥・とくべつな バトル（よてい）',146:'伝説の三鳥・とくべつな バトル（よてい）',150:'クリア後のとくべつな バトル（よてい）',151:'とくべつな イベント（よてい）'};
- if(eventMap[id])return eventMap[id];
+ if([144,145,146].includes(id))return 'でんせつの さんちょうチャレンジで しょうり';if(id===150)return 'グリーンに かったあと ミュウツーに しょうり';if(id===151)return 'ミュウいがいの 150しゅるいを ずかんに とうろく';if(eventMap[id])return eventMap[id];
  if(eggNames.length)return eggNames.join('／');
  const from=Object.entries(EVO).filter(([from,e])=>e[0]===id).map(([from])=>name(Number(from)));
  if(from.length)return from.join('／')+'からしんか';
- if([134,135,136].includes(id))return 'イーブイからしんか';
+ if([134,135,136].includes(id))return 'イーブイを それぞれの いしで しんか';
  return 'ゲットの しかたは今後のストーリーで追加よてい';
 }
 function dexRegistered(id){return state.seen.includes(id)}
@@ -343,28 +507,69 @@ async function openDex(id,shiny=false){
  }catch{let target=$('#dex-data');if(target)target.innerHTML='<p class="muted">くわしくデータを取得できなかったよ。通信状況をかくにんしてね。</p>'}
 }
 
-function renderSettings(){return `<div class="card"><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${state.admin?'ON':'OFF'}</button><hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 こうしん りれき（v2.1）</h2><p class="small"><b>v2.1：</b>親子ポケモンバトルDXを さんこうに、なきごえ（あいて・みかたを べつべつ）、わざ・ダメージの じゅんばんひょうじ、HPバーの アニメーション、こうげきエフェクトを ついか。</p><hr class="separator"><p class="small"><b>v2.1：</b>バトルの あいて・みかたの しかくい はいけいを なくして、フィールドに なじむように しゅうせい。</p><hr class="separator"><p class="small"><b>v2.1：</b>タマゴと レベルアップで ポケエネの のこりを おおきく ひょうじ。レベルアップまえに ひつような ポケエネと つかったあとの のこりも かくにんできるよ。</p><hr class="separator"><p class="small"><b>v2.1：</b>Googleログイン・Firebaseどうき。アプリ名を ポケモン放置冒険に へんこう。</p><hr class="separator"><p class="small"><b>v2.1：</b>バトルDXに あわせて わざの ⓘせつめい、タイプあいしょう、わざの いりょく・めいちゅう・しゅるいを ひょうじ。1バトル1こ、HPと じょうたいいじょうを なおす かいふくのくすりを ついか。</p><hr class="separator"><p class="small"><b>v2.1：</b>わざの おぼえる レベルを ピカブイ きじゅんに へんこう。しんかまえの わざも ひきつづき えらべるよ。</p><hr class="separator"><p class="small"><b>v2.1：</b>つながりのヒモでの しんかも 50ポケエネに とういつしたよ。</p><hr class="separator"><p class="small"><b>v2.1：</b>パーティーを いちばん上に いどう。ボックスに タイプ・いろちがいの しぼりこみと ならびかえを ついか。わざえらびに いりょく・めいちゅう・こうかの せつめいと かくていボタンを ついか。</p><hr class="separator"><p class="small"><b>v2.1：</b>タマゴのレアどを 4だんかいで たためるようにしたよ。ゲットずみの しるし、コンプしたタマゴの いちばん下への いどうも ついか！</p><hr class="separator"><p class="small"><b>v2.1：</b>こどもが よみやすいように、がめんの かんじを ひらがなに かえたよ。あそびかたは そのまま！</p><hr class="separator"><p class="small"><b>v2.1：</b>8つの街それぞれの背景をホーム・ジム画面に追加。バッジ獲得でつぎの街へ自動切り替え。街の操作やショップは増やさず従来の遊び方を維持。</p><hr class="separator"><p class="small"><b>v2.1：</b>カントー151匹のずかん、とうろく・まだひょうじ、絞り込み、つよさ・しんか・ゲットの しかた、いろちがいひょうじ切り替えを追加。</p><hr class="separator"><p class="muted">のうりょくランク±6段階、命中・回避、交代時のランクリセット、ほじょわざの追加に対応。v0.3ではわざのえらぶ肢拡大・パーティー交代・初期化パスワードを追加。バトルDX風UI、オーキド博士の立ち絵（外部画像）、オープニング、なまえ・御三家えらぶ、放置収益、地域タマゴ、レベルいくせい、初代しんか、APIこうげき技えらぶ、簡易3対3ジム戦、基本イベントを搭載。</p><p class="muted">既存バトルDX v4.9.3のトレーナーチームを参照。戦闘は今回のいくせいレベルに対応した簡易版で、DXの全演出・とくしゅ効果・ほじょわざはまだ移植していません。</p></div>`}
-function adminLogin(){if(state.admin){state.admin=false;save();render();return}showModal(`<h2>🔑 かんりしゃモード</h2><p>パスワードを入力してね。</p><input id="adminPass" type="password" class="input" placeholder="パスワード"><button class="btn wide" style="margin-top:12px" onclick="checkAdmin()">認証する</button><button class="btn alt wide" style="margin-top:8px" onclick="closeModal()">もどる</button>`)}
-function checkAdmin(){if($('#adminPass').value!=='daiki')return toast('パスワードが違うよ');state.admin=true;save();closeModal();render();toast('かんりしゃモード ON：ポケエネ無制限')}
+function renderSettings(){return `<div class="card"><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 こうしん りれき（v3.1）</h2><p class="small"><b>v3.1：</b>かんりしゃテストを ほんばんと べつの Firebase データに ぶんり。テスト中は ひょうじを つけ、きりかえても ほんばんを うわがきしないよ。</p><hr class="separator"><p class="small"><b>v3.0：</b>グリーンに はじめて かったとき、オーキドはかせが おいわい！ でんどういりの 3びき・レベル・ひづけを ほぞん。ストーリーから いつでも みられるよ。</p><hr class="separator"><p class="small"><b>v2.9：</b>でんせつチャレンジは まけても なんどでも ポケエネが もらえる！ さんちょうは 50、ミュウツーは 100。かったら なかまになって さいちょうせんは できないよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>ロケット団サカキ・四天王・グリーン・ブルーの しょうぶまえと まけたあとの セリフを こうしん。でんせつ4ひきは とうじょうメッセージと なかまいり、ミュウは オーキドはかせの おいわいを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>ロケット団サカキ、四天王、グリーン、ブルー。さんちょうとミュウツーの 1たいずつの しょうりゲット。150しゅるいで ミュウを もらえる。</p><hr class="separator"><p class="small"><b>v2.8：</b>ジムリーダー8人の とうじょうセリフ・しょうぶするボタン・しょうりごの セリフを ついか。たちえは そのまま。</p><hr class="separator"><p class="small"><b>v2.8：</b>レベル・いし・つながりのヒモの しんかで、ひかり・へんしん・なきごえの えんしゅつを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>バトル中、こうげき・ぼうぎょ・とくこう・とくぼう・すばやさ・めいちゅう・かいひの のうりょくへんかを HPのしたに ひょうじ。こうたいで リセット。</p><hr class="separator"><p class="small"><b>v2.8：</b>親子ポケモンバトルDXを さんこうに、なきごえ（あいて・みかたを べつべつ）、わざ・ダメージの じゅんばんひょうじ、HPバーの アニメーション、こうげきエフェクトを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>バトルの あいて・みかたの しかくい はいけいを なくして、フィールドに なじむように しゅうせい。</p><hr class="separator"><p class="small"><b>v2.8：</b>タマゴと レベルアップで ポケエネの のこりを おおきく ひょうじ。レベルアップまえに ひつような ポケエネと つかったあとの のこりも かくにんできるよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>Googleログイン・Firebaseどうき。アプリ名を ポケモン放置冒険に へんこう。</p><hr class="separator"><p class="small"><b>v2.8：</b>バトルDXに あわせて わざの ⓘせつめい、タイプあいしょう、わざの いりょく・めいちゅう・しゅるいを ひょうじ。1バトル1こ、HPと じょうたいいじょうを なおす かいふくのくすりを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>わざの おぼえる レベルを ピカブイ きじゅんに へんこう。しんかまえの わざも ひきつづき えらべるよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>つながりのヒモでの しんかも 50ポケエネに とういつしたよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>パーティーを いちばん上に いどう。ボックスに タイプ・いろちがいの しぼりこみと ならびかえを ついか。わざえらびに いりょく・めいちゅう・こうかの せつめいと かくていボタンを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>タマゴのレアどを 4だんかいで たためるようにしたよ。ゲットずみの しるし、コンプしたタマゴの いちばん下への いどうも ついか！</p><hr class="separator"><p class="small"><b>v2.8：</b>こどもが よみやすいように、がめんの かんじを ひらがなに かえたよ。あそびかたは そのまま！</p><hr class="separator"><p class="small"><b>v2.8：</b>8つの街それぞれの背景をホーム・ジム画面に追加。バッジ獲得でつぎの街へ自動切り替え。街の操作やショップは増やさず従来の遊び方を維持。</p><hr class="separator"><p class="small"><b>v2.8：</b>カントー151匹のずかん、とうろく・まだひょうじ、絞り込み、つよさ・しんか・ゲットの しかた、いろちがいひょうじ切り替えを追加。</p><hr class="separator"><p class="muted">のうりょくランク±6段階、命中・回避、交代時のランクリセット、ほじょわざの追加に対応。v0.3ではわざのえらぶ肢拡大・パーティー交代・初期化パスワードを追加。バトルDX風UI、オーキド博士の立ち絵（外部画像）、オープニング、なまえ・御三家えらぶ、放置収益、地域タマゴ、レベルいくせい、初代しんか、APIこうげき技えらぶ、簡易3対3ジム戦、基本イベントを搭載。</p><p class="muted">既存バトルDX v4.9.3のトレーナーチームを参照。戦闘は今回のいくせいレベルに対応した簡易版で、DXの全演出・とくしゅ効果・ほじょわざはまだ移植していません。</p></div>`}
+function adminLogin(){
+ if(modeSwitching)return;
+ if(saveMode==='admin'){
+  showModal(`<h2>🏠 いつものぼうけんに もどる</h2><p>テストデータは べつに ほぞんされるよ。</p><button class="btn wide" onclick="closeModal();switchSaveMode('normal')">ほんばんデータに もどる</button><button class="btn alt wide" style="margin-top:8px" onclick="closeModal()">キャンセル</button>`);return;
+ }
+ showModal(`<h2>🔑 かんりしゃテスト</h2><p>テスト用の べつデータで あそべるよ。ほんばんの ぼうけんには えいきょうしないよ。</p><input id="adminPass" type="password" class="input" placeholder="パスワード"><button class="btn wide" style="margin-top:12px" onclick="checkAdmin()">テストモードを ひらく</button><button class="btn alt wide" style="margin-top:8px" onclick="closeModal()">もどる</button>`)
+}
+function checkAdmin(){if($('#adminPass').value!=='daiki')return toast('パスワードが違うよ');closeModal();switchSaveMode('admin')}
+function adminSetProgress(){
+ if(saveMode!=='admin')return;
+ const raw=prompt('ジムバッジの かずを 0〜8 で いれてね',String(state.cleared));
+ if(raw===null)return;
+ const n=Number(raw);
+ if(!Number.isInteger(n)||n<0||n>8)return toast('0〜8 の すうじを いれてね');
+ state.cleared=n;save();render();toast('テストの ジムしんこうを へんこうしたよ');
+}
+function adminLevelTeam(){
+ if(saveMode!=='admin')return;
+ const raw=prompt('パーティーの レベルを 5〜100 で いれてね','50');
+ if(raw===null)return;
+ const n=Number(raw);
+ if(!Number.isInteger(n)||n<5||n>100)return toast('5〜100 の すうじを いれてね');
+ for(const uid of state.team){const p=byUid(uid);if(p)p.lv=n}
+ save();render();toast('テストの パーティーレベルを へんこうしたよ');
+}
 function exportSave(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='kanto_save_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),3000)}
 function importSave(){showModal(`<h2>📂 セーブ読み込み</h2><p>この端末のセーブを上書きするよ。</p><input type="file" id="saveFile" accept=".json,application/json"><button class="btn wide" style="margin-top:12px" onclick="loadSaveFile()">よみこむ</button><button class="btn alt wide" style="margin-top:8px" onclick="closeModal()">キャンセル</button>`)}
-async function loadSaveFile(){let f=$('#saveFile').files[0];if(!f)return toast('ファイルを選んでね');try{let j=JSON.parse(await f.text());if(j.version!==1||!Array.isArray(j.owned)||!Array.isArray(j.team)||!Number.isFinite(j.energy)||typeof j.player!=='string')throw Error();state=j;state.last=Date.now();save();closeModal();render();toast('セーブデータを読み込んだよ')}catch{toast('対応するセーブデータではありません')}}
-function resetGame(){if(prompt('さいしょから やりなおすにはパスワードを入力してね')!=='daiki'){toast('パスワードが違うよ');return}if(!confirm('本当にさいしょから やりなおす？ セーブが消えるよ。'))return;state=fresh();save();tab='home';render()}
+async function loadSaveFile(){let f=$('#saveFile').files[0];if(!f)return toast('ファイルを選んでね');try{let j=JSON.parse(await f.text());if(j.version!==1||!Array.isArray(j.owned)||!Array.isArray(j.team)||!Number.isFinite(j.energy)||typeof j.player!=='string')throw Error();state=j;state.admin=saveMode==='admin';state.last=Date.now();save();closeModal();render();toast('セーブデータを読み込んだよ')}catch{toast('対応するセーブデータではありません')}}
+function resetGame(){if(prompt('さいしょから やりなおすにはパスワードを入力してね')!=='daiki'){toast('パスワードが違うよ');return}if(!confirm('本当にさいしょから やりなおす？ セーブが消えるよ。'))return;state=fresh();state.admin=saveMode==='admin';save();tab='home';render()}
 function fallbackMove(types){let type=types?.[0]||'normal',f=FALLBACK[type]||FALLBACK.normal;return {slug:'fallback-'+type,name:f[0],type,power:f[1],category:f[2],accuracy:100}}
 function statsFor(data,lv){let s=data?.stats||{'hp':55,'attack':55,'defense':55,'special-attack':55,'special-defense':55,'speed':55};let result={};for(let k of ['hp','attack','defense','special-attack','special-defense','speed'])result[k]=k==='hp'?Math.floor(2*s[k]*lv/100)+lv+10:Math.floor(2*s[k]*lv/100)+5;return result}
 async function fighter(id,lv,uid=null){let data;try{data=await fetchPokemon(id)}catch{data={types:['normal'],stats:null,moves:[]}}let p=uid?byUid(uid):null,moves=[];if(p){try{let learned=await learnable(id,lv),slugs=p.auto?learned.slice(-4).map(m=>m.slug):p.moves;moves=slugs.map(s=>learned.find(m=>m.slug===s)).filter(Boolean)}catch{}}else{try{moves=(await learnable(id,lv)).slice(-4)}catch{}}if(!moves.length)moves=[fallbackMove(data.types)];let s=statsFor(data,lv);return {id,uid,lv,shiny:p?.shiny||false,name:name(id),types:data.types||['normal'],stats:s,hp:s.hp,maxHp:s.hp,moves,alive:true,stages:Object.fromEntries(STAGE_KEYS.map(k=>[k,0])),status:null,statusTurns:0,seeded:false}}
-async function startBattle(){if(!state.team.length)return toast('パーティーに1匹は入れてね');if(state.cleared>=8)return;let b=BOSSES[state.cleared];showModal(`<h2>⚔️ ${b.name}にちょうせん！</h2><p>ポケモンたちが準備しているよ…</p>`);try{let allies=await Promise.all(state.team.map(uid=>byUid(uid)).filter(Boolean).map(p=>fighter(p.id,p.lv,p.uid))),enemies=await Promise.all(b.team.map(id=>fighter(id,b.lv)));battle={allies,enemies,ai:0,ei:0,turn:1,boss:b,log:[`${b.name}が勝負をしかけてきた！`],busy:false,potionUsed:false};closeModal();render();battleIntro(battle)}catch(e){closeModal();toast('バトルの準備にしっぱいしたよ')}}
+async function startBattle(){if(!state.team.length)return toast('パーティーに1匹は入れてね');if(state.cleared>=8)return;if(state.cleared===4&&!state.events.snorlax)return toast('カビゴンを たおして みちを ひらこう！');let b=BOSSES[state.cleared];showModal(`<h2>⚔️ ${b.name}にちょうせん！</h2><p>ポケモンたちが準備しているよ…</p>`);try{let allies=await Promise.all(state.team.map(uid=>byUid(uid)).filter(Boolean).map(p=>fighter(p.id,p.lv,p.uid))),enemies=await Promise.all(b.team.map(id=>fighter(id,b.lv)));battle={allies,enemies,ai:0,ei:0,turn:1,boss:b,log:[`${b.name}が勝負をしかけてきた！`],busy:true,potionUsed:false,awaitingIntro:true};showModal(`<h2>🏅 ${b.city}ジム</h2>${gymDialogueCard(state.cleared,'before')}<button class="btn gold wide" onclick="beginGymBattle()">⚔️ しょうぶする！</button>` )}catch(e){closeModal();toast('バトルの準備にしっぱいしたよ')}}
+function beginGymBattle(){if(!battle||!battle.awaitingIntro)return;const b=battle;b.awaitingIntro=false;b.busy=false;closeModal();render();battleIntro(b)}
 function activeMon(side){return battle?.[side][battle[side==='allies'?'ai':'ei']]}
 function hpHtml(p){return `<div class="progress"><i style="width:${Math.max(0,100*p.hp/p.maxHp)}%;background:${p.hp/p.maxHp<.25?'#d95a55':'#31b39b'}"></i></div><div class="muted">HP ${Math.max(0,p.hp)} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ'}[p.status]||''):''}${p.seeded?' · やどりぎ':''}</div>`}
+function stageBadges(p){
+ const labels={'attack':'こうげき','defense':'ぼうぎょ','special-attack':'とくこう','special-defense':'とくぼう','speed':'すばやさ','accuracy':'めいちゅう','evasion':'かいひ'};
+ const st=ensureStages(p);
+ const active=STAGE_KEYS.filter(k=>st[k]!==0);
+ if(!active.length)return '';
+ return `<div class="battle-stage-list" aria-label="のうりょくの へんか">${active.map(k=>`<span class="battle-stage-chip ${st[k]>0?'stage-up':'stage-down'}">${labels[k]} ${st[k]>0?'▲ +':'▼ '}${st[k]}</span>`).join('')}</div>`;
+}
+function updateBattleStageDisplays(){
+ if(!battle)return;
+ for(const [side,id] of [['enemies','enemyStats'],['allies','allyStats']]){
+  const el=document.getElementById(id);if(!el)continue;
+  let list=el.querySelector('.battle-stage-list');
+  const html=stageBadges(activeMon(side));
+  if(list)list.remove();
+  if(html)el.insertAdjacentHTML('beforeend',html);
+ }
+}
 function renderBattle(){
  let b=battle,a=activeMon('allies'),e=activeMon('enemies'),idx=BOSSES.indexOf(b.boss);
  const back=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${a.shiny?'shiny/':''}${a.id}.png`;
  const playerImg=`<img src="${back}" alt="${esc(a.name)}" onerror="this.src='${sprite(a.id,a.shiny)}'">`;
  return `<header class="top"><h1>⚔️ ${b.boss.name}戦</h1><span class="tag">ターン ${b.turn}</span></header>
- <div class="battle-trainer-strip" style="background-image:linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.74)),url('${cityBackdrop(idx)}');background-size:cover;background-position:center"><img src="${trainerImage(idx)}" alt="${b.boss.name}" onerror="this.style.display='none'"><div><strong>${b.boss.city}ジム · ${b.boss.name}</strong><span class="muted">${b.boss.type}タイプ · おすすめLv.${b.boss.lv}</span></div></div>
+ <div class="battle-trainer-strip" style="background-image:linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.74)),url('${cityBackdrop(Math.max(0,idx))}');background-size:cover;background-position:center"><img src="${b.extra?bossPortrait(b.boss):trainerImage(idx)}" alt="${b.boss.name}" onerror="this.style.display='none'"><div><strong>${b.boss.city}${b.extra?"":"ジム"} · ${b.boss.name}</strong><span class="muted">${b.boss.type}タイプ · おすすめLv.${b.boss.lv}</span></div></div>
  <div class="battle-arena" id="battleArena">
-  <div class="battle-field-row enemy-row"><div class="battle-stats" id="enemyStats"><b>${e.name} Lv.${e.lv}</b>${hpHtml(e)}<div class="muted">あいて ${b.ei+1}/${b.enemies.length}匹</div></div><div class="battle-fighter enemy" id="enemyFighter">${img(e.id)}</div></div>
-  <div class="battle-field-row player-row"><div class="battle-fighter player" id="allyFighter">${playerImg}</div><div class="battle-stats" id="allyStats"><b>${a.name} Lv.${a.lv}</b>${hpHtml(a)}<div class="muted">みかた ${b.ai+1}/${b.allies.length}匹</div></div></div>
+  <div class="battle-field-row enemy-row"><div class="battle-stats" id="enemyStats"><b>${e.name} Lv.${e.lv}</b>${hpHtml(e)}<div class="muted">あいて ${b.ei+1}/${b.enemies.length}匹</div>${stageBadges(e)}</div><div class="battle-fighter enemy" id="enemyFighter">${img(e.id)}</div></div>
+  <div class="battle-field-row player-row"><div class="battle-fighter player" id="allyFighter">${playerImg}</div><div class="battle-stats" id="allyStats"><b>${a.name} Lv.${a.lv}</b>${hpHtml(a)}<div class="muted">みかた ${b.ai+1}/${b.allies.length}匹</div>${stageBadges(a)}</div></div>
  </div>
  <div class="battle-feed" id="battleFeed" role="status" aria-live="polite">${esc(b.log[b.log.length-1]||'わざをえらぼう！')}</div><div class="battle-sound-row"><label><input type="checkbox" ${cryEnabled?'checked':''} onchange="setBattleCry(this.checked)"> 🔊 ポケモンの なきごえ</label><span>こうげき・HPの えんしゅつ ON</span></div>
  <div class="card" style="margin-top:12px"><h2>⚡ わざをえらぼう！</h2><div class="grid2 battle-moves">${a.moves.map((m,i)=>`<div class="battle-move-card"><button class="battle-move-attack" ${b.busy?'disabled':''} onclick="playerAttack(${i})"><b>${esc(m.name)}</b><small>${TYPE_JP[m.type]||m.type} · ${m.category==='physical'?'ぶつり':m.category==='special'?'とくしゅ':'へんか'}</small><small>いりょく ${m.power||'—'} ／ めいちゅう ${m.accuracy==null?'—':m.accuracy+'%'}</small>${m.power>0?`<small class="effectiveness">${battleEffectLabel(m,e)}</small>`:''}</button><button class="battle-move-info" onclick="showBattleMoveInfo(${i})" aria-label="${esc(m.name)}のせつめい">ⓘ せつめい</button></div>`).join('')}</div><button class="btn battle-potion wide" ${b.potionUsed||b.busy?'disabled':''} onclick="openBattlePotion()">🧴 かいふくのくすり ${b.potionUsed?'（つかったよ）':'（あと1こ）'}<small>HPと じょうたいを ぜんかいふく</small></button>
@@ -410,6 +615,7 @@ async function animatedAttack(att,def,move,b){
  battleMessage(`${att.name}の ${move.name}！`);await battleWait(480);
  if(battle!==b)return false;
  attack(att,def,move);
+ updateBattleStageDisplays();
  const entries=b.log.slice(logStart),hit=old-def.hp;
  if(hit>0){battleHitEffect(side,hit);animateBattleHp(side,old,def.hp,def.maxHp)}
  for(const message of entries){if(battle!==b)return false;battleMessage(message);await battleWait(message.includes('たおれた')||message.includes('倒れた')?950:hit>0?780:620)}
@@ -535,9 +741,9 @@ async function switchPoke(i){
  if(await animatedSwitchCheck(b))return;
  await animatedTurnEnd(b);
 }
-function retreat(){if(!confirm('ジム戦をやめる？ ペナルティはないよ。'))return;battleSequence++;battle=null;render()}
-function winBattle(){let b=battle.boss,idx=state.cleared;state.cleared++;state.energy+=b.lv*10;save();battle=null;tab='story';render();showModal(`<h2>🏆 ${b.name}に勝利！</h2><div class="badge-win-art">${badgeSvg(idx)}</div><p><b>${b.badge}</b>を手に入れた！<br>かつと もらえる：${b.lv*10} ポケエネ！</p><div class="notice">放置収益が <b>${INCOME[idx]} → ${INCOME[idx+1]} エネ/時</b> にアップ！<br>${EGG[idx+1]?.name||'つぎのぼうけん'}がかいほうされた！</div><button class="btn wide" style="margin-top:13px" onclick="closeModal()">つぎのぼうけんへ！</button>`)}
-function loseBattle(){let b=battle.boss,reward=Math.floor(b.lv*10/2);state.energy+=reward;save();battle=null;render();showModal(`<h2>またちょうせんしよう！</h2><p>${b.name}にはまけてしまった…。<br>でも がんばったごほうび！</p><div class="notice"><b>✨ ${reward} ポケエネ ゲット！</b><br>しょうりボーナスの はんぶんを もらったよ！</div><p>ポケモンをそだててから、もういちど ちょうせんしよう！</p><button class="btn wide" onclick="closeModal()">いくせいにもどる</button>`)}
+function retreat(){if(!confirm('バトルをやめる？ ペナルティはないよ。'))return;battleSequence++;battle=null;render()}
+function winBattle(){if(battle.extra){winExtraBattle();return}let b=battle.boss,idx=state.cleared;state.cleared++;state.energy+=b.lv*10;save();battle=null;tab='story';render();showModal(`<h2>🏆 ${b.name}に勝利！</h2>${gymDialogueCard(idx,'after')}<div class="badge-win-art">${badgeSvg(idx)}</div><p><b>${b.badge}</b>を手に入れた！<br>かつと もらえる：${b.lv*10} ポケエネ！</p><div class="notice">放置収益が <b>${INCOME[idx]} → ${INCOME[idx+1]} エネ/時</b> にアップ！<br>${EGG[idx+1]?.name||'つぎのぼうけん'}がかいほうされた！</div><button class="btn wide" style="margin-top:13px" onclick="closeModal()">つぎのぼうけんへ！</button>`)}
+function loseBattle(){const b=battle.boss;const legend=!!battle.extra&&LEGEND_BOSSES.some(x=>x.key===b.key);const reward=legend?legendLoseReward(b):Math.floor(b.lv*10/2);state.energy+=reward;save();battle=null;tab='story';render();showModal(`<h2>また ちょうせんしよう！</h2><p>${esc(b.name)}には まけてしまった…。<br>でも がんばった ごほうび！</p><div class="notice"><b>✨ ${reward} ポケエネ ゲット！</b><br>${legend?'まけても なんどでも もらえるよ！':'しょうりボーナスの はんぶんを もらったよ！'}</div><p>あと すこしで かてそう！ ポケモンを そだてて また ちょうせんしよう！</p><button class="btn wide" onclick="closeModal()">いくせいにもどる</button>`)}
 window.addEventListener('click',e=>{let t=e.target.closest('[data-tab]');if(t)changeTab(t.dataset.tab)});document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!battle)render()});window.addEventListener('focus',()=>{if(!battle&&state.step>=3)render()});render();
 </script>
 <script type="module">
@@ -550,7 +756,17 @@ let current=null,unsub=null,localEcho=false,activeUid=null;
 window.firebaseBridge={
  async login(){try{await signInWithPopup(auth,provider)}catch(e){if(['auth/popup-blocked','auth/operation-not-supported-in-this-environment'].includes(e.code))await signInWithRedirect(auth,provider);else throw e}},
  logout:()=>signOut(auth),
- async write(data){if(!current)throw Error('ログインしていません');localEcho=true;try{await setDoc(current,{save:data,updatedAt:Date.now()})}finally{setTimeout(()=>localEcho=false,1000)}}
+ async write(data,mode='normal'){
+  if(!current)throw Error('ログインしていません');
+  localEcho=true;
+  try{await setDoc(current,{[mode==='admin'?'adminSave':'save']:data,updatedAt:Date.now()},{merge:true})}
+  finally{setTimeout(()=>localEcho=false,1000)}
+ },
+ async read(mode='normal'){
+  if(!current)throw Error('ログインしていません');
+  const snap=await getDoc(current);
+  return snap.exists()?snap.data()[mode==='admin'?'adminSave':'save']||null:null;
+ }
 };
 getRedirectResult(auth).catch(e=>{cloudStatus='ログインに しっぱいしたよ';console.error(e);render()});
 onAuthStateChanged(auth,async user=>{
@@ -561,12 +777,12 @@ onAuthStateChanged(auth,async user=>{
  try{
   const snap=await getDoc(current);if(activeUid!==uid)return;
   const data=snap.exists()?snap.data().save:null;
-  cloudLoad(user,data);
-  if(!data)await window.firebaseBridge.write(state);
+  cloudLoad(user,data,'normal');
+  if(!data)await window.firebaseBridge.write(state,'normal');
   unsub=onSnapshot(current,ss=>{
    if(activeUid!==uid||!ss.exists()||localEcho)return;
-   const remote=ss.data().save;
-   if(remote&&JSON.stringify(remote)!==JSON.stringify(state))cloudUpdate(remote);
+   const remote=ss.data()[saveMode==='admin'?'adminSave':'save'];
+   if(remote&&JSON.stringify(remote)!==JSON.stringify(state))cloudUpdate(remote,saveMode);
   },e=>{cloudStatus='⚠️ どうきエラー';console.error(e)});
  }catch(e){cloudReady=false;cloudStatus='⚠️ Firestoreの せっていを かくにんしてね';console.error(e);render()}
 });
