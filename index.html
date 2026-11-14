@@ -135,15 +135,27 @@ h1{letter-spacing:.02em;font-size:23px}h2{font-size:18px}
 @keyframes hallRise{from{opacity:0;transform:translateY(18px) scale(.86)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes hallShine{50%{filter:drop-shadow(0 0 14px #ffed94);transform:scale(1.08)}}
 .story-route{display:flex;flex-wrap:wrap;gap:6px}.story-step{font-size:12px;padding:7px 9px;border-radius:10px;background:#f2f4f7;color:#6c7987}.story-done{background:#e6f6ed;color:#238452}.story-current{background:#fff0d9;color:#9b5a10;font-weight:900;border:2px solid #efac50}
-/* v3.5: compact offensive/defensive stat meters and move categories */
+/* v3.9: compact offensive/defensive stat meters and move categories */
 .battle-compact-stats{margin-top:7px;display:grid;gap:5px}.battle-stat-line{display:grid;grid-template-columns:54px minmax(0,1fr) 35px;align-items:center;gap:5px;font-size:10px;font-weight:700}.battle-stat-track{height:9px;border-radius:8px;background:#dfe8f0;overflow:hidden}.battle-stat-fill{height:100%;border-radius:8px;background:#428cda;transition:width .25s}.battle-stat-fill.up{background:#2eae6a}.battle-stat-fill.down{background:#e16b63}.battle-stat-number{text-align:right;font-variant-numeric:tabular-nums}.battle-category{display:inline-flex;align-items:center;gap:3px;font-weight:800}.battle-category.physical{color:#b24e2c}.battle-category.special{color:#3769bc}.battle-category.status{color:#687688}.battle-category-symbol{font-size:14px;line-height:1}.battle-move-attack .battle-category{font-size:11px}
 .nav button[data-tab="events"]{position:relative}.adventure-nav-badge{position:absolute;top:1px;right:4px;display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 4px;border-radius:99px;background:#e63b45;color:white;font-size:11px;font-weight:900;line-height:1;box-shadow:0 1px 3px #0003;pointer-events:none}.adventure-gift-alert{background:#fff2d8;border:2px solid #f1b544;color:#77500c;border-radius:13px;padding:12px 13px;margin:12px 0;font-size:15px;font-weight:900}.adventure-gift-alert .small{font-weight:600;margin-top:5px;color:#80612b}
+.box-poke-item{min-width:0;display:flex;flex-direction:column;gap:5px}
+.box-poke-item>.poke{width:100%;flex:1}
+.box-swap-btn{width:100%;border:1px solid #6d9fe4;background:#e9f3ff;color:#225a9d;border-radius:12px;padding:8px 2px;font-weight:800;font-size:12px;cursor:pointer}
+.box-swap-btn.is-team{background:#edf7ec;border-color:#91c69b;color:#327647}
+.battle-stat-line{display:flex;align-items:center;gap:4px}
+.battle-stat-line>span:first-child{min-width:55px}
+.battle-stat-track{flex:1;min-width:10px}
+.battle-stat-number{min-width:25px;text-align:right}
+.battle-rank{font-size:11px;font-weight:900;border-radius:6px;padding:2px 3px;min-width:25px;text-align:center;white-space:nowrap}
+.battle-rank.up{background:#d8f6df;color:#12632e}
+.battle-rank.down{background:#ffe0df;color:#a21d1d}
+.battle-rank.neutral{background:#eef0f4;color:#69717e}
 </style></head><body><main id="app"></main><div id="nav" class="nav hidden"><div class="nav-inner"><button data-tab="home"><span>🏠</span>ホーム</button><button data-tab="eggs"><span>🥚</span>タマゴ</button><button data-tab="team"><span>🐾</span>ポケモン</button><button data-tab="story"><span>🏅</span>ストーリー</button><button data-tab="events"><span>🎁</span>ぼうけん</button><button data-tab="dex"><span>📖</span>ずかん</button><button data-tab="settings"><span>⚙️</span>せってい</button></div></div><div id="modal" class="dialog hidden"><div class="modal" id="modalContent"></div></div><div id="toast" class="toast hidden"></div><script>
 'use strict';
 const SAVE='kanto-idle-v01', CACHE='kanto-idle-api-v01';
 const NAMES=['フシギダネ','フシギソウ','フシギバナ','ヒトカゲ','リザード','リザードン','ゼニガメ','カメール','カメックス','キャタピー','トランセル','バタフリー','ビードル','コクーン','スピアー','ポッポ','ピジョン','ピジョット','コラッタ','ラッタ','オニスズメ','オニドリル','アーボ','アーボック','ピカチュウ','ライチュウ','サンド','サンドパン','ニドラン♀','ニドリーナ','ニドクイン','ニドラン♂','ニドリーノ','ニドキング','ピッピ','ピクシー','ロコン','キュウコン','プリン','プクリン','ズバット','ゴルバット','ナゾノクサ','クサイハナ','ラフレシア','パラス','パラセクト','コンパン','モルフォン','ディグダ','ダグトリオ','ニャース','ペルシアン','コダック','ゴルダック','マンキー','オコリザル','ガーディ','ウインディ','ニョロモ','ニョロゾ','ニョロボン','ケーシィ','ユンゲラー','フーディン','ワンリキー','ゴーリキー','カイリキー','マダツボミ','ウツドン','ウツボット','メノクラゲ','ドククラゲ','イシツブテ','ゴローン','ゴローニャ','ポニータ','ギャロップ','ヤドン','ヤドラン','コイル','レアコイル','カモネギ','ドードー','ドードリオ','パウワウ','ジュゴン','ベトベター','ベトベトン','シェルダー','パルシェン','ゴース','ゴースト','ゲンガー','イワーク','スリープ','スリーパー','クラブ','キングラー','ビリリダマ','マルマイン','タマタマ','ナッシー','カラカラ','ガラガラ','サワムラー','エビワラー','ベロリンガ','ドガース','マタドガス','サイホーン','サイドン','ラッキー','モンジャラ','ガルーラ','タッツー','シードラ','トサキント','アズマオウ','ヒトデマン','スターミー','バリヤード','ストライク','ルージュラ','エレブー','ブーバー','カイロス','ケンタロス','コイキング','ギャラドス','ラプラス','メタモン','イーブイ','シャワーズ','サンダース','ブースター','ポリゴン','オムナイト','オムスター','カブト','カブトプス','プテラ','カビゴン','フリーザー','サンダー','ファイヤー','ミニリュウ','ハクリュー','カイリュー','ミュウツー','ミュウ'];
 const name=id=>NAMES[id-1]||'#'+id, sprite=(id,shiny=false)=>`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny?'shiny/':''}${id}.png`;
-const EGG=[{name:'まっさらなタマゴ',price:10,ids:[16,19,21,10,13,25,43,69,29,32],weights:[18,16,10,14,14,2,8,8,5,5]},{name:'ニビ色のタマゴ',price:20,ids:[41,74,35,46,39,27,56,23]},{name:'ハナダ色のタマゴ',price:30,ids:[63,48,54,60,118,79]},{name:'クチバ色のタマゴ',price:40,ids:[50,52,81,100,72,98,83]},{name:'タマムシ色のタマゴ',price:50,ids:[37,58,77,84,92,96]},{name:'セキチク色のタマゴ',price:60,ids:[102,111,115,113,128,123,127,147]},{name:'ヤマブキ色のタマゴ',price:70,ids:[122,108,88,109,104,66]},{name:'グレン色のタマゴ',price:80,ids:[90,120,116,86,124,126]},{name:'トキワ色のタマゴ',price:90,ids:[95,114,125,132]}];
+const EGG=[{name:'まっさらなタマゴ',price:10,ids:[16,19,21,10,13,25,43,69,29,32],weights:[18,16,10,14,14,2,8,8,5,5]},{name:'ニビ色のタマゴ',price:10,ids:[41,74,35,46,39,27,56,23]},{name:'ハナダ色のタマゴ',price:10,ids:[63,48,54,60,118,79]},{name:'クチバ色のタマゴ',price:10,ids:[50,52,81,100,72,98,83]},{name:'タマムシ色のタマゴ',price:10,ids:[37,58,77,84,92,96]},{name:'セキチク色のタマゴ',price:10,ids:[102,111,115,113,128,123,127,147]},{name:'ヤマブキ色のタマゴ',price:10,ids:[122,108,88,109,104,66]},{name:'グレン色のタマゴ',price:10,ids:[90,120,116,86,124,126]},{name:'トキワ色のタマゴ',price:10,ids:[95,114,125,132]}];
 function badgeSvg(i){
  const palette=['#9aa4ae','#48b9e7','#f6a23d','#9b75dc','#f38cb8','#d8b54c','#c74843','#49b977'];
  const color=palette[i%palette.length];
@@ -309,7 +321,7 @@ function add(id,lv=5,shiny=Math.random()<.1){if(own(id))return false;let p={uid:
 function byUid(uid){return state.owned.find(p=>p.uid===uid)}
 function cardPoke(p){return `<div class="poke">${img(p.id,p.shiny)}<div class="name">${esc(name(p.id))}${p.shiny?'<span class="shiny"> ✨</span>':''}</div><div class="tiny">Lv.${p.lv}</div></div>`}
 function nav(){let show=state.step>=3;$('#nav').classList.toggle('hidden',!show||!!battle);const count=adventureNoticeCount();document.querySelectorAll('[data-tab]').forEach(x=>{x.classList.toggle('on',x.dataset.tab===tab);if(x.dataset.tab==='events'){let badge=x.querySelector('.adventure-nav-badge');if(count){if(!badge){badge=document.createElement('span');badge.className='adventure-nav-badge';x.appendChild(badge)}badge.textContent=count>9?'9+':String(count);x.setAttribute('aria-label',`ぼうけん、うけとれるイベント ${count}けん`)}else{badge?.remove();x.removeAttribute('aria-label')}}})}
-function render(){if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v3.5 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${state.cleared}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · だい1しょう カントー v3.5</div>`}
+function render(){if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v4.5 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${state.cleared}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · だい1しょう カントー v4.5</div>`}
 function renderIntro(){if(state.step===0)return `<div class="screen-center"><div class="hero" style="text-align:center"><div class="opening-symbol">◉</div><h1>ポケモンの世界へ<br>ようこそ！</h1><p class="intro">ここは ふしぎな いきもの<br>ポケモンたちが くらす せかい。<br>きみだけの ぼうけんが いま はじまる！</p><button class="btn gold wide" onclick="advance(1)">ぼうけんを はじめる →</button></div></div>`;
 if(state.step===1)return `<div class="screen-center"><div class="card intro"><div class="professor"><img src="https://play.pokemonshowdown.com/sprites/trainers/oak.png" alt="オーキド博士" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="professor-fallback" style="display:none">👨‍🔬</div></div><h2>オーキド博士</h2><p>はじめまして！ わしは オーキド。<br>みんなからは ポケモンはかせと よばれておる。</p><p>まずは きみの なまえを おしえてくれるかな？</p><input id="playerName" class="input" maxlength="12" placeholder="トレーナーのなまえ" value="${esc(state.player)}"><button class="btn wide" style="margin-top:12px" onclick="setPlayer()">これで いいよ！</button></div></div>`;
 return `<div class="screen-center"><div class="card"><h2>🌟 パートナーをえらぼう！</h2><p class="intro">この3匹から 1匹を えらぶんじゃ。<br>どのポケモンも Lv.5 から スタート！</p><div class="grid3">${[1,4,7].map(id=>`<button class="poke" onclick="chooseStarter(${id})">${img(id)}<div class="name">${name(id)}</div><div class="tiny">${{1:'くさ',4:'ほのお',7:'みず'}[id]}</div></button>`).join('')}</div></div></div>`}
@@ -383,7 +395,7 @@ function renderTeam(){
  else if(boxSort==='name')filtered.sort((a,b)=>name(a.id).localeCompare(name(b.id),'ja'));
  const typeOptions=[['all','すべて'],...BOX_TYPES.map(t=>[t,TYPE_JP[t]])];
  return `<div class="card"><div class="row between"><h2>🎒 パーティー</h2><span class="tag">${team.length}/3ひき</span></div><p class="muted">ポケモンを タップして いくせい・わざ・いれかえ！</p><div class="grid3" style="margin-top:12px">${Array.from({length:3},(_,i)=>{let p=team[i];return p?`<button class="poke selected" onclick="openPoke('${p.uid}')"><div class="tiny">${i+1}ばん</div>${img(p.id,p.shiny)}<div class="name">${name(p.id)}${p.shiny?' ✨':''}</div><div class="tiny">Lv.${p.lv}</div></button>`:`<div class="poke box-empty"><div class="tiny">${i+1}ばん</div><div class="box-empty-icon">＋</div><div class="name">あき</div></div>`}).join('')}</div></div>
- <div class="card"><div class="row between"><h2>📦 ポケモンボックス</h2><span class="tag">${filtered.length}/${owned.length}ひき</span></div><p class="muted">タイプを えらんで さがせるよ。ふたつのタイプを もつポケモンは どちらでも でるよ。</p><div class="box-controls"><label>タイプで さがす<select class="input" onchange="setBoxType(this.value)">${typeOptions.map(([v,l])=>`<option value="${v}" ${boxType===v?'selected':''}>${l}</option>`).join('')}</select></label><label>ならびかえ<select class="input" onchange="setBoxSort(this.value)"><option value="caught" ${boxSort==='caught'?'selected':''}>ゲットした じゅん</option><option value="number" ${boxSort==='number'?'selected':''}>ずかんばんごう</option><option value="level" ${boxSort==='level'?'selected':''}>レベルが たかいじゅん</option><option value="name" ${boxSort==='name'?'selected':''}>なまえじゅん</option></select></label></div><button class="btn ${boxShiny?'':'alt'} sm" style="margin:10px 0" onclick="toggleBoxShiny()">✨ ${boxShiny?'いろちがいだけ ✓':'いろちがいだけ みる'}</button>${needTypes?'<p class="muted">タイプじょうほうを よみこみちゅう…</p>':''}<div class="grid3" style="margin-top:12px">${filtered.map(p=>`<button class="poke ${state.team.includes(p.uid)?'selected':''}" onclick="openPoke('${p.uid}')">${img(p.id,p.shiny)}<div class="name">${name(p.id)}${p.shiny?' ✨':''}</div><div class="tiny">Lv.${p.lv}${state.team.includes(p.uid)?' · チーム中':''}</div></button>`).join('')||'<p class="muted" style="grid-column:1/-1">あてはまる ポケモンが いないよ。</p>'}</div></div>`;
+ <div class="card"><div class="row between"><h2>📦 ポケモンボックス</h2><span class="tag">${filtered.length}/${owned.length}ひき</span></div><p class="muted">ポケモンの下の「入れ替え」から、手持ち3匹と直接交換できるよ。タイプでも探せるよ。</p><div class="box-controls"><label>タイプで さがす<select class="input" onchange="setBoxType(this.value)">${typeOptions.map(([v,l])=>`<option value="${v}" ${boxType===v?'selected':''}>${l}</option>`).join('')}</select></label><label>ならびかえ<select class="input" onchange="setBoxSort(this.value)"><option value="caught" ${boxSort==='caught'?'selected':''}>ゲットした じゅん</option><option value="number" ${boxSort==='number'?'selected':''}>ずかんばんごう</option><option value="level" ${boxSort==='level'?'selected':''}>レベルが たかいじゅん</option><option value="name" ${boxSort==='name'?'selected':''}>なまえじゅん</option></select></label></div><button class="btn ${boxShiny?'':'alt'} sm" style="margin:10px 0" onclick="toggleBoxShiny()">✨ ${boxShiny?'いろちがいだけ ✓':'いろちがいだけ みる'}</button>${needTypes?'<p class="muted">タイプじょうほうを よみこみちゅう…</p>':''}<div class="grid3" style="margin-top:12px">${filtered.map(p=>`<div class="box-poke-item"><button class="poke ${state.team.includes(p.uid)?'selected':''}" onclick="openPoke('${p.uid}')">${img(p.id,p.shiny)}<div class="name">${name(p.id)}${p.shiny?' ✨':''}</div><div class="tiny">Lv.${p.lv}${state.team.includes(p.uid)?' · チーム中':''}</div></button><button class="box-swap-btn ${state.team.includes(p.uid)?'is-team':''}" onclick="boxTeamAction('${p.uid}')">${state.team.includes(p.uid)?'✓ 手持ち':'🔄 入れ替え'}</button></div>`).join('')||'<p class="muted" style="grid-column:1/-1">あてはまる ポケモンが いないよ。</p>'}</div></div>`;
 }
 function levelCap(){return Math.min(100,Math.max(20,(BOSSES[Math.min(state.cleared,7)]?.lv||70)*2))}
 function openPoke(uid){let p=byUid(uid);if(!p)return;let evo=EVO[p.id],can=evo&&(evo[1]===0||p.lv>=evo[1]),ec=evo?.[2]?50:0;let eText=evo?`${name(evo[0])} ${evo[1]?`Lv.${evo[1]}でしんか`:`${STONE[evo[2]]}（${ec}エネ）`}`:'初代ではこれ以上しんかしない';showModal(`<h2>${name(p.id)} ${p.shiny?'✨':''}</h2><div class="row">${img(p.id,p.shiny)}<div><b class="level">Lv.${p.lv}</b><p class="muted">レベルじょうげん：${levelCap()}</p><p class="muted">レベルを あげると ポケエネを つかうよ</p></div></div>${energyWallet('レベルアップの まえに のこりを かくにんしよう')}${energySpend(cost(p.lv),'Lv.'+p.lv+' → Lv.'+(p.lv+1))}<div class="grid2"><button class="btn" ${p.lv>=levelCap()||(!state.admin&&state.energy<cost(p.lv))?'disabled':''} onclick="levelUp('${uid}',1)">⚡ Lv +1<br><small>${cost(p.lv)} ポケエネ</small></button></div><hr class="separator"><p class="small">しんか：${eText}</p>${p.id===133?`<div class="stack">${[[134,"みずのいし"],[135,"かみなりのいし"],[136,"ほのおのいし"]].map(([to,stone])=>`<button class="btn alt wide" ${own(to)?"disabled":""} onclick="evolve('${uid}',${to})">${name(to)}に しんか（${stone}・50エネ）${own(to)?" ✓":""}</button>`).join("")}</div>`:evo?`<button class="btn alt wide" ${can?"":"disabled"} onclick="evolve('${uid}')">${can?"しんかさせる":"まだしんかできない"}</button>`:""}<hr class="separator"><div class="grid2"><button class="btn alt" onclick="editMoves('${uid}')">⚔️ わざをえらぶ</button><button class="btn ${state.team.includes(uid)?'alt':'dark'}" onclick="toggleTeam('${uid}')">${state.team.includes(uid)?'チームから外す':'パーティーに入れる'}</button></div><button class="btn alt wide" style="margin-top:12px" onclick="closeModal()">閉じる</button>`)}
@@ -415,7 +427,9 @@ function evolve(uid,selectedTo=null){
  if(own(to))return toast('しんか したあとのポケモンをすでに持っているよ');
  let c=kind?50:0;if(!pay(c))return;
  const from=p.id,old=name(from),next=name(to),shiny=!!p.shiny;
- p.id=to;p.moves=[];p.auto=true;
+ // 進化しても選択中の技と自動設定をそのまま引き継ぐ。
+ // 進化後の技候補には進化前の習得技も含まれる。
+ p.id=to;
  state.seen=[...new Set([...state.seen,to])];
  if(shiny)state.shinySeen=[...new Set([...state.shinySeen,to])];
  save();render();preparePoke(to);
@@ -426,6 +440,12 @@ function evolve(uid,selectedTo=null){
    // 鳴き声再生が失敗しても、必ず「やったー！」を押せるようにする。
    try{evolutionCry(to)}finally{finishEvolution()}
  },3400);
+}
+function boxTeamAction(uid){
+ const p=byUid(uid);if(!p)return;
+ if(state.team.includes(uid)){openPoke(uid);return}
+ if(state.team.length<3){state.team.push(uid);save();render();toast(`${name(p.id)}を パーティーに いれたよ！`);return}
+ openSwapPicker(uid);
 }
 let swapCandidate=null,swapSlot=-1;
 function toggleTeam(uid){
@@ -502,7 +522,7 @@ function moveExplanation(m){
   const effects=[STAGE_EFFECTS[m.slug],...(EXTRA_STAGE_EFFECTS[m.slug]||[])].filter(Boolean);
   return effects.map(([stat,n,self])=>`${self?'じぶん':'あいて'}の ${MOVE_STAT_JP[stat]||stat}を ${Math.abs(n)}だんかい ${n>0?'あげる':'さげる'}`).join('／');
  }
- if(m.power>0){let t='あいてに ダメージを あたえる';if(m.ailment!=='none'&&MOVE_AILMENT_JP[m.ailment])t+=`。${m.effectChance?m.effectChance+'%で ':''}${MOVE_AILMENT_JP[m.ailment]}にする（バトルでの こうかは じゅんじ たいおう）`;return t;}
+ if(m.power>0){if(m.slug==='fake-out')return 'せんせいして こうげき！ あいてを かならず ひるませる。でてきて さいしょの ターンだけ せいこうするよ。';let t='あいてに ダメージを あたえる';if(m.ailment!=='none'&&MOVE_AILMENT_JP[m.ailment])t+=`。${m.effectChance?m.effectChance+'%で ':''}${MOVE_AILMENT_JP[m.ailment]}にする（バトルで はつどうするよ）`;return t;}
  return 'こうかを かくにんちゅう';
 }
 function renderMovePicker(){let p=byUid(window._moveUid),moves=window._moveList||[],selected=window._moveSelected||[];if(!p)return;
@@ -536,9 +556,9 @@ function availableAdventureGifts(){
 function adventureNoticeCount(){return state.step>=3?availableAdventureGifts().length:0}
 function renderAdventure(){const gifts=adventureNoticeCount();return `<div class="card"><h2>🎁 ぼうけんの であい</h2>${gifts?`<div class="adventure-gift-alert" role="status">🎉 うけとれる ポケモンが いるよ！ <b>${gifts}けん</b><div class="small">「うけとる」を おして なかまにしよう！</div></div>`:""}<p>ストーリーを すすめると ポケモンを むりょうで うけとれるよ！</p><p class="small">バトルのある カビゴンは ストーリーに いるよ。</p>${renderEvents()}</div>`}
 function eventButton(id,title,detail,available,done){return `<div class="listline"><div class="row between"><div><b>${title}</b><div class="muted">${detail}</div></div><button class="btn sm ${done?'alt':''}" ${!available||done?'disabled':''} onclick="runEvent('${id}')">${done?'受取済':available?'受け取る':'🔒'}</button></div></div>`}
-function renderEvents(){let i=state.cleared,ev=state.events;return `${eventButton('magikarp','コイキング Lv.5','タケシに かった後・おつきみやま',i>=1,!!ev.magikarp)}${eventButton('bulbasaur','フシギダネ Lv.15','カスミに かった後・ハナダシティ',i>=2,!!ev.bulbasaur)}${eventButton('charmander','ヒトカゲ Lv.15','カスミに かった後・24ばんどうろ',i>=2,!!ev.charmander)}${eventButton('squirtle','ゼニガメ Lv.20','マチスに かった後・クチバシティ',i>=3,!!ev.squirtle)}${eventButton('eevee','イーブイ 3びき Lv.25','エリカに かった後・タマムシマンション',i>=4,!!ev.eevee)}${eventButton('porygon','ポリゴン Lv.25','エリカに かった後・ゲームコーナー',i>=4,!!ev.porygon)}${eventButton('dojo','サワムラーと エビワラー Lv.40','ナツメに かった後・かくとうどうじょう',i>=6,!!ev.dojo)}${eventButton('lapras','ラプラス Lv.45','ロケット団ボス・サカキに かった後',extraProgress()>=1,!!ev.lapras)}${eventButton('fossils','オムナイト・カブト・プテラ Lv.45','カツラに かった後・グレンの けんきゅうじょ',i>=7,!!ev.fossils)}`}
+function renderEvents(){let i=state.cleared,ev=state.events;return `${eventButton('magikarp','コイキング Lv.15','タケシに かった後・おつきみやま',i>=1,!!ev.magikarp)}${eventButton('bulbasaur','フシギダネ Lv.20','カスミに かった後・ハナダシティ',i>=2,!!ev.bulbasaur)}${eventButton('charmander','ヒトカゲ Lv.20','カスミに かった後・24ばんどうろ',i>=2,!!ev.charmander)}${eventButton('squirtle','ゼニガメ Lv.25','マチスに かった後・クチバシティ',i>=3,!!ev.squirtle)}${eventButton('eevee','イーブイ 3びき Lv.30','エリカに かった後・タマムシマンション',i>=4,!!ev.eevee)}${eventButton('porygon','ポリゴン Lv.30','エリカに かった後・ゲームコーナー',i>=4,!!ev.porygon)}${eventButton('dojo','サワムラーと エビワラー Lv.40','ナツメに かった後・かくとうどうじょう',i>=6,!!ev.dojo)}${eventButton('lapras','ラプラス Lv.52','ロケット団ボス・サカキに かった後',extraProgress()>=1,!!ev.lapras)}${eventButton('fossils','オムナイト・カブト・プテラ Lv.45','カツラに かった後・グレンの けんきゅうじょ',i>=7,!!ev.fossils)}`}
 function runEvent(key){
- const specs={magikarp:{ids:[129],lv:5,words:'おじさんの コイキングを たいせつに そだてておくれ！'},bulbasaur:{ids:[1],lv:15,words:'このこを たいせつに そだててくれる？'},charmander:{ids:[4],lv:15,words:'こいつを りっぱに そだててくれ！'},squirtle:{ids:[7],lv:20,words:'この ゼニガメを おねがいできる？'},eevee:{ids:[133,133,133],lv:25,words:'イーブイ 3びきを たいせつに そだててね！'},porygon:{ids:[137],lv:25,words:'ポリゴンを プレゼント！'},dojo:{ids:[106,107],lv:40,words:'よくぞ ここまで きた！ サワムラーと エビワラー、2ひきを たくそう！'},lapras:{ids:[131],lv:45,words:'たすけてくれて ありがとう！ この ラプラスを つれていって！'},fossils:{ids:[138,140,142],lv:45,words:'カセキの ふくげんに せいこうしたぞ！'}};
+ const specs={magikarp:{ids:[129],lv:15,words:'おじさんの コイキングを たいせつに そだてておくれ！'},bulbasaur:{ids:[1],lv:20,words:'このこを たいせつに そだててくれる？'},charmander:{ids:[4],lv:20,words:'こいつを りっぱに そだててくれ！'},squirtle:{ids:[7],lv:25,words:'この ゼニガメを おねがいできる？'},eevee:{ids:[133,133,133],lv:30,words:'イーブイ 3びきを たいせつに そだててね！'},porygon:{ids:[137],lv:30,words:'ポリゴンを プレゼント！'},dojo:{ids:[106,107],lv:40,words:'よくぞ ここまで きた！ サワムラーと エビワラー、2ひきを たくそう！'},lapras:{ids:[131],lv:52,words:'たすけてくれて ありがとう！ この ラプラスを つれていって！'},fossils:{ids:[138,140,142],lv:45,words:'カセキの ふくげんに せいこうしたぞ！'}};
  const x=specs[key];if(!x||state.events[key])return;
  const ok={magikarp:state.cleared>=1,bulbasaur:state.cleared>=2,charmander:state.cleared>=2,squirtle:state.cleared>=3,eevee:state.cleared>=4,porygon:state.cleared>=4,dojo:state.cleared>=6,lapras:extraProgress()>=1,fossils:state.cleared>=7};if(!ok[key])return;
  const got=[];for(const id of x.ids){let p;if(key==='eevee'){p={uid:Date.now()+'-'+Math.random().toString(36).slice(2,8),id,lv:x.lv,shiny:false,moves:[],auto:true};state.owned.push(p);if(state.team.length<3)state.team.push(p.uid);state.seen=[...new Set([...state.seen,id])];preparePoke(id)}else{p=add(id,x.lv,false)}if(p)got.push(p)}
@@ -576,7 +596,17 @@ async function openDex(id,shiny=false){
  }catch{let target=$('#dex-data');if(target)target.innerHTML='<p class="muted">くわしくデータを取得できなかったよ。通信状況をかくにんしてね。</p>'}
 }
 
-function renderSettings(){return `<div class="card"><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 こうしん りれき（v3.5）</h2><p class="small"><b>v3.5：</b>ぼうけんで うけとれる ポケモンが いるとき、タブに あかい すうじを ひょうじ。ぼうけん画面にも おしらせを ついか。うけとると すうじが へるよ。</p><hr class="separator"><p class="small"><b>v3.4：</b>タマゴを さいごまで あつめた しゅんかんに おいわいの メッセージ！ ストーリーは いまの ボスだけを ひょうじし、したに ぼうけんの すすみぐあいを ついか。</p><hr class="separator"><p class="small"><b>v3.4：</b>かんりしゃテストを ほんばんと べつの Firebase データに ぶんり。テスト中は ひょうじを つけ、きりかえても ほんばんを うわがきしないよ。</p><hr class="separator"><p class="small"><b>v3.0：</b>グリーンに はじめて かったとき、オーキドはかせが おいわい！ でんどういりの 3びき・レベル・ひづけを ほぞん。ストーリーから いつでも みられるよ。</p><hr class="separator"><p class="small"><b>v2.9：</b>でんせつチャレンジは まけても なんどでも ポケエネが もらえる！ さんちょうは 50、ミュウツーは 100。かったら なかまになって さいちょうせんは できないよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>ロケット団サカキ・四天王・グリーン・ブルーの しょうぶまえと まけたあとの セリフを こうしん。でんせつ4ひきは とうじょうメッセージと なかまいり、ミュウは オーキドはかせの おいわいを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>ロケット団サカキ、四天王、グリーン、ブルー。さんちょうとミュウツーの 1たいずつの しょうりゲット。150しゅるいで ミュウを もらえる。</p><hr class="separator"><p class="small"><b>v2.8：</b>ジムリーダー8人の とうじょうセリフ・しょうぶするボタン・しょうりごの セリフを ついか。たちえは そのまま。</p><hr class="separator"><p class="small"><b>v2.8：</b>レベル・いし・つながりのヒモの しんかで、ひかり・へんしん・なきごえの えんしゅつを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>バトル中、こうげき・ぼうぎょ・とくこう・とくぼう・すばやさ・めいちゅう・かいひの のうりょくへんかを HPのしたに ひょうじ。こうたいで リセット。</p><hr class="separator"><p class="small"><b>v2.8：</b>親子ポケモンバトルDXを さんこうに、なきごえ（あいて・みかたを べつべつ）、わざ・ダメージの じゅんばんひょうじ、HPバーの アニメーション、こうげきエフェクトを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>バトルの あいて・みかたの しかくい はいけいを なくして、フィールドに なじむように しゅうせい。</p><hr class="separator"><p class="small"><b>v2.8：</b>タマゴと レベルアップで ポケエネの のこりを おおきく ひょうじ。レベルアップまえに ひつような ポケエネと つかったあとの のこりも かくにんできるよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>Googleログイン・Firebaseどうき。アプリ名を ポケモン放置冒険に へんこう。</p><hr class="separator"><p class="small"><b>v2.8：</b>バトルDXに あわせて わざの ⓘせつめい、タイプあいしょう、わざの いりょく・めいちゅう・しゅるいを ひょうじ。1バトル1こ、HPと じょうたいいじょうを なおす かいふくのくすりを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>わざの おぼえる レベルを ピカブイ きじゅんに へんこう。しんかまえの わざも ひきつづき えらべるよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>つながりのヒモでの しんかも 50ポケエネに とういつしたよ。</p><hr class="separator"><p class="small"><b>v2.8：</b>パーティーを いちばん上に いどう。ボックスに タイプ・いろちがいの しぼりこみと ならびかえを ついか。わざえらびに いりょく・めいちゅう・こうかの せつめいと かくていボタンを ついか。</p><hr class="separator"><p class="small"><b>v2.8：</b>タマゴのレアどを 4だんかいで たためるようにしたよ。ゲットずみの しるし、コンプしたタマゴの いちばん下への いどうも ついか！</p><hr class="separator"><p class="small"><b>v2.8：</b>こどもが よみやすいように、がめんの かんじを ひらがなに かえたよ。あそびかたは そのまま！</p><hr class="separator"><p class="small"><b>v2.8：</b>8つの街それぞれの背景をホーム・ジム画面に追加。バッジ獲得でつぎの街へ自動切り替え。街の操作やショップは増やさず従来の遊び方を維持。</p><hr class="separator"><p class="small"><b>v2.8：</b>カントー151匹のずかん、とうろく・まだひょうじ、絞り込み、つよさ・しんか・ゲットの しかた、いろちがいひょうじ切り替えを追加。</p><hr class="separator"><p class="muted">のうりょくランク±6段階、命中・回避、交代時のランクリセット、ほじょわざの追加に対応。v0.3ではわざのえらぶ肢拡大・パーティー交代・初期化パスワードを追加。バトルDX風UI、オーキド博士の立ち絵（外部画像）、オープニング、なまえ・御三家えらぶ、放置収益、地域タマゴ、レベルいくせい、初代しんか、APIこうげき技えらぶ、簡易3対3ジム戦、基本イベントを搭載。</p><p class="muted">既存バトルDX v4.9.3のトレーナーチームを参照。戦闘は今回のいくせいレベルに対応した簡易版で、DXの全演出・とくしゅ効果・ほじょわざはまだ移植していません。</p></div>`}
+function renderSettings(){return `<div class="card"><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 更新履歴（v4.5）</h2><p class="small"><b>v4.5：</b>ぼうけんで受け取れるポケモンのレベルを次のジム・ボスに合わせて調整。</p><hr class="separator"><p class="small"><b>v4.5：</b>ねこだましの優先度+3、登場後最初の攻撃時だけ成功、命中時100%ひるみを実装。通常のひるみも相手が行動前のときだけ有効に修正。</p><hr class="separator">
+<p class="small"><b>v3.8：</b>攻撃技の追加効果（まひ・やけど・こおり・どく・ねむり・ひるみ）を確率で発動するよう修正。</p><hr class="separator"><p class="small"><b>v4.2：</b>倒れたときに次のポケモンを選べるよう変更。<br>すべてのタマゴの価格を10ポケエネに統一。</p>
+<hr class="separator"><p class="small"><b>v3.7：</b>ボックスから直接パーティーを入れ替えるボタンを追加。更新履歴を漢字表記に変更。</p>
+<hr class="separator"><p class="small"><b>v3.6：</b>進化演出が終了しない問題を修正。鳴き声の処理とスキップボタンを改善。</p>
+<hr class="separator"><p class="small"><b>v3.9：</b>冒険で受け取れるポケモンがいるとき、タブに通知件数を表示。</p>
+<hr class="separator"><p class="small"><b>v3.4：</b>技のタイプ相性を色分けして表示。</p>
+<hr class="separator"><p class="small"><b>v3.3：</b>バトルに能力グラフと物理・特殊技のマークを追加。</p>
+<hr class="separator"><p class="small"><b>v3.2：</b>タマゴコンプリートのお祝い表示とストーリー進捗画面を追加。</p>
+<hr class="separator"><p class="small"><b>v3.1：</b>管理者テストと通常プレイのセーブデータを分離。</p>
+<hr class="separator"><p class="small"><b>v3.0：</b>殿堂入り演出と記録を追加。</p>
+<hr class="separator"><p class="small"><b>v2.9以前：</b>伝説チャレンジ、図鑑、ジム、バトル、タマゴ、進化、Firebase同期などを追加。</p></div>`}
 function adminLogin(){
  if(modeSwitching)return;
  if(saveMode==='admin'){
@@ -612,7 +642,7 @@ async function fighter(id,lv,uid=null){let data;try{data=await fetchPokemon(id)}
 async function startBattle(){if(!state.team.length)return toast('パーティーに1匹は入れてね');if(state.cleared>=8)return;if(state.cleared===4&&!state.events.snorlax)return toast('カビゴンを たおして みちを ひらこう！');let b=BOSSES[state.cleared];showModal(`<h2>⚔️ ${b.name}にちょうせん！</h2><p>ポケモンたちが準備しているよ…</p>`);try{let allies=await Promise.all(state.team.map(uid=>byUid(uid)).filter(Boolean).map(p=>fighter(p.id,p.lv,p.uid))),enemies=await Promise.all(b.team.map(id=>fighter(id,b.lv)));battle={allies,enemies,ai:0,ei:0,turn:1,boss:b,log:[`${b.name}が勝負をしかけてきた！`],busy:true,potionUsed:false,awaitingIntro:true};showModal(`<h2>🏅 ${b.city}ジム</h2>${gymDialogueCard(state.cleared,'before')}<button class="btn gold wide" onclick="beginGymBattle()">⚔️ しょうぶする！</button>` )}catch(e){closeModal();toast('バトルの準備にしっぱいしたよ')}}
 function beginGymBattle(){if(!battle||!battle.awaitingIntro)return;const b=battle;b.awaitingIntro=false;b.busy=false;closeModal();render();battleIntro(b)}
 function activeMon(side){return battle?.[side][battle[side==='allies'?'ai':'ei']]}
-function hpHtml(p){return `<div class="progress"><i style="width:${Math.max(0,100*p.hp/p.maxHp)}%;background:${p.hp/p.maxHp<.25?'#d95a55':'#31b39b'}"></i></div><div class="muted">HP ${Math.max(0,p.hp)} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ'}[p.status]||''):''}${p.seeded?' · やどりぎ':''}</div>`}
+function hpHtml(p){return `<div class="progress"><i style="width:${Math.max(0,100*p.hp/p.maxHp)}%;background:${p.hp/p.maxHp<=.2?'#e34848':p.hp/p.maxHp<=.5?'#efc13b':'#31b39b'}"></i></div><div class="muted">HP ${Math.max(0,p.hp)} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ',burn:'やけど',freeze:'こおり'}[p.status]||''):''}${p.seeded?' · やどりぎ':''}</div>`}
 function stageBadges(p){
  const labels={'attack':'こうげき','defense':'ぼうぎょ','special-attack':'とくこう','special-defense':'とくぼう','speed':'すばやさ','accuracy':'めいちゅう','evasion':'かいひ'};
  const st=ensureStages(p);
@@ -622,10 +652,13 @@ function stageBadges(p){
 }
 function updateBattleStageDisplays(){
  if(!battle)return;
- for(const [side,id] of [['enemies','enemyStats'],['allies','allyStats']]){
+ for(const [side,id,keys] of [['enemies','enemyStats',['defense','special-defense']],['allies','allyStats',['attack','special-attack']]]){
   const el=document.getElementById(id);if(!el)continue;
+  const p=activeMon(side);
+  const stats=el.querySelector('.battle-compact-stats');
+  if(stats)stats.outerHTML=compactBattleStats(p,keys);
   let list=el.querySelector('.battle-stage-list');
-  const html=stageBadges(activeMon(side));
+  const html=stageBadges(p);
   if(list)list.remove();
   if(html)el.insertAdjacentHTML('beforeend',html);
  }
@@ -635,7 +668,8 @@ function compactBattleStats(p,keys){
  return `<div class="battle-compact-stats" aria-label="バトルの能力値">${keys.map(k=>{
   const base=Math.max(1,Number(p.stats?.[k])||1), rank=ensureStages(p)[k], val=Math.round(effectiveStat(p,k));
   const width=Math.max(5,Math.min(100,val/Math.max(200,base*2)*100));
-  return `<div class="battle-stat-line"><span>${titles[k]}</span><span class="battle-stat-track"><span class="battle-stat-fill ${rank>0?'up':rank<0?'down':''}" style="display:block;width:${width}%"></span></span><span class="battle-stat-number">${val}</span></div>`;
+  const change=rank>0?`<span class="battle-rank up">+${rank}</span>`:rank<0?`<span class="battle-rank down">${rank}</span>`:`<span class="battle-rank neutral">±0</span>`;
+  return `<div class="battle-stat-line"><span>${titles[k]}</span><span class="battle-stat-track"><span class="battle-stat-fill ${rank>0?'up':rank<0?'down':''}" style="display:block;width:${width}%"></span></span><span class="battle-stat-number">${val}</span>${change}</div>`;
  }).join('')}</div>`;
 }
 function battleCategoryMark(m){const cat=m.category==='physical'?'physical':m.category==='special'?'special':'status';return `<span class="battle-category ${cat}"><span class="battle-category-symbol" aria-hidden="true">${cat==='physical'?'⚔':cat==='special'?'✦':'◇'}</span>${cat==='physical'?'ぶつり':cat==='special'?'とくしゅ':'へんか'}</span>`}
@@ -650,7 +684,7 @@ function renderBattle(){
   <div class="battle-field-row player-row"><div class="battle-fighter player" id="allyFighter">${playerImg}</div><div class="battle-stats" id="allyStats"><b>${a.name} Lv.${a.lv}</b>${hpHtml(a)}<div class="muted">みかた ${b.ai+1}/${b.allies.length}匹</div>${compactBattleStats(a,['attack','special-attack'])}</div></div>
  </div>
  <div class="battle-feed" id="battleFeed" role="status" aria-live="polite">${esc(b.log[b.log.length-1]||'わざをえらぼう！')}</div><div class="battle-sound-row"><label><input type="checkbox" ${cryEnabled?'checked':''} onchange="setBattleCry(this.checked)"> 🔊 ポケモンの なきごえ</label><span>こうげき・HPの えんしゅつ ON</span></div>
- <div class="card" style="margin-top:12px"><h2>⚡ わざをえらぼう！</h2><div class="grid2 battle-moves">${a.moves.map((m,i)=>`<div class="battle-move-card"><button class="battle-move-attack" ${b.busy?'disabled':''} onclick="playerAttack(${i})"><b>${esc(m.name)}</b><small>${TYPE_JP[m.type]||m.type} · ${battleCategoryMark(m)}</small><small>いりょく ${m.power||'—'} ／ めいちゅう ${m.accuracy==null?'—':m.accuracy+'%'}</small>${m.power>0?`<small class="effectiveness ${battleEffectClass(m,e)}">${battleEffectLabel(m,e)}</small>`:''}</button><button class="battle-move-info" onclick="showBattleMoveInfo(${i})" aria-label="${esc(m.name)}のせつめい">ⓘ せつめい</button></div>`).join('')}</div><button class="btn battle-potion wide" ${b.potionUsed||b.busy?'disabled':''} onclick="openBattlePotion()">🧴 かいふくのくすり ${b.potionUsed?'（つかったよ）':'（あと1こ）'}<small>HPと じょうたいを ぜんかいふく</small></button>
+ ${b.awaitingReplacement?'<button class="btn wide" onclick="showFaintedSwitchPicker()">🔄 つぎの ポケモンを えらぶ</button>':''}<div class="card" style="margin-top:12px"><h2>⚡ わざをえらぼう！</h2><div class="grid2 battle-moves">${a.moves.map((m,i)=>`<div class="battle-move-card"><button class="battle-move-attack" ${b.busy?'disabled':''} onclick="playerAttack(${i})"><b>${esc(m.name)}</b><small>${TYPE_JP[m.type]||m.type} · ${battleCategoryMark(m)}</small><small>いりょく ${m.power||'—'} ／ めいちゅう ${m.accuracy==null?'—':m.accuracy+'%'}</small>${m.power>0?`<small class="effectiveness ${battleEffectClass(m,e)}">${battleEffectLabel(m,e)}</small>`:''}</button><button class="battle-move-info" onclick="showBattleMoveInfo(${i})" aria-label="${esc(m.name)}のせつめい">ⓘ せつめい</button></div>`).join('')}</div><button class="btn battle-potion wide" ${b.potionUsed||b.busy?'disabled':''} onclick="openBattlePotion()">🧴 かいふくのくすり ${b.potionUsed?'（つかったよ）':'（あと1こ）'}<small>HPと じょうたいを ぜんかいふく</small></button>
  <hr class="separator"><h3>🔄 ポケモンを交代</h3><div class="battle-party" style="margin-top:9px">${b.allies.map((p,i)=>`<button class="poke ${i===b.ai?'selected':''} ${p.hp<=0?'locked':''}" ${p.hp<=0||i===b.ai||b.busy?'disabled':''} onclick="switchPoke(${i})">${img(p.id,p.shiny)}<div class="name">${p.name}</div><div class="tiny">HP ${p.hp}/${p.maxHp}</div></button>`).join('')}</div>
  <details style="margin-top:12px"><summary class="small">📜 バトルログを見る</summary><div class="log" id="battleLog">${b.log.slice(-15).map(x=>`<div>${esc(x)}</div>`).join('')}</div></details>
  <button class="btn alt wide" style="margin-top:13px" onclick="retreat()">バトルをやめる（ペナルティなし）</button></div>`;
@@ -672,7 +706,7 @@ function battleHitEffect(side,damage){
 function animateBattleHp(side,from,to,max){
  const el=document.getElementById(side==='enemies'?'enemyStats':'allyStats');if(!el)return;
  const bar=el.querySelector('.progress i'),label=el.querySelector('.progress + .muted');
- if(bar){bar.style.transition='none';bar.style.width=`${Math.max(0,100*from/max)}%`;void bar.offsetWidth;bar.style.transition='width .7s ease-out,background-color .4s';bar.style.width=`${Math.max(0,100*to/max)}%`;bar.style.background=to/max<.25?'#d95a55':to/max<.5?'#e8af3e':'#31b39b'}
+ if(bar){bar.style.transition='none';bar.style.width=`${Math.max(0,100*from/max)}%`;void bar.offsetWidth;bar.style.transition='width .7s ease-out,background-color .4s';bar.style.width=`${Math.max(0,100*to/max)}%`;bar.style.background=to/max<=.2?'#e34848':to/max<=.5?'#efc13b':'#31b39b'}
  if(label){const initial=label.textContent;label.textContent=initial.replace(/HP\s*\d+\s*\/\s*\d+/,`HP ${Math.max(0,to)} / ${max}`)}
 }
 async function battleIntro(b){
@@ -704,8 +738,30 @@ async function animatedSwitchCheck(b){
  const oldEnemy=b.ei,oldAlly=b.ai;
  if(endCheck())return true;
  if(b.ei!==oldEnemy){render();battleMessage(`${b.boss.name}は ${activeMon('enemies').name}を くりだした！`);playBattleCry(activeMon('enemies'));await battleWait(1050)}
+ if(b.awaitingReplacement){
+  b.busy=true;render();
+  showFaintedSwitchPicker();
+  return true;
+ }
  if(b.ai!==oldAlly){render();battleMessage(`いけ！ ${activeMon('allies').name}！`);playBattleCry(activeMon('allies'));await battleWait(1050)}
  return battle!==b;
+}
+function showFaintedSwitchPicker(){
+ if(!battle||!battle.awaitingReplacement)return;
+ const choices=battle.allies.map((p,i)=>p.hp>0?`<button class="battle-heal-choice" onclick="chooseFaintedReplacement(${i})">${img(p.id,p.shiny)}<span><b>${esc(p.name)} Lv.${p.lv}</b><small>HP ${p.hp} / ${p.maxHp}</small></span><span>えらぶ →</span></button>`:'').join('');
+ showModal(`<h2>💫 ポケモンが たおれた！</h2><p>つぎに たたかう ポケモンを えらんでね！</p><div class="battle-heal-list">${choices}</div>`);
+ // 選択するまで閉じても、戦闘画面に再選択ボタンを表示する。
+}
+async function chooseFaintedReplacement(i){
+ if(!battle||!battle.awaitingReplacement||battle.allies[i]?.hp<=0)return;
+ const b=battle;
+ closeModal();b.awaitingReplacement=false;
+ resetStages(activeMon('allies'));b.ai=i;enterBattleMon(activeMon('allies'));enterBattleMon(activeMon('allies'));
+ b.log.push(`${state.player}は ${activeMon('allies').name}を くりだした！`);
+ render();battleMessage(`いけ！ ${activeMon('allies').name}！`);playBattleCry(activeMon('allies'));
+ await battleWait(950);
+ if(battle!==b)return;
+ b.turn++;b.busy=false;render();battleMessage('つぎの わざを えらぼう！');
 }
 async function animatedTurnEnd(b){
  if(battle!==b)return;
@@ -725,7 +781,7 @@ function showBattleMoveInfo(i){
 }
 function openBattlePotion(){
  if(!battle||battle.busy||battle.potionUsed)return;
- showModal(`<h2>🧴 かいふくのくすり</h2><p>かいふくする ポケモンを タップしてね！<br>HPと じょうたいいじょうを ぜんかいふくするよ。</p><div class="battle-heal-list">${battle.allies.map((p,i)=>`<button class="battle-heal-choice" ${p.hp<=0?'disabled':''} onclick="useBattlePotion(${i})">${img(p.id,p.shiny)}<span><b>${esc(p.name)} Lv.${p.lv}</b><small>HP ${p.hp} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ'}[p.status]||p.status):''}</small></span><span>${p.hp<=0?'ひんし':'えらぶ →'}</span></button>`).join('')}</div><p class="muted small">1バトルに 1こだけ。つかうと あいても こうどうするよ。</p><button class="btn alt wide" onclick="closeModal()">やめる</button>`);
+ showModal(`<h2>🧴 かいふくのくすり</h2><p>かいふくする ポケモンを タップしてね！<br>HPと じょうたいいじょうを ぜんかいふくするよ。</p><div class="battle-heal-list">${battle.allies.map((p,i)=>`<button class="battle-heal-choice" ${p.hp<=0?'disabled':''} onclick="useBattlePotion(${i})">${img(p.id,p.shiny)}<span><b>${esc(p.name)} Lv.${p.lv}</b><small>HP ${p.hp} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ',burn:'やけど',freeze:'こおり'}[p.status]||p.status):''}</small></span><span>${p.hp<=0?'ひんし':'えらぶ →'}</span></button>`).join('')}</div><p class="muted small">1バトルに 1こだけ。つかうと あいても こうどうするよ。</p><button class="btn alt wide" onclick="closeModal()">やめる</button>`);
 }
 function useBattlePotion(i){
  if(!battle||battle.busy||battle.potionUsed)return;
@@ -773,9 +829,36 @@ function applyStatusMove(att,def,m){
  def.status=status;def.statusTurns=status==='sleep'?2+Math.floor(Math.random()*2):0;
  battle.log.push(`${def.name}は ${status==='sleep'?'ねむってしまった':status==='poison'?'どくになった':'まひした'}！`);return true
 }
-function canAct(p){if(p.status==='sleep'){p.statusTurns--;if(p.statusTurns>0){battle.log.push(`${p.name}は ねむっている…`);return false}p.status=null;battle.log.push(`${p.name}は めを さました！`)}if(p.status==='paralysis'&&Math.random()<.25){battle.log.push(`${p.name}は まひして うごけない！`);return false}return true}
-function endTurnEffects(){for(const p of [activeMon('allies'),activeMon('enemies')]){if(!p||p.hp<=0)continue;if(p.status==='poison'){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は どくで ${n}ダメージ！`)}if(p.seeded&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);const other=p===activeMon('allies')?activeMon('enemies'):activeMon('allies');if(other&&other.hp>0)other.hp=Math.min(other.maxHp,other.hp+n);battle.log.push(`${p.name}は やどりぎで ${n}HP すいとられた！`)}}}
+function applyAttackSecondary(att,def,m){
+ if(def.hp<=0)return;
+ const ail=m.ailment||'none',chance=Number(m.effectChance)||0;
+ if(!chance||Math.random()*100>=chance)return;
+ if(ail==='flinch'){
+  if(def.actedThisTurn)return;
+  def.flinched=true;battle.log.push(`${def.name}は ひるんだ！`);return;
+ }
+ const statuses={paralysis:'paralysis',burn:'burn',freeze:'freeze',poison:'poison',sleep:'sleep'};
+ const status=statuses[ail];if(!status||def.status)return;
+ if(status==='paralysis'&&def.types.includes('electric'))return;
+ if(status==='burn'&&def.types.includes('fire'))return;
+ if(status==='freeze'&&def.types.includes('ice'))return;
+ if(status==='poison'&&def.types.some(t=>['poison','steel'].includes(t)))return;
+ def.status=status;def.statusTurns=status==='sleep'?2+Math.floor(Math.random()*2):0;
+ const label={paralysis:'まひした',burn:'やけどした',freeze:'こおってしまった',poison:'どくになった',sleep:'ねむってしまった'}[status];
+ battle.log.push(`${def.name}は ${label}！`);
+}
+function canAct(p){
+ if(p.flinched){p.flinched=false;battle.log.push(`${p.name}は ひるんで うごけない！`);return false}
+ if(p.status==='sleep'){p.statusTurns--;if(p.statusTurns>0){battle.log.push(`${p.name}は ねむっている…`);return false}p.status=null;battle.log.push(`${p.name}は めを さました！`)}
+ if(p.status==='freeze'){if(Math.random()<.2){p.status=null;battle.log.push(`${p.name}の こおりが とけた！`)}else{battle.log.push(`${p.name}は こおって うごけない！`);return false}}
+ if(p.status==='paralysis'&&Math.random()<.25){battle.log.push(`${p.name}は まひして うごけない！`);return false}
+ return true
+}
+function endTurnEffects(){for(const p of [activeMon('allies'),activeMon('enemies')])if(p)p.flinched=false;for(const p of [activeMon('allies'),activeMon('enemies')]){if(!p||p.hp<=0)continue;if(p.status==='poison'){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は どくで ${n}ダメージ！`)}if(p.status==='burn'&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/16));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は やけどで ${n}ダメージ！`)}if(p.seeded&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);const other=p===activeMon('allies')?activeMon('enemies'):activeMon('allies');if(other&&other.hp>0)other.hp=Math.min(other.maxHp,other.hp+n);battle.log.push(`${p.name}は やどりぎで ${n}HP すいとられた！`)}}}
 function attack(att,def,m){
+ const fakeOut=m.slug==='fake-out';
+ if(fakeOut&&att.fakeOutUsed){battle.log.push(`${att.name}の ${m.name}！ しかし しっぱいした！`);return}
+ if(fakeOut)att.fakeOutUsed=true;
  if(!canAct(att))return;
  if(Math.random()*100>=hitChance(att,def,m)){battle.log.push(`${att.name}の ${m.name}！ しかし外れた！`);return}
  if(m.category==='status'){
@@ -787,28 +870,32 @@ function attack(att,def,m){
  if(mult===0){battle.log.push(`${att.name}の ${m.name}！ 効果がない…`);return}
  let n=damage(att,def,m);def.hp=Math.max(0,def.hp-n);
  battle.log.push(`${att.name}の ${m.name}！ ${n}ダメージ！${mult>1?' 効果はバツグン！':mult<1?' 効果はいまひとつ…':''}`);
- if(def.hp===0)battle.log.push(`${def.name}は倒れた！`)
+ if(def.hp===0)battle.log.push(`${def.name}は倒れた！`);else if(fakeOut){if(!def.actedThisTurn){def.flinched=true;battle.log.push(`${def.name}は ひるんだ！`)}}else applyAttackSecondary(att,def,m)
 }
 function battleSpeed(p){return effectiveStat(p,'speed')}
+function battlePriority(m){return m.slug==='fake-out'?3:Number(m.priority)||0}
+function enterBattleMon(p){p.fakeOutUsed=false;p.flinched=false;p.actedThisTurn=false}
 function resetStages(p){p.stages=Object.fromEntries(STAGE_KEYS.map(k=>[k,0]))}
 function nextAlive(arr){return arr.findIndex(p=>p.hp>0)}
-function endCheck(){if(activeMon('enemies').hp<=0){let n=nextAlive(battle.enemies);if(n<0){winBattle();return true}battle.ei=n;resetStages(activeMon('enemies'));battle.log.push(`${battle.boss.name}は ${activeMon('enemies').name}をくりだした！`)}if(activeMon('allies').hp<=0){let n=nextAlive(battle.allies);if(n<0){loseBattle();return true}battle.ai=n;resetStages(activeMon('allies'));battle.log.push(`${state.player}は ${activeMon('allies').name}をくりだした！`)}return false}
+function endCheck(){if(activeMon('enemies').hp<=0){let n=nextAlive(battle.enemies);if(n<0){winBattle();return true}battle.ei=n;resetStages(activeMon('enemies'));enterBattleMon(activeMon('enemies'));battle.log.push(`${battle.boss.name}は ${activeMon('enemies').name}をくりだした！`)}if(activeMon('allies').hp<=0){let n=nextAlive(battle.allies);if(n<0){loseBattle();return true}battle.awaitingReplacement=true;}return false}
 async function playerAttack(i){
  if(!battle||battle.busy)return;
  const b=battle,a=activeMon('allies'),e=activeMon('enemies'),m=a.moves[i];if(!m)return;
  b.busy=true;render();
  const em=e.moves[Math.floor(Math.random()*e.moves.length)];
- const first=battleSpeed(a)>battleSpeed(e)||(battleSpeed(a)===battleSpeed(e)&&Math.random()<.5);
+ a.actedThisTurn=false;e.actedThisTurn=false;
+ const first=battlePriority(m)>battlePriority(em)||(battlePriority(m)===battlePriority(em)&&(battleSpeed(a)>battleSpeed(e)||(battleSpeed(a)===battleSpeed(e)&&Math.random()<.5)));
  const order=first?[[a,e,m],[e,a,em]]:[[e,a,em],[a,e,m]];
  for(const [att,def,move] of order){
   if(battle!==b)return;
   if(att.hp<=0||def.hp<=0)break;
   await animatedAttack(att,def,move,b);
+  att.actedThisTurn=true;
   if(await animatedSwitchCheck(b))return;
   // ひんし・交代が起きたターンは次の攻撃を行わない
   if(activeMon('allies')!==a||activeMon('enemies')!==e)break;
  }
- if(battle===b)await animatedTurnEnd(b);
+ if(battle===b&&!b.awaitingReplacement)await animatedTurnEnd(b);
 }
 async function switchPoke(i){
  if(!battle||battle.busy||battle.allies[i]?.hp<=0||i===battle.ai)return;
@@ -816,7 +903,7 @@ async function switchPoke(i){
  b.log.push(`${state.player}は ${activeMon('allies').name}に こうたいした！`);render();
  battleMessage(`いけ！ ${activeMon('allies').name}！`);playBattleCry(activeMon('allies'));await battleWait(950);
  if(battle!==b)return;
- const e=activeMon('enemies'),a=activeMon('allies');await animatedAttack(e,a,e.moves[Math.floor(Math.random()*e.moves.length)],b);
+ const e=activeMon('enemies'),a=activeMon('allies');e.actedThisTurn=false;a.actedThisTurn=false;await animatedAttack(e,a,e.moves[Math.floor(Math.random()*e.moves.length)],b);e.actedThisTurn=true;
  if(await animatedSwitchCheck(b))return;
  await animatedTurnEnd(b);
 }
