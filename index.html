@@ -151,7 +151,7 @@ h1{letter-spacing:.02em;font-size:23px}h2{font-size:18px}
 .battle-rank.down{background:#ffe0df;color:#a21d1d}
 .battle-rank.neutral{background:#eef0f4;color:#69717e}
 
-/* v5.1 フィールド型UI：カードを減らし、画面全体をゲームの舞台にする */
+/* v5.3 フィールド型UI：カードを減らし、画面全体をゲームの舞台にする */
 :root{color:#19344a;background:#9cdbf1}
 html{min-height:100%;background:#9cdbf1}
 body{
@@ -224,7 +224,7 @@ function cityBanner(i){const b=BOSSES[Math.min(7,i)];return `<div class="city-ba
 const TRAINER_KEYS=['brock','misty','ltsurge','erika','koga','sabrina','blaine','giovanni'];
 function trainerImage(i){return 'https://play.pokemonshowdown.com/sprites/trainers/'+TRAINER_KEYS[i]+'.png'}
 const BOSSES=[{name:'タケシ',city:'ニビ',type:'いわ',lv:10,team:[74,75,95],badge:'グレーバッジ'},{name:'カスミ',city:'ハナダ',type:'みず',lv:15,team:[118,120,121],badge:'ブルーバッジ'},{name:'マチス',city:'クチバ',type:'でんき',lv:20,team:[100,25,26],badge:'オレンジバッジ'},{name:'エリカ',city:'タマムシ',type:'くさ',lv:25,team:[114,71,45],badge:'レインボーバッジ'},{name:'キョウ',city:'セキチク',type:'どく',lv:30,team:[109,89,110],badge:'ピンクバッジ'},{name:'ナツメ',city:'ヤマブキ',type:'エスパー',lv:35,team:[122,97,65],badge:'ゴールドバッジ'},{name:'カツラ',city:'グレン',type:'ほのお',lv:40,team:[77,78,59],badge:'クリムゾンバッジ'},{name:'サカキ',city:'トキワ',type:'じめん',lv:45,team:[51,34,112],badge:'グリーンバッジ'}];
-// 親子ポケモンバトルDX v5.1.3のカントー編の手持ちを参考にした追加ボス
+// 親子ポケモンバトルDX v5.3.3のカントー編の手持ちを参考にした追加ボス
 const EXTRA_BOSSES=[
  {key:'rocket',name:'サカキ',city:'ロケット団アジト',type:'ノーマル',lv:48,team:[52,115,53],before:'わたしは ロケット団の サカキ！ じゃまを するなら ようしゃは しない！',after:'この わたしが まけるとは……。きみの つよさは ほんものだな'},
  {key:'lorelei',name:'カンナ',city:'ポケモンリーグ',type:'こおり',lv:52,team:[87,124,131],before:'わたしは カンナ！ こおりポケモンの つよさを みせてあげる！',after:'すごいわね！ あなたの じつりょくを みとめるわ'},
@@ -311,7 +311,8 @@ function fresh(){return {version:1,player:'',step:0,starter:null,energy:100,last
 // v2.8は旧データを移行せず、クラウドから開始する
 state=fresh();
 function save(){
- state.last=Date.now();
+ // セーブ前に未精算の放置収益を必ず加算する。
+ earn(true);
  if(!cloudReady||cloudApplying)return;
  cloudDirty=true;clearTimeout(cloudTimer);cloudTimer=setTimeout(syncSave,800);
 }
@@ -361,7 +362,7 @@ async function syncSaveAfterSwitch(mode){
  await window.firebaseBridge.write(JSON.parse(JSON.stringify(state)),mode);
  cloudDirty=false;
 }
-function earn(){let now=Date.now(),dt=Math.max(0,Math.min(now-state.last,365*864e5));if(!state.admin)state.energy+=dt/3600000*INCOME[Math.min(state.cleared,8)];state.last=now;if(dt>60000)save()}
+function earn(fromSave=false){let now=Date.now(),dt=Math.max(0,Math.min(now-(Number(state.last)||now),365*864e5));if(!state.admin)state.energy+=dt/3600000*INCOME[Math.min(state.cleared,8)];state.last=now;if(dt>60000&&!fromSave)save()}
 function money(n){return state.admin?'∞':Math.floor(n).toLocaleString('ja-JP')}
 function cost(n){return n+1}
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
@@ -375,7 +376,7 @@ function add(id,lv=5,shiny=Math.random()<.1){if(own(id))return false;let p={uid:
 function byUid(uid){return state.owned.find(p=>p.uid===uid)}
 function cardPoke(p){return `<div class="poke">${img(p.id,p.shiny)}<div class="name">${esc(name(p.id))}${p.shiny?'<span class="shiny"> ✨</span>':''}</div><div class="tiny">Lv.${p.lv}</div></div>`}
 function nav(){let show=state.step>=3;$('#nav').classList.toggle('hidden',!show||!!battle);const count=adventureNoticeCount();document.querySelectorAll('[data-tab]').forEach(x=>{x.classList.toggle('on',x.dataset.tab===tab);if(x.dataset.tab==='events'){let badge=x.querySelector('.adventure-nav-badge');if(count){if(!badge){badge=document.createElement('span');badge.className='adventure-nav-badge';x.appendChild(badge)}badge.textContent=count>9?'9+':String(count);x.setAttribute('aria-label',`ぼうけん、うけとれるイベント ${count}けん`)}else{badge?.remove();x.removeAttribute('aria-label')}}})}
-function render(){document.body.dataset.scene=battle?'battle':tab;if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v5.1 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${state.cleared}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · だい1しょう カントー v5.1</div>`}
+function render(){document.body.dataset.scene=battle?'battle':tab;if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v5.3 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${state.cleared}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · だい1しょう カントー v5.3</div>`}
 function renderIntro(){if(state.step===0)return `<div class="screen-center"><div class="hero" style="text-align:center"><div class="opening-symbol">◉</div><h1>ポケモンの世界へ<br>ようこそ！</h1><p class="intro">ここは ふしぎな いきもの<br>ポケモンたちが くらす せかい。<br>きみだけの ぼうけんが いま はじまる！</p><button class="btn gold wide" onclick="advance(1)">ぼうけんを はじめる →</button></div></div>`;
 if(state.step===1)return `<div class="screen-center"><div class="card intro"><div class="professor"><img src="https://play.pokemonshowdown.com/sprites/trainers/oak.png" alt="オーキド博士" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="professor-fallback" style="display:none">👨‍🔬</div></div><h2>オーキド博士</h2><p>はじめまして！ わしは オーキド。<br>みんなからは ポケモンはかせと よばれておる。</p><p>まずは きみの なまえを おしえてくれるかな？</p><input id="playerName" class="input" maxlength="12" placeholder="トレーナーのなまえ" value="${esc(state.player)}"><button class="btn wide" style="margin-top:12px" onclick="setPlayer()">これで いいよ！</button></div></div>`;
 return `<div class="screen-center"><div class="card"><h2>🌟 パートナーをえらぼう！</h2><p class="intro">この3匹から 1匹を えらぶんじゃ。<br>どのポケモンも Lv.10 から スタート！</p><div class="grid3">${[1,4,7].map(id=>`<button class="poke" onclick="chooseStarter(${id})">${img(id)}<div class="name">${name(id)}</div><div class="tiny">${{1:'くさ',4:'ほのお',7:'みず'}[id]}</div></button>`).join('')}</div></div></div>`}
@@ -657,7 +658,7 @@ async function openDex(id,shiny=false){
  }catch{let target=$('#dex-data');if(target)target.innerHTML='<p class="muted">くわしくデータを取得できなかったよ。通信状況をかくにんしてね。</p>'}
 }
 
-function renderSettings(){return `<div class="card"><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 更新履歴（v5.1）</h2><p class="small"><b>v5.1：</b>草原・青空・街の雰囲気を取り入れたゲーム風の背景に刷新。画面ごとの色分け、半透明パネル、立体的なボタンに変更。ゲーム進行とセーブ仕様は維持。</p><hr class="separator"><p class="small"><b>v5.1：</b>タマゴから生まれるポケモンのレベルを次のジムに合わせて変更（Lv.10〜45）。</p><hr class="separator"><p class="small"><b>v5.1：</b>すいとる・メガドレイン・ギガドレインなどの攻撃技にHP吸収効果を追加。</p><hr class="separator"><p class="small"><b>v5.1：</b>ぼうけんで受け取れるポケモンのレベルを次のジム・ボスに合わせて調整。</p><hr class="separator"><p class="small"><b>v5.1：</b>ねこだましの優先度+3、登場後最初の攻撃時だけ成功、命中時100%ひるみを実装。通常のひるみも相手が行動前のときだけ有効に修正。</p><hr class="separator">
+function renderSettings(){return `<div class="card"><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div><button class="btn gold wide" style="margin-top:10px" onclick="adminGiftEnergy()">🎁 大貴に ポケエネを プレゼント</button><p class="small">本番セーブに追加するよ。テストデータのポケエネは減らないよ。</p></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 更新履歴（v5.3）</h2><p class="small"><b>v5.3：</b>管理者テスト画面から本番データにポケエネをプレゼントできる機能を追加。</p><hr class="separator"><p class="small"><b>v5.3：</b>草原・青空・街の雰囲気を取り入れたゲーム風の背景に刷新。画面ごとの色分け、半透明パネル、立体的なボタンに変更。ゲーム進行とセーブ仕様は維持。</p><hr class="separator"><p class="small"><b>v5.3：</b>タマゴから生まれるポケモンのレベルを次のジムに合わせて変更（Lv.10〜45）。</p><hr class="separator"><p class="small"><b>v5.3：</b>すいとる・メガドレイン・ギガドレインなどの攻撃技にHP吸収効果を追加。</p><hr class="separator"><p class="small"><b>v5.3：</b>ぼうけんで受け取れるポケモンのレベルを次のジム・ボスに合わせて調整。</p><hr class="separator"><p class="small"><b>v5.3：</b>ねこだましの優先度+3、登場後最初の攻撃時だけ成功、命中時100%ひるみを実装。通常のひるみも相手が行動前のときだけ有効に修正。</p><hr class="separator">
 <p class="small"><b>v3.8：</b>攻撃技の追加効果（まひ・やけど・こおり・どく・ねむり・ひるみ）を確率で発動するよう修正。</p><hr class="separator"><p class="small"><b>v4.2：</b>倒れたときに次のポケモンを選べるよう変更。<br>すべてのタマゴの価格を10ポケエネに統一。</p>
 <hr class="separator"><p class="small"><b>v3.7：</b>ボックスから直接パーティーを入れ替えるボタンを追加。更新履歴を漢字表記に変更。</p>
 <hr class="separator"><p class="small"><b>v3.6：</b>進化演出が終了しない問題を修正。鳴き声の処理とスキップボタンを改善。</p>
@@ -676,6 +677,22 @@ function adminLogin(){
  showModal(`<h2>🔑 かんりしゃテスト</h2><p>テスト用の べつデータで あそべるよ。ほんばんの ぼうけんには えいきょうしないよ。</p><input id="adminPass" type="password" class="input" placeholder="パスワード"><button class="btn wide" style="margin-top:12px" onclick="checkAdmin()">テストモードを ひらく</button><button class="btn alt wide" style="margin-top:8px" onclick="closeModal()">もどる</button>`)
 }
 function checkAdmin(){if($('#adminPass').value!=='daiki')return toast('パスワードが違うよ');closeModal();switchSaveMode('admin')}
+let giftSending=false;
+async function adminGiftEnergy(){
+ if(saveMode!=='admin'||!cloudReady||giftSending)return;
+ const raw=prompt('大貴に なんポケエネ プレゼントする？（1〜100000）','100');
+ if(raw===null)return;
+ const amount=Number(raw);
+ if(!Number.isSafeInteger(amount)||amount<1||amount>100000)return toast('1〜100000の すうじを いれてね');
+ if(!confirm(`大貴の いつものぼうけんに ${amount.toLocaleString('ja-JP')} ポケエネを プレゼントする？`))return;
+ giftSending=true;
+ try{
+  await window.firebaseBridge.giftEnergy(amount);
+  toast(`🎁 ${amount.toLocaleString('ja-JP')} ポケエネを プレゼントしたよ！`);
+  showModal(`<h2>🎁 プレゼント かんりょう！</h2><p>大貴の ほんばんデータに <b>${amount.toLocaleString('ja-JP')} ポケエネ</b>を おくったよ！</p><p class="small">大貴の画面に反映されない場合は、いちど画面を開き直してね。</p><button class="btn wide" onclick="closeModal()">OK！</button>`);
+ }catch(e){console.error(e);toast('プレゼントに しっぱいしたよ。もういちど ためしてね')}
+ finally{giftSending=false}
+}
 function adminSetProgress(){
  if(saveMode!=='admin')return;
  const raw=prompt('ジムバッジの かずを 0〜8 で いれてね',String(state.cleared));
@@ -986,7 +1003,7 @@ window.addEventListener('click',e=>{let t=e.target.closest('[data-tab]');if(t)ch
 <script type="module">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithRedirect,getRedirectResult,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-import {getFirestore,doc,getDoc,setDoc,onSnapshot} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+import {getFirestore,doc,getDoc,setDoc,onSnapshot,runTransaction} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
 const config={apiKey:"AIzaSyB8Kq8SKvTBceijeHVTOzTTcqs_1Cd6QKE",authDomain:"pokemon-idle-adventure.firebaseapp.com",projectId:"pokemon-idle-adventure",storageBucket:"pokemon-idle-adventure.firebasestorage.app",messagingSenderId:"330354142380",appId:"1:330354142380:web:46a3f1ee89a0150b684309"};
 const auth=getAuth(initializeApp(config)),db=getFirestore(),provider=new GoogleAuthProvider();
 let current=null,unsub=null,localEcho=false,activeUid=null;
@@ -998,6 +1015,16 @@ window.firebaseBridge={
   localEcho=true;
   try{await setDoc(current,{[mode==='admin'?'adminSave':'save']:data,updatedAt:Date.now()},{merge:true})}
   finally{setTimeout(()=>localEcho=false,1000)}
+ },
+ async giftEnergy(amount){
+  if(!current)throw Error('ログインしていません');
+  if(!Number.isSafeInteger(amount)||amount<1||amount>100000)throw Error('不正な数量');
+  await runTransaction(db,async tx=>{
+   const snap=await tx.get(current),data=snap.data()||{},normal=data.save;
+   if(!normal||normal.version!==1||!Number.isFinite(normal.energy))throw Error('本番セーブがありません');
+   const updated={...normal,energy:normal.energy+amount};
+   tx.update(current,{save:updated,updatedAt:Date.now()});
+  });
  },
  async read(mode='normal'){
   if(!current)throw Error('ログインしていません');
