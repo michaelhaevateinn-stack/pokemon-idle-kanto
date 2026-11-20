@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#123c51"><title>ポケモン放置冒険 v7.2</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#123c51"><title>ポケモン放置冒険 v7.3</title><style>
 :root{font-family:system-ui,-apple-system,'Hiragino Kaku Gothic ProN',sans-serif;color:#183444;background:#eaf3f3}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}main{max-width:690px;margin:auto;min-height:100dvh;padding:14px 13px 90px}h1,h2,h3,p{margin:0}h1{font-size:25px}h2{font-size:19px;margin-bottom:9px}h3{font-size:16px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:4px 0 14px}.muted{color:#68808d;font-size:12px;line-height:1.6}.small{font-size:13px}.card{background:white;border:1px solid #d6e7e9;border-radius:20px;padding:17px;margin-bottom:12px;box-shadow:0 5px 15px #0e4b6510}.hero{background:linear-gradient(130deg,#12475d,#227d80);color:white;border-radius:22px;padding:22px;margin-bottom:14px}.hero .muted{color:#d5eff0}.btn{border:0;border-radius:12px;background:#187e85;color:white;font-weight:800;padding:12px 15px;min-height:43px}.btn.alt{background:#e9f4f5;color:#17606b}.btn.gold{background:#e8ae32;color:#372500}.btn.dark{background:#153e53}.btn.sm{padding:7px 10px;min-height:34px;font-size:12px}.btn:active{transform:scale(.98)}.wide{width:100%}.row{display:flex;align-items:center;gap:10px}.between{justify-content:space-between}.stack{display:grid;gap:9px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.tag{display:inline-block;background:#e9f3f6;border-radius:99px;padding:4px 9px;color:#276075;font-weight:750;font-size:11px}.stat{background:#f0f7f8;border-radius:13px;padding:11px}.stat b{font-size:22px}.poke{border:1px solid #d8e5e7;border-radius:15px;padding:10px;text-align:center;background:#fff}.poke img{width:90px;height:90px;object-fit:contain;image-rendering:pixelated}.poke .name{font-weight:800;font-size:13px;min-height:23px}.poke.selected{outline:3px solid #1d9a9d;background:#edfcfa}.poke .tiny{font-size:11px;color:#67808c}.nav{position:fixed;z-index:20;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #d6e6e7;display:flex;justify-content:center;padding:6px max(6px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom))}.nav-inner{display:flex;max-width:690px;width:100%;gap:3px}.nav button{flex:1;background:transparent;border:0;color:#607c85;font-size:11px;font-weight:800;padding:7px 1px}.nav button.on{color:#127f82;background:#eaf7f6;border-radius:12px}.nav span{display:block;font-size:20px;margin-bottom:2px}.hidden{display:none!important}.dialog{position:fixed;inset:0;z-index:50;background:#102f3ab8;display:grid;place-items:center;padding:15px}.modal{background:white;border-radius:22px;padding:20px;max-width:440px;width:100%;max-height:85dvh;overflow:auto}.modal h2{margin-bottom:10px}.modal p{line-height:1.7;margin-bottom:13px}.input{width:100%;border:2px solid #c5dcde;border-radius:12px;padding:13px;background:#fff}.progress{height:10px;background:#dbe9eb;border-radius:30px;overflow:hidden}.progress i{display:block;height:100%;background:#37b0a4}.log{background:#f0f6f8;border-radius:12px;padding:10px;min-height:70px;max-height:180px;overflow:auto;font-size:12px;line-height:1.7}.battlemon{display:flex;gap:10px;align-items:center;border:1px solid #e1ebec;border-radius:16px;padding:10px;margin:8px 0}.battlemon img{width:94px;height:94px;image-rendering:pixelated}.battlemon>div{flex:1}.move{border:1px solid #d2e4e6;border-radius:11px;padding:10px;background:#f5fafb;text-align:left;min-height:58px}.move b{display:block}.move small{color:#607c86}.separator{border:0;border-top:1px solid #e0ebed;margin:13px 0}.notice{background:#fff7dd;border-radius:12px;padding:11px;font-size:13px;line-height:1.6}.shiny{color:#c3820e}.level{font-weight:900;color:#177e82}.badge{font-size:27px}.listline{padding:10px 0;border-bottom:1px solid #e5eff0}.listline:last-child{border-bottom:0}.choose{border:2px solid #d4e4e5;background:#fff;border-radius:13px;padding:12px;text-align:left}.choose.on{border-color:#14968b;background:#e7faf6}.toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#173e4d;color:#fff;padding:12px 18px;border-radius:12px;z-index:90;max-width:90%;font-weight:700;text-align:center;box-shadow:0 8px 30px #0003}.flair{font-size:46px;text-align:center;margin:8px}.screen-center{min-height:85dvh;display:flex;flex-direction:column;justify-content:center}.intro{font-size:15px;line-height:1.85;margin:14px 0}.intro img{display:block;margin:auto;width:150px;height:150px;object-fit:contain}.footer{font-size:11px;color:#77919a;text-align:center;margin:14px 0}.battlemon.enemy{background:#fff4ee}.battlemon.ally{background:#edf9f8}.locked{opacity:.55}
 
 /* v2.8: 親子ポケモンバトルDXの配色・カード・ボタンに寄せたタップUI。十字キーなし */
@@ -548,6 +548,48 @@ const HOENN_MOVE_UPDATE_NOTICE='前のバージョンで選んだ技の一部は
 </script>
 <script>
 'use strict';
+// Shared Pokémon move rules v1. Generated from move-rules.cjs; do not edit per app.
+const SharedMoveEffects = (() => {
+  'use strict';
+  const rows = {"absorb":{"drain":0.5},"acid-spray":{"target":{"special-defense":-2}},"agility":{"self":{"speed":2}},"air-slash":{"flinch":30},"amnesia":{"self":{"special-defense":2}},"aqua-step":{"self":{"speed":1}},"arm-cannon":{"self":{"defense":-1,"special-defense":-1}},"barrier":{"self":{"defense":2}},"bite":{"flinch":30},"blizzard":{"status":"freeze","chance":10},"body-slam":{"status":"paralysis","chance":30},"brave-bird":{"recoil":0.3333333333333333},"bulk-up":{"self":{"attack":1,"defense":1}},"bulldoze":{"target":{"speed":-1}},"calm-mind":{"self":{"special-attack":1,"special-defense":1}},"charm":{"target":{"attack":-2}},"close-combat":{"self":{"defense":-1,"special-defense":-1}},"coil":{"self":{"attack":1,"defense":1,"accuracy":1}},"confuse-ray":{"confuse":100,"accuracy":100},"cotton-spore":{"target":{"speed":-2}},"crunch":{"target":{"defense":-1},"chance":20},"dark-pulse":{"flinch":20},"defense-curl":{"self":{"defense":1}},"detect":{"protect":true,"priority":4},"discharge":{"status":"paralysis","chance":30},"double-edge":{"recoil":0.3333333333333333},"double-team":{"self":{"evasion":1}},"draco-meteor":{"self":{"special-attack":-2}},"dragon-ascent":{"self":{"defense":-1,"special-defense":-1}},"dragon-dance":{"self":{"attack":1,"speed":1}},"drain-punch":{"drain":0.5},"draining-kiss":{"drain":0.75},"dream-eater":{"drain":0.5,"requiresSleep":true},"drum-beating":{"target":{"speed":-1}},"earth-power":{"target":{"special-defense":-1},"chance":10},"ember":{"status":"burn","chance":10},"energy-ball":{"target":{"special-defense":-1},"chance":10},"fake-out":{"flinch":100,"priority":3},"fake-tears":{"target":{"special-defense":-2}},"feather-dance":{"target":{"attack":-2}},"fiery-wrath":{"flinch":20},"fire-blast":{"status":"burn","chance":10},"flame-charge":{"self":{"speed":1}},"flamethrower":{"status":"burn","chance":10},"flare-blitz":{"recoil":0.3333333333333333,"status":"burn","chance":10},"flash":{"target":{"accuracy":-1}},"flash-cannon":{"target":{"special-defense":-1},"chance":10},"flower-shield":{"self":{"defense":1}},"focus-blast":{"target":{"special-defense":-1},"chance":10},"freezing-glare":{"status":"freeze","chance":10},"geomancy":{"self":{"special-attack":2,"special-defense":2,"speed":2}},"giga-drain":{"drain":0.5},"growl":{"target":{"attack":-1}},"growth":{"self":{"attack":1,"special-attack":1}},"hammer-arm":{"self":{"speed":-1}},"harden":{"self":{"defense":1}},"head-smash":{"recoil":0.5},"headbutt":{"flinch":30},"heal-order":{"recover":0.5},"hone-claws":{"self":{"attack":1,"accuracy":1}},"horn-leech":{"drain":0.5},"howl":{"self":{"attack":1}},"hypnosis":{"status":"sleep","chance":100},"ice-beam":{"status":"freeze","chance":10},"ice-hammer":{"self":{"speed":-1}},"ice-punch":{"status":"freeze","chance":10},"icy-wind":{"target":{"speed":-1}},"iron-defense":{"self":{"defense":2}},"iron-head":{"flinch":30},"iron-tail":{"target":{"defense":-1},"chance":30},"kinesis":{"target":{"accuracy":-1}},"leaf-storm":{"self":{"special-attack":-2}},"leech-life":{"drain":0.5},"leer":{"target":{"defense":-1}},"liquidation":{"target":{"defense":-1},"chance":20},"lumina-crash":{"target":{"special-defense":-2}},"luster-purge":{"target":{"special-defense":-1},"chance":50},"make-it-rain":{"self":{"special-attack":-1}},"matcha-gotcha":{"status":"burn","chance":20},"meditate":{"self":{"attack":1}},"mega-drain":{"drain":0.5},"metal-sound":{"target":{"special-defense":-2}},"milk-drink":{"recover":0.5},"minimize":{"self":{"evasion":2}},"mist-ball":{"target":{"special-attack":-1},"chance":50},"moonblast":{"target":{"special-attack":-1},"chance":30},"moonlight":{"recover":0.5},"morning-sun":{"recover":0.5},"mud-shot":{"target":{"speed":-1}},"mystical-fire":{"target":{"special-attack":-1},"chance":100},"nasty-plot":{"self":{"special-attack":2}},"night-shade":{"fixedLevel":true,"type":"ghost","category":"special","accuracy":100,"priority":0},"oblivion-wing":{"drain":0.75},"outrage":{"rampage":true,"type":"dragon","category":"physical","power":120,"accuracy":100,"priority":0},"overheat":{"self":{"special-attack":-2}},"parabolic-charge":{"drain":0.5},"petal-dance":{"rampage":true,"type":"grass","category":"special","power":120,"accuracy":100,"priority":0},"poison-jab":{"status":"poison","chance":30},"poison-powder":{"status":"poison","chance":100},"power-up-punch":{"self":{"attack":1}},"protect":{"protect":true,"priority":4},"psychic":{"target":{"special-defense":-1},"chance":10},"quiver-dance":{"self":{"special-attack":1,"special-defense":1,"speed":1}},"razor-shell":{"target":{"defense":-1},"chance":50},"recover":{"recover":0.5},"rock-slide":{"flinch":30},"rock-smash":{"target":{"defense":-1},"chance":50},"rock-tomb":{"target":{"speed":-1}},"roost":{"recover":0.5},"sand-attack":{"target":{"accuracy":-1}},"scale-shot":{"self":{"defense":-1,"speed":1}},"scary-face":{"target":{"speed":-2}},"screech":{"target":{"defense":-2}},"seismic-toss":{"fixedLevel":true,"type":"fighting","category":"physical","accuracy":100,"priority":0},"shadow-ball":{"target":{"special-defense":-1},"chance":20},"sharpen":{"self":{"attack":1}},"shell-smash":{"self":{"attack":2,"special-attack":2,"speed":2,"defense":-1,"special-defense":-1}},"shore-up":{"recover":0.5},"sing":{"status":"sleep","chance":100},"slack-off":{"recover":0.5},"sleep-powder":{"status":"sleep","chance":100},"sludge":{"status":"poison","chance":30},"sludge-bomb":{"status":"poison","chance":30},"smokescreen":{"target":{"accuracy":-1}},"snarl":{"target":{"special-attack":-1}},"soft-boiled":{"recover":0.5},"spore":{"status":"sleep","chance":100},"stomp":{"flinch":30},"string-shot":{"target":{"speed":-2}},"struggle-bug":{"target":{"special-attack":-1}},"stun-spore":{"status":"paralysis","chance":100},"sucker-punch":{"priority":1},"superpower":{"self":{"attack":-1,"defense":-1}},"supersonic":{"confuse":100},"sweet-kiss":{"confuse":100},"swords-dance":{"self":{"attack":2}},"synthesis":{"recover":0.5},"tail-glow":{"self":{"special-attack":3}},"tail-whip":{"target":{"defense":-1}},"take-down":{"recoil":0.25},"teeter-dance":{"confuse":100},"thrash":{"rampage":true,"type":"normal","category":"physical","power":120,"accuracy":100,"priority":0},"thunder":{"status":"paralysis","chance":30},"thunder-punch":{"status":"paralysis","chance":10},"thunder-wave":{"status":"paralysis","chance":100},"thunderbolt":{"status":"paralysis","chance":10},"thunderous-kick":{"target":{"defense":-1}},"tickle":{"target":{"attack":-1,"defense":-1}},"torch-song":{"self":{"special-attack":1}},"toxic":{"status":"toxic","chance":100,"accuracy":90},"v-create":{"self":{"defense":-1,"special-defense":-1,"speed":-1}},"volt-tackle":{"recoil":0.3333333333333333,"status":"paralysis","chance":10},"waterfall":{"flinch":20},"wild-charge":{"recoil":0.25},"will-o-wisp":{"status":"burn","chance":100},"withdraw":{"self":{"defense":1}},"wood-hammer":{"recoil":0.3333333333333333},"work-up":{"self":{"attack":1,"special-attack":1}},"zen-headbutt":{"flinch":20}};
+  for (const rule of Object.values(rows)) {
+    if (rule.self) Object.freeze(rule.self);
+    if (rule.target) Object.freeze(rule.target);
+    Object.freeze(rule);
+  }
+  const rules = Object.freeze(Object.assign(Object.create(null), rows));
+  const clampStage = value => Math.max(-6, Math.min(6, Number(value) || 0));
+  const accuracyFactor = (accuracyStage, evasionStage) => {
+    const delta = clampStage(clampStage(accuracyStage) - clampStage(evasionStage));
+    return delta >= 0 ? (3 + delta) / 3 : 3 / (3 - delta);
+  };
+  const damageBase = (level, power, attack, defense) =>
+    (2 * Math.max(1, Number(level) || 1) / 5 + 2) * power * attack / Math.max(1, defense) / 50 + 2;
+  const turns = (kind, rng = Math.random) => {
+    if (!['confusion', 'sleep', 'rampage'].includes(kind)) throw new RangeError('Unknown countdown: ' + kind);
+    return 2 + Math.floor(rng() * (kind === 'confusion' ? 3 : 2));
+  };
+  const toxicTick = (maxHp, counter) =>
+    Math.max(1, Math.floor(maxHp * Math.min(15, Math.max(1, Math.floor(counter))) / 16));
+  const confusionSelfHit = (rng = Math.random) => rng() < 1 / 3;
+  const confusionDamage = (maxHp) => Math.max(1, Math.floor(maxHp / 12));
+  const protectChance = (chain) => (1 / 3) ** Math.max(0, Number(chain) || 0);
+  const critChance = (slug) => {
+    if (['flower-trick','frost-breath','storm-throw','surging-strikes','wicked-blow'].includes(slug)) return 1;
+    return ['slash','night-slash','leaf-blade','psycho-cut','cross-poison','shadow-claw','stone-edge','air-cutter','crabhammer','karate-chop','razor-leaf','cross-chop','drill-run','spacial-rend','attack-order','aeroblast','blaze-kick','poison-tail','snipe-shot'].includes(slug) ? 1 / 8 : 1 / 24;
+  };
+  const normalize = (move) => {
+    const rule = rules[move?.slug];
+    if (!rule) return move;
+    const overrides = {};
+    for (const key of ['type', 'category', 'power', 'accuracy', 'priority']) {
+      if (rule[key] !== undefined) overrides[key] = rule[key];
+    }
+    return {...move, ...overrides};
+  };
+  return Object.freeze({version:1, rules, normalize, damageBase, accuracyFactor, turns, toxicTick, confusionSelfHit, confusionDamage, protectChance, critChance});
+})();
+
 const SAVE='kanto-idle-v01', CACHE='kanto-idle-api-v01';
 const NAMES=['フシギダネ','フシギソウ','フシギバナ','ヒトカゲ','リザード','リザードン','ゼニガメ','カメール','カメックス','キャタピー','トランセル','バタフリー','ビードル','コクーン','スピアー','ポッポ','ピジョン','ピジョット','コラッタ','ラッタ','オニスズメ','オニドリル','アーボ','アーボック','ピカチュウ','ライチュウ','サンド','サンドパン','ニドラン♀','ニドリーナ','ニドクイン','ニドラン♂','ニドリーノ','ニドキング','ピッピ','ピクシー','ロコン','キュウコン','プリン','プクリン','ズバット','ゴルバット','ナゾノクサ','クサイハナ','ラフレシア','パラス','パラセクト','コンパン','モルフォン','ディグダ','ダグトリオ','ニャース','ペルシアン','コダック','ゴルダック','マンキー','オコリザル','ガーディ','ウインディ','ニョロモ','ニョロゾ','ニョロボン','ケーシィ','ユンゲラー','フーディン','ワンリキー','ゴーリキー','カイリキー','マダツボミ','ウツドン','ウツボット','メノクラゲ','ドククラゲ','イシツブテ','ゴローン','ゴローニャ','ポニータ','ギャロップ','ヤドン','ヤドラン','コイル','レアコイル','カモネギ','ドードー','ドードリオ','パウワウ','ジュゴン','ベトベター','ベトベトン','シェルダー','パルシェン','ゴース','ゴースト','ゲンガー','イワーク','スリープ','スリーパー','クラブ','キングラー','ビリリダマ','マルマイン','タマタマ','ナッシー','カラカラ','ガラガラ','サワムラー','エビワラー','ベロリンガ','ドガース','マタドガス','サイホーン','サイドン','ラッキー','モンジャラ','ガルーラ','タッツー','シードラ','トサキント','アズマオウ','ヒトデマン','スターミー','バリヤード','ストライク','ルージュラ','エレブー','ブーバー','カイロス','ケンタロス','コイキング','ギャラドス','ラプラス','メタモン','イーブイ','シャワーズ','サンダース','ブースター','ポリゴン','オムナイト','オムスター','カブト','カブトプス','プテラ','カビゴン','フリーザー','サンダー','ファイヤー','ミニリュウ','ハクリュー','カイリュー','ミュウツー','ミュウ'];
 const JOHTO_NAMES=["チコリータ", "ベイリーフ", "メガニウム", "ヒノアラシ", "マグマラシ", "バクフーン", "ワニノコ", "アリゲイツ", "オーダイル", "オタチ", "オオタチ", "ホーホー", "ヨルノズク", "レディバ", "レディアン", "イトマル", "アリアドス", "クロバット", "チョンチー", "ランターン", "ピチュー", "ピィ", "ププリン", "トゲピー", "トゲチック", "ネイティ", "ネイティオ", "メリープ", "モココ", "デンリュウ", "キレイハナ", "マリル", "マリルリ", "ウソッキー", "ニョロトノ", "ハネッコ", "ポポッコ", "ワタッコ", "エイパム", "ヒマナッツ", "キマワリ", "ヤンヤンマ", "ウパー", "ヌオー", "エーフィ", "ブラッキー", "ヤミカラス", "ヤドキング", "ムウマ", "アンノーン", "ソーナンス", "キリンリキ", "クヌギダマ", "フォレトス", "ノコッチ", "グライガー", "ハガネール", "ブルー", "グランブル", "ハリーセン", "ハッサム", "ツボツボ", "ヘラクロス", "ニューラ", "ヒメグマ", "リングマ", "マグマッグ", "マグカルゴ", "ウリムー", "イノムー", "サニーゴ", "テッポウオ", "オクタン", "デリバード", "マンタイン", "エアームド", "デルビル", "ヘルガー", "キングドラ", "ゴマゾウ", "ドンファン", "ポリゴン２", "オドシシ", "ドーブル", "バルキー", "カポエラー", "ムチュール", "エレキッド", "ブビィ", "ミルタンク", "ハピナス", "ライコウ", "エンテイ", "スイクン", "ヨーギラス", "サナギラス", "バンギラス", "ルギア", "ホウオウ", "セレビィ"];
@@ -1169,9 +1211,9 @@ function renderTitle(){
  <div class="card title-regions"><button class="title-region kanto" onclick="openKanto()"><span class="region-emoji">🌿</span><span><b>カントーちほう</b><small>${state.step>=3?'ぼうけんの つづきへ':'あたらしい ぼうけんへ'}</small></span><strong>▶</strong></button>
  <button class="title-region johto ${unlocked?'':'region-locked'}" onclick="openJohto()"><span class="region-emoji">🌸</span><span><b>ジョウトちほう</b><small>${unlocked?'かいほう！ ぼうけんへ':'🔒 チャンピオンに かつと かいほう'}</small></span><strong>${unlocked?'▶':'🔒'}</strong></button>
  <button class="title-region ${hUnlocked?'':'region-locked'}" onclick="openHoenn()"><span class="region-emoji">🌊</span><span><b>ホウエンちほう</b><small>${hUnlocked?'ぼうけんへ':'🔒 ジョウトのチャンピオンに かつと かいほう'}</small></span><strong>${hUnlocked?'▶':'🔒'}</strong></button></div>
- <div class="card"><button class="btn alt wide" onclick="changeTab('settings')">⚙️ せってい・セーブ・かんりしゃ</button><p class="small muted" style="text-align:center">${esc(state.player||'トレーナー')} · ${saveMode==='admin'?'🧪 テスト中':'☁️ ほんばん'} · v7.2</p></div>`;
+ <div class="card"><button class="btn alt wide" onclick="changeTab('settings')">⚙️ せってい・セーブ・かんりしゃ</button><p class="small muted" style="text-align:center">${esc(state.player||'トレーナー')} · ${saveMode==='admin'?'🧪 テスト中':'☁️ ほんばん'} · v7.3</p></div>`;
 }
-function render(){document.body.dataset.scene=battle?'battle':tab;if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(!battle&&tab==='title'){a.innerHTML=renderTitle();return}if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v7.2 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${activeRegionConfig().badges}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · ${isHoenn()?'だい3しょう ホウエン':isJohto()?'だい2しょう ジョウト':'だい1しょう カントー'} · v7.2</div>`}
+function render(){document.body.dataset.scene=battle?'battle':tab;if(!cloudReady){$('#nav').classList.add('hidden');$('#app').innerHTML=cloudGate();return}earn();nav();let a=$('#app');if(!battle&&tab==='title'){a.innerHTML=renderTitle();return}if(battle){a.innerHTML=renderBattle();return}if(state.step<3){a.innerHTML=renderIntro();return}a.innerHTML=`<header class="top"><div><h1>⚡ ポケモン放置冒険</h1><div class="muted">${esc(state.player)}のぼうけん · v7.3 ${saveMode==='admin'?'🧪 テスト中':''}</div></div><span class="tag">${activeRegionConfig().badges}/8 バッジ</span></header>`+({home:renderHome,eggs:renderEggs,team:renderTeam,story:renderStory,events:renderAdventure,dex:renderDex,settings:renderSettings}[tab]||renderHome)()+`<div class="footer">ポケモン放置冒険 · ${isHoenn()?'だい3しょう ホウエン':isJohto()?'だい2しょう ジョウト':'だい1しょう カントー'} · v7.3</div>`}
 function renderIntro(){if(state.step===0)return `<div class="screen-center"><div class="hero" style="text-align:center"><div class="opening-symbol">◉</div><h1>ポケモンの世界へ<br>ようこそ！</h1><p class="intro">ここは ふしぎな いきもの<br>ポケモンたちが くらす せかい。<br>きみだけの ぼうけんが いま はじまる！</p><button class="btn gold wide" onclick="advance(1)">ぼうけんを はじめる →</button></div></div>`;
 if(state.step===1)return `<div class="screen-center"><div class="card intro"><div class="professor"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAASFBMVEUBAAAAAACESkq2t8tiY4i+fGLepHtzWk3u7/D/1b1sVnhwcGhSQDY0Li5PRTynh7jcyemhim1LS0R2aFt5b2P///+onaewsKhHTqfJAAAAAXRSTlMAQObYZgAAAkZJREFUeF7t1MmSGkEMhOFOqdbe2Mfv/6ZWUpgmxuFLlcKn+QmuHymaYHr2008L8wSvv6zlyjw4kyi2PMSFkK/oDPLexLc9GfsmJw9xSUbVWml6iKh1SeZRvMIFbN3v6bq4gPd0JxejLXQ5+YFo5+KR0iIeoDzwvNhASfAAU6osuYAsVkYxyuSREKs10nNJjIoiafDeeIhILAJDXpWDhM0TzCcMeKkmeXs6A3I6zxpC6AdjA83Q+SxJzue5BNVOMkY+1WieBjVwfnoEtYTe355UmSgE806nmQOLed1grA0MZTbPxNkmmtcnolr0CJp3triwH0y1JrwGUiNolJZ+MYnAvDcYDCr9oIiUYiA+QZqdYGhL/gFS7AbpNZAYwbGJ30FFYfAA6TVQCfaIGqDfQYV5naAq9xwnP1Noz8kU9R9gcQBP1gtE6TqZwTwUnal9glw5dQVMf4OhXdwbSiB2iPQGwKAa5mPi8ECC2DZgZg0MHuDX15e5pKTWGAZBq4EwMNbnH+8QeLlcVjBwoAdoZXtdUFRqrClhwAufoKokEYEDuL5ARVALDuDawKBuIFkvMOcMgnABKVHM2QMM+gZXn4UKehaQnUB6RmJa/4AhjIH5YhHMeGqBC3uDgYzgBE5k4yA9PzCb5wMyEMwELRCENQ2EvOY3mAEQ9wMz+SFwJfE24A8Oi/4ggU+QYfyZZPiDx81jIHMFb7fbDuAAYfVzuO27iTuOwTcLA/PIbdt2LN6tXhFb6+NIw6y9e2Lr+2fsBL0Cw/Tf+g2+Iy+e+98TJwAAAABJRU5ErkJggg==" alt="オーキド博士" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="professor-fallback" style="display:none">👨‍🔬</div></div><h2>オーキド博士</h2><p>はじめまして！ わしは オーキド。<br>みんなからは ポケモンはかせと よばれておる。</p><p>まずは きみの なまえを おしえてくれるかな？</p><input id="playerName" class="input" maxlength="12" placeholder="トレーナーのなまえ" value="${esc(state.player)}"><button class="btn wide" style="margin-top:12px" onclick="setPlayer()">これで いいよ！</button></div></div>`;
 return `<div class="screen-center"><div class="card"><h2>🌟 パートナーをえらぼう！</h2><p class="intro">この3匹から 1匹を えらぶんじゃ。<br>どのポケモンも Lv.10 から スタート！</p><div class="grid3">${[1,4,7].map(id=>`<button class="poke" onclick="chooseStarter(${id})">${img(id)}<div class="name">${name(id)}</div><div class="tiny">${{1:'くさ',4:'ほのお',7:'みず'}[id]}</div></button>`).join('')}</div></div></div>`}
@@ -1331,12 +1373,14 @@ const FIXED_MOVE_SECONDARIES={
  'waterfall':{ailment:'flinch',effectChance:20},
  'crunch':{ailment:'none',effectChance:20,statChanges:[{stat:'defense',change:-1}]}
 };
+function sharedRule(slug){return SharedMoveEffects.rules[slug]||{}}
 const FIXED_MOVE_PRIORITIES={'aqua-jet':1,'quick-attack':1,'mach-punch':1,'ice-shard':1,'bullet-punch':1,'shadow-sneak':1,'vacuum-wave':1,'water-shuriken':1,'sucker-punch':1,'extreme-speed':2,'fake-out':3};
 function normalizeMoveSecondary(m){
  const fix=FIXED_MOVE_SECONDARIES[m.slug];
  const p=Object.prototype.hasOwnProperty.call(FIXED_MOVE_PRIORITIES,m.slug)?{priority:FIXED_MOVE_PRIORITIES[m.slug]}:{};
- const petal=m.slug==='petal-dance'?{type:'grass',power:120,accuracy:100,category:'special'}:{};
- return {...m,...(fix||{}),...p,...petal};
+ const rule=sharedRule(m.slug), fields={};
+ for(const k of ['power','accuracy','priority','type','category'])if(Object.hasOwn(rule,k))fields[k]=rule[k];
+ return {...m,...(fix||{}),...p,...fields};
 }
 async function fetchMove(slug,version=moveLearnVersion()){if(version===JOHTO_LEARN_VERSION&&JOHTO_NATU_MOVES[slug])return normalizeMoveSecondary(JOHTO_NATU_MOVES[slug]);if(version===HOENN_LEARN_VERSION){const bundled=hoennMoveData(slug);if(!bundled)throw Error('ホウエンの技データがありません: '+slug);return normalizeMoveSecondary(bundled)}if(apiCache['m'+slug]&&apiCache['m'+slug].detailReady)return normalizeMoveSecondary(apiCache['m'+slug]);let r=await fetch('https://pokeapi.co/api/v2/move/'+slug);if(!r.ok)throw Error('技データを取得できません');let j=await r.json(),m={slug,name:j.names.find(x=>x.language.name==='ja-Hrkt')?.name||j.names.find(x=>x.language.name==='ja')?.name||slug,type:j.type.name,power:j.power||0,accuracy:j.accuracy,category:j.damage_class.name,priority:j.priority||0,ailment:j.meta?.ailment?.name||'none',effectChance:j.meta?.ailment_chance||j.effect_chance||0,statChanges:(j.stat_changes||[]).map(x=>({stat:x.stat.name,change:x.change})),drain:Number(j.meta?.drain)||0,minHits:j.meta?.min_hits??null,maxHits:j.meta?.max_hits??null,detailReady:true};m=normalizeMoveSecondary(m);apiCache['m'+slug]=m;cacheSave();return m}
 function cacheSave(){try{localStorage.setItem(CACHE,JSON.stringify(apiCache))}catch{}}
@@ -1371,8 +1415,9 @@ const STAGE_EFFECTS={
 };
 const EXTRA_STAGE_EFFECTS={'growth':[['special-attack',1,true]],'calm-mind':[['special-defense',1,true]],'bulk-up':[['defense',1,true]],'tickle':[['defense',-1,false]]};
 const SPECIAL_STATUS=new Set(['leech-seed','poison-powder','sleep-powder','stun-spore','toxic','hypnosis','thunder-wave','spore','confuse-ray']);
-const STATUS_SUPPORTED=new Set([...Object.keys(STAGE_EFFECTS),...SPECIAL_STATUS]);function isLevelDamageMove(m){return m.slug==='night-shade'}
-function isSupported(m){return ((m.power>0||isLevelDamageMove(m))&&['physical','special'].includes(m.category))||STATUS_SUPPORTED.has(m.slug)}
+const STATUS_SUPPORTED=new Set([...Object.keys(STAGE_EFFECTS),...SPECIAL_STATUS]);function isLevelDamageMove(m){return !!sharedRule(m.slug).fixedLevel}
+function hasSharedStatusRule(rule){return !!(rule.self||rule.target||rule.status||rule.recover||rule.protect||rule.confuse||rule.flinch)}
+function isSupported(m){return ((m.power>0||isLevelDamageMove(m))&&['physical','special'].includes(m.category))||STATUS_SUPPORTED.has(m.slug)||hasSharedStatusRule(sharedRule(m.slug))}
 async function learnable(id,lv,version=moveLearnVersion()){let slugs=await learnedSlugs(id,lv,version),moves=await Promise.all(slugs.map(async x=>{try{return {...await fetchMove(x.slug,version),level:x.level}}catch{return null}}));return moves.filter(x=>x&&isSupported(x)).sort((a,b)=>a.level-b.level||a.name.localeCompare(b.name,'ja'))}
 async function editMoves(uid){
  const p=byUid(uid);if(!p)return;
@@ -1399,7 +1444,18 @@ const TRAPPING_MOVES=new Set(['fire-spin','whirlpool','wrap','bind','clamp','san
 const MOVE_AILMENT_JP={burn:'やけど',paralysis:'まひ',poison:'どく',freeze:'こおり',sleep:'ねむり',confusion:'こんらん',flinch:'ひるみ'};
 function moveExplanation(m){
  m=normalizeMoveSecondary(m);
- if(isLevelDamageMove(m))return 'じぶんの レベルと おなじ ダメージを あたえる。ノーマルタイプには きかない。';
+ const rule=sharedRule(m.slug);
+ if(isLevelDamageMove(m))return 'じぶんの レベルと おなじ ダメージを あたえる。タイプで こうかが ない あいてには きかない。';
+ if(rule.protect)return 'このターン、あいての わざを ふせぐ。れんぞくで つかうと しっぱいしやすい。';
+ if(rule.recover)return 'さいだいHPの '+Math.round(rule.recover*100)+'%を かいふくする。';
+ if(rule.confuse)return (m.category==='status'?'':'ダメージを あたえる。')+(rule.confuse<100?rule.confuse+'%で ':'')+'あいてを こんらんさせる。';
+ if(rule.flinch)return 'ダメージを あたえる。'+rule.flinch+'%で あいてを ひるませる。';
+ if(rule.status==='toxic')return 'あいてを もうどくにする。まいターン ダメージが ふえていく。';
+ if(rule.self||rule.target){
+  const changes=Object.entries(rule.self||{}).map(([k,n])=>['じぶん',k,n]).concat(Object.entries(rule.target||{}).map(([k,n])=>['あいて',k,n]));
+  const effects=changes.map(([who,k,n])=>who+'の '+(MOVE_STAT_JP[k]||k)+'を '+Math.abs(n)+'だんかい '+(n>0?'あげる':'さげる')).join('／');
+  return (m.category==='status'?'':'ダメージを あたえる。')+((rule.chance??100)<100?(rule.chance+'%で '):'')+effects+'。';
+ }
  if(SPECIAL_STATUS.has(m.slug))return ({'leech-seed':'あいてに タネを うえて、まいターン HPを すいとる','poison-powder':'あいてを どくにする','sleep-powder':'あいてを ねむらせる','stun-spore':'あいてを まひにする',toxic:'あいてを もうどくにする',hypnosis:'あいてを ねむらせる','thunder-wave':'あいてを まひにする',spore:'あいてを ねむらせる','confuse-ray':'あいてを こんらんさせる。こんらん中は じぶんを こうげきすることが ある。'})[m.slug];
  if(STATUS_SUPPORTED.has(m.slug)){
   const effects=[STAGE_EFFECTS[m.slug],...(EXTRA_STAGE_EFFECTS[m.slug]||[])].filter(Boolean);
@@ -1532,7 +1588,7 @@ async function openDex(id,shiny=false){
  }catch{let target=$('#dex-data');if(target)target.innerHTML='<p class="muted">くわしくデータを取得できなかったよ。通信状況をかくにんしてね。</p>'}
 }
 
-function renderSettings(){return `<div class="card"><button class="btn alt wide" onclick="openTitle()">← タイトルへ もどる</button><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div><button class="btn gold wide" style="margin-top:10px" onclick="adminOpenJohto()">🌸 ジョウトへ すぐいく（テストだけ）</button><button class="btn alt wide" style="margin-top:10px" onclick="resetAdminProgress()">🔄 テストの しんこうを リセット</button><button class="btn gold wide" style="margin-top:10px" onclick="adminGiftEnergy()">🎁 大貴に ポケエネを プレゼント</button><p class="small">本番セーブに追加するよ。テストデータのポケエネは減らないよ。</p></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 更新履歴（v7.2）</h2><p class="small"><b>v7.2：</b>はなびらのまいをORASの動きに調整。ジョウトのネイティ・ネイティオがナイトヘッド／あやしいひかりを使用可能に。はかせの初登場画像を見直し。</p><p class="small"><b>v7.1：</b>なかま加入・タマゴふ化の画面でポケモンの画像を大きく中央に表示。複数の仲間も画面幅に合わせて表示。</p><p class="small"><b>v7.0：</b>ジョウトのチャンピオンに勝つとホウエンを解放。初回のジョウトは100ポケエネから開始。ホウエンの技候補はORAS準拠。図鑑の入手条件と進化を見やすく表示。</p><p class="small"><b>v6.68：</b>ジョウトのごさんけイベントを通常は「ごさんけ」とだけ表示し、開くと未入手のパートナーだけを選べるように修正。</p><p class="small"><b>v6.67：</b>ジョウトの技候補が表示されない問題を修正。ジョウトではハートゴールド・ソウルシルバーのレベルアップ習得表を使用。カントーの技候補は変更なし。</p><p class="small"><b>v6.66：</b>地方別の表示設定を共通化。初回のテスト・本番セーブ枠作成時に初期化済みデータを確実に読み込むよう修正。構文・進行データの回帰チェックを追加。</p><p class="small"><b>v6.66：</b>特別バトル敗北後も「ぼうけん」に戻るよう地方共通の敗北処理を修正。ジョウト進行値の上限を明示し、セーブ・地方切替の静的回帰点検を実施。</p><p class="small"><b>v6.66：</b>両地方の画面構造とジョウト進行・勝利報酬を点検。ジョウトの特別バトル勝利時にもLv×10の報酬を付与し、勝利後は「ぼうけん」に戻る。ホーム画面の余分な閉じタグを削除し、進行値の範囲外を防止。</p><p class="small"><b>v6.66：</b>敗北時の報酬・メッセージを地方共通化。トレーナー画像のURL生成と代替画像の処理を共通化。<br><b>v6.36：</b>両地方のジム紹介カード・バッジ一覧・タマゴ一覧の並びとコンプリート表示を同一関数へ統合。地方別のデータとボタン動作は維持。</p><p class="small"><b>v6.66：</b>カントー・ジョウトのパーティー表示、冒険記録、バッジ一覧、勝利演出を共通コンポーネント化。ジョウト勝利時もバッジ獲得・放置収益アップ・タマゴ解禁を案内。</p><h2 style="display:none"></h2><p class="small"><b>v6.66：</b>ジョウト図鑑をカントーと同じ共通画面に統一。未入手シルエット・絞り込み・詳細・進捗バーを追加。</p><h2 style="display:none"></h2><p class="small"><b>v6.66：</b>ジョウトのタマゴ表示をカントーと同じ4段階レア度・入手状況・コンプリート表示に統一。</p><hr class="separator"><p class="small"><b>v6.66：</b>ジョウト100種の日本語名を追加。ホーム・ストーリー・ジムバッジ・手持ち表示・トレーナーの戦闘前後会話をカントーの共通デザインに統一。</p><hr class="separator"><p class="small"><b>v6.66：</b>ジョウト全トレーナーの立ち絵を複数世代の画像で再試行し、ポケモン画像は公式アートへフォールバック。戦闘画面にも適用。</p><hr class="separator"><p class="small"><b>v6.27：</b>管理者テストの進行だけをリセットするボタンを追加。ジョウトのジムリーダー画像を地方別に設定し、ハヤトの立ち絵・ポケモン画像の表示を改善。</p><hr class="separator"><p class="small"><b>v6.66：</b>カントーずかん150種類達成でミュウが受取可能になった際、ぼうけんの通知件数に1件加算。受取後は消え、ほかのイベント件数と合算。</p><hr class="separator"><p class="small"><b>v6.66：</b>あく・はがねタイプの相性表が欠けていた問題を修正。かみくだく等のあく技がエスパーに2倍となるよう改善。</p><hr class="separator"><p class="small"><b>v6.21：</b>げきりん・あばれるは2〜3ターン同じ技を自動使用し、その間は技変更・交代不可。終了後は混乱し、混乱中は1/3で自傷。敵味方共通。</p><hr class="separator"><p class="small"><b>v6.20：</b>ゆめくいは相手がねむり状態のときだけ成功するよう修正。与えたダメージの50%を回復する効果は維持し、技説明にも条件を明記。</p><hr class="separator"><p class="small"><b>v6.21：</b>まひ中は行動順計算のすばやさを半分に、やけど中は物理技の攻撃力を半分に補正。従来のまひ25%行動不能・やけど毎ターン最大HP1/16ダメージは維持。敵味方共通。</p><hr class="separator"><p class="small"><b>v6.21：</b>カントーのロケット団サカキ・四天王・グリーン・ブルー撃破で放置ポケエネ効率が50→55→60→65→70→80→100/時まで上昇。勝利画面にも効率アップを表示。ジョウトは地方別の従来効率を維持。</p><hr class="separator"><p class="small"><b>v6.16：</b>ジョウトのあかいギャラドスを「ぼうけん」の特別チャレンジに移動。ミカン撃破後に通知件数へ追加し、バトル勝利で仲間になることを明記。既存のストーリー進行データは維持。</p><hr class="separator"><p class="small"><b>v6.15：</b>カンナ・キクコ・ブルーのトレーナー画像参照を修正。画像が読み込めない場合は手持ちポケモン画像に切り替えるよう改善。</p><hr class="separator"><p class="small"><b>v6.13：</b>アクアジェットなどの先制技に優先度を説明表示。古い技キャッシュにも優先度を補正し、ふいうちの成功条件を追加。</p><hr class="separator"><p class="small"><b>v6.12：</b>ずつき・かみつく・いわなだれ等のひるみ確率と、かみくだくの防御ダウンを技説明・戦闘処理で統一。古い技キャッシュにも対応。</p><hr class="separator"><p class="small"><b>v6.9：</b>あいてのポケモンを倒した後、次の相手が出る際に手持ちの交代か続行を選択できるように変更。交代時の追加攻撃はなし。</p><hr class="separator"><p class="small"><b>v6.8：</b>ひるみ技の確率と先制時のみの行動阻止、ほのおのうず等の4〜5ターン継続ダメージ・交代解除、かみくだく等の能力変化追加効果を反映。</p><hr class="separator"><p class="small"><b>v6.7：</b>みだれひっかき等の連続攻撃（2〜5回）、とっしん等の反動ダメージ、じばく・だいばくはつの自分ひんしを実装。技説明とHP演出にも反映。</p><hr class="separator"><p class="small"><b>v6.7：</b>管理者テストモードではカントー殿堂入り前でもジョウトを選択可能に。設定画面に「ジョウトへ すぐいく」ボタンを追加。通常セーブの解放条件は変更なし。</p><hr class="separator"><p class="small"><b>v6.7：</b>マリル→マリルリ（Lv18）、ヒマナッツ→キマワリ（たいようのいし・50ポケエネ）を追加。ジョウトの冒険イベント通知を受取条件・受取済みフラグと連動するよう修正。</p><hr class="separator"><p class="small"><b>v6.7：</b>ジョウトの特別な出会い5件を会話イベントとして実装。御三家は選択・残り1匹の配布に対応。</p><p class="small"><b>v6.7：</b>両地方の8個目ジムクリア後はセキエイこうげん、チャンピオン撃破後は殿堂入り記念の背景へ変更。</p><hr class="separator"><p class="small"><b>v6.7：</b>ジョウトで御三家選択、地方別パーティー・進行、共通ポケエネ、ジム・シルバー・四天王・伝説戦、仮タマゴ・イベントを遊べる試作版として実装。</p><hr class="separator"><p class="small"><b>v6.7：</b>ジョウト戦闘の確定仕様（全トレーナー3匹、シルバー固定Lv25、特別戦の再挑戦・仲間化、8匹の優先技）を設計データとプレビューに反映。実戦接続は今後。</p><hr class="separator"><p class="small"><b>v5.8：</b>ジョウトのジム・シルバー・四天王・ワタルの戦闘前後セリフと、伝説イベントの演出文を設計データ・確認画面に追加。</p><hr class="separator"><p class="small"><b>v5.8：</b>シルバーをLv25、ベイリーフ・マグマラシ・アリゲイツの3匹に変更（設計プレビュー）。</p><hr class="separator"><p class="small"><b>v5.6：</b>ジョウトのジム手持ち3組を調整。シルバーの登場位置、赤いギャラドス・三犬・ルギア・ホウオウ・セレビィの出現条件を設計データとプレビューに追加。まだ実戦未対応。</p><hr class="separator"><p class="small"><b>v5.6：</b>ジョウト編の骨子を追加。御三家、ジム8人、四天王・チャンピオン、タマゴ9種類、イベント案をプレビュー表示。実プレイ・地方切替はまだ未実装。</p><hr class="separator"><p class="small"><b>v5.6：</b>タイトル画面と地方選択を追加。ジョウトは殿堂入り後に解放（冒険本編は今後実装）。設定をタイトル画面から開く方式に変更。カントーの既存データは維持。</p><hr class="separator"><p class="small"><b>v5.3：</b>管理者テスト画面から本番データにポケエネをプレゼントできる機能を追加。</p><hr class="separator"><p class="small"><b>v5.3：</b>草原・青空・街の雰囲気を取り入れたゲーム風の背景に刷新。画面ごとの色分け、半透明パネル、立体的なボタンに変更。ゲーム進行とセーブ仕様は維持。</p><hr class="separator"><p class="small"><b>v5.3：</b>タマゴから生まれるポケモンのレベルを次のジムに合わせて変更（Lv.10〜45）。</p><hr class="separator"><p class="small"><b>v5.3：</b>すいとる・メガドレイン・ギガドレインなどの攻撃技にHP吸収効果を追加。</p><hr class="separator"><p class="small"><b>v5.3：</b>ぼうけんで受け取れるポケモンのレベルを次のジム・ボスに合わせて調整。</p><hr class="separator"><p class="small"><b>v5.3：</b>ねこだましの優先度+3、登場後最初の攻撃時だけ成功、命中時100%ひるみを実装。通常のひるみも相手が行動前のときだけ有効に修正。</p><hr class="separator">
+function renderSettings(){return `<div class="card"><button class="btn alt wide" onclick="openTitle()">← タイトルへ もどる</button><h2>⚙️ せってい</h2><p>プレイヤー：<b>${esc(state.player)}</b></p><p>ほぞん：☁️ Firebase（Googleログイン）</p><div class="notice"><b>${saveMode==='admin'?'🧪 かんりしゃテスト（べつデータ）':'🏠 いつものぼうけん（ほんばんデータ）'}</b><br>ふたつのセーブは べつべつに ほぞんされるよ。</div><p class="muted">${esc(cloudStatus)}</p><hr class="separator"><button class="btn alt wide" onclick="cloudLogout()">Googleから ログアウト</button><hr class="separator"><button class="btn alt wide" onclick="adminLogin()">🔑 かんりしゃモード：${saveMode==='admin'?'ON（テスト）':'OFF'}</button>${saveMode==='admin'?`<div class="card" style="background:#fff5e8"><h3>🧪 テストよう そうさ</h3><p class="small">このへんこうは テストデータだけに はんえいするよ。</p><div class="grid2"><button class="btn gold" onclick="adminSetProgress()">ジムの しんこうを へんこう</button><button class="btn gold" onclick="adminLevelTeam()">パーティーの レベルを へんこう</button></div><button class="btn gold wide" style="margin-top:10px" onclick="adminOpenJohto()">🌸 ジョウトへ すぐいく（テストだけ）</button><button class="btn alt wide" style="margin-top:10px" onclick="resetAdminProgress()">🔄 テストの しんこうを リセット</button><button class="btn gold wide" style="margin-top:10px" onclick="adminGiftEnergy()">🎁 大貴に ポケエネを プレゼント</button><p class="small">本番セーブに追加するよ。テストデータのポケエネは減らないよ。</p></div>`:''}<hr class="separator"><button class="btn alt wide" onclick="exportSave()">💾 セーブデータをかきだす</button><button class="btn alt wide" style="margin-top:8px" onclick="importSave()">📂 セーブデータをよみこむ</button><hr class="separator"><button class="btn alt wide" onclick="resetGame()">さいしょから やりなおす</button></div><div class="card"><h2>📝 更新履歴（v7.3）</h2><p class="small"><b>v7.3：</b>バトルDXと共通の技効果。自分の能力変化、もうどく、まもる、HP回復を調整。</p><p class="small"><b>v7.2：</b>はなびらのまいをORASの動きに調整。ジョウトのネイティ・ネイティオがナイトヘッド／あやしいひかりを使用可能に。はかせの初登場画像を見直し。</p><p class="small"><b>v7.1：</b>なかま加入・タマゴふ化の画面でポケモンの画像を大きく中央に表示。複数の仲間も画面幅に合わせて表示。</p><p class="small"><b>v7.0：</b>ジョウトのチャンピオンに勝つとホウエンを解放。初回のジョウトは100ポケエネから開始。ホウエンの技候補はORAS準拠。図鑑の入手条件と進化を見やすく表示。</p><p class="small"><b>v6.68：</b>ジョウトのごさんけイベントを通常は「ごさんけ」とだけ表示し、開くと未入手のパートナーだけを選べるように修正。</p><p class="small"><b>v6.67：</b>ジョウトの技候補が表示されない問題を修正。ジョウトではハートゴールド・ソウルシルバーのレベルアップ習得表を使用。カントーの技候補は変更なし。</p><p class="small"><b>v6.66：</b>地方別の表示設定を共通化。初回のテスト・本番セーブ枠作成時に初期化済みデータを確実に読み込むよう修正。構文・進行データの回帰チェックを追加。</p><p class="small"><b>v6.66：</b>特別バトル敗北後も「ぼうけん」に戻るよう地方共通の敗北処理を修正。ジョウト進行値の上限を明示し、セーブ・地方切替の静的回帰点検を実施。</p><p class="small"><b>v6.66：</b>両地方の画面構造とジョウト進行・勝利報酬を点検。ジョウトの特別バトル勝利時にもLv×10の報酬を付与し、勝利後は「ぼうけん」に戻る。ホーム画面の余分な閉じタグを削除し、進行値の範囲外を防止。</p><p class="small"><b>v6.66：</b>敗北時の報酬・メッセージを地方共通化。トレーナー画像のURL生成と代替画像の処理を共通化。<br><b>v6.36：</b>両地方のジム紹介カード・バッジ一覧・タマゴ一覧の並びとコンプリート表示を同一関数へ統合。地方別のデータとボタン動作は維持。</p><p class="small"><b>v6.66：</b>カントー・ジョウトのパーティー表示、冒険記録、バッジ一覧、勝利演出を共通コンポーネント化。ジョウト勝利時もバッジ獲得・放置収益アップ・タマゴ解禁を案内。</p><h2 style="display:none"></h2><p class="small"><b>v6.66：</b>ジョウト図鑑をカントーと同じ共通画面に統一。未入手シルエット・絞り込み・詳細・進捗バーを追加。</p><h2 style="display:none"></h2><p class="small"><b>v6.66：</b>ジョウトのタマゴ表示をカントーと同じ4段階レア度・入手状況・コンプリート表示に統一。</p><hr class="separator"><p class="small"><b>v6.66：</b>ジョウト100種の日本語名を追加。ホーム・ストーリー・ジムバッジ・手持ち表示・トレーナーの戦闘前後会話をカントーの共通デザインに統一。</p><hr class="separator"><p class="small"><b>v6.66：</b>ジョウト全トレーナーの立ち絵を複数世代の画像で再試行し、ポケモン画像は公式アートへフォールバック。戦闘画面にも適用。</p><hr class="separator"><p class="small"><b>v6.27：</b>管理者テストの進行だけをリセットするボタンを追加。ジョウトのジムリーダー画像を地方別に設定し、ハヤトの立ち絵・ポケモン画像の表示を改善。</p><hr class="separator"><p class="small"><b>v6.66：</b>カントーずかん150種類達成でミュウが受取可能になった際、ぼうけんの通知件数に1件加算。受取後は消え、ほかのイベント件数と合算。</p><hr class="separator"><p class="small"><b>v6.66：</b>あく・はがねタイプの相性表が欠けていた問題を修正。かみくだく等のあく技がエスパーに2倍となるよう改善。</p><hr class="separator"><p class="small"><b>v6.21：</b>げきりん・あばれるは2〜3ターン同じ技を自動使用し、その間は技変更・交代不可。終了後は混乱し、混乱中は1/3で自傷。敵味方共通。</p><hr class="separator"><p class="small"><b>v6.20：</b>ゆめくいは相手がねむり状態のときだけ成功するよう修正。与えたダメージの50%を回復する効果は維持し、技説明にも条件を明記。</p><hr class="separator"><p class="small"><b>v6.21：</b>まひ中は行動順計算のすばやさを半分に、やけど中は物理技の攻撃力を半分に補正。従来のまひ25%行動不能・やけど毎ターン最大HP1/16ダメージは維持。敵味方共通。</p><hr class="separator"><p class="small"><b>v6.21：</b>カントーのロケット団サカキ・四天王・グリーン・ブルー撃破で放置ポケエネ効率が50→55→60→65→70→80→100/時まで上昇。勝利画面にも効率アップを表示。ジョウトは地方別の従来効率を維持。</p><hr class="separator"><p class="small"><b>v6.16：</b>ジョウトのあかいギャラドスを「ぼうけん」の特別チャレンジに移動。ミカン撃破後に通知件数へ追加し、バトル勝利で仲間になることを明記。既存のストーリー進行データは維持。</p><hr class="separator"><p class="small"><b>v6.15：</b>カンナ・キクコ・ブルーのトレーナー画像参照を修正。画像が読み込めない場合は手持ちポケモン画像に切り替えるよう改善。</p><hr class="separator"><p class="small"><b>v6.13：</b>アクアジェットなどの先制技に優先度を説明表示。古い技キャッシュにも優先度を補正し、ふいうちの成功条件を追加。</p><hr class="separator"><p class="small"><b>v6.12：</b>ずつき・かみつく・いわなだれ等のひるみ確率と、かみくだくの防御ダウンを技説明・戦闘処理で統一。古い技キャッシュにも対応。</p><hr class="separator"><p class="small"><b>v6.9：</b>あいてのポケモンを倒した後、次の相手が出る際に手持ちの交代か続行を選択できるように変更。交代時の追加攻撃はなし。</p><hr class="separator"><p class="small"><b>v6.8：</b>ひるみ技の確率と先制時のみの行動阻止、ほのおのうず等の4〜5ターン継続ダメージ・交代解除、かみくだく等の能力変化追加効果を反映。</p><hr class="separator"><p class="small"><b>v6.7：</b>みだれひっかき等の連続攻撃（2〜5回）、とっしん等の反動ダメージ、じばく・だいばくはつの自分ひんしを実装。技説明とHP演出にも反映。</p><hr class="separator"><p class="small"><b>v6.7：</b>管理者テストモードではカントー殿堂入り前でもジョウトを選択可能に。設定画面に「ジョウトへ すぐいく」ボタンを追加。通常セーブの解放条件は変更なし。</p><hr class="separator"><p class="small"><b>v6.7：</b>マリル→マリルリ（Lv18）、ヒマナッツ→キマワリ（たいようのいし・50ポケエネ）を追加。ジョウトの冒険イベント通知を受取条件・受取済みフラグと連動するよう修正。</p><hr class="separator"><p class="small"><b>v6.7：</b>ジョウトの特別な出会い5件を会話イベントとして実装。御三家は選択・残り1匹の配布に対応。</p><p class="small"><b>v6.7：</b>両地方の8個目ジムクリア後はセキエイこうげん、チャンピオン撃破後は殿堂入り記念の背景へ変更。</p><hr class="separator"><p class="small"><b>v6.7：</b>ジョウトで御三家選択、地方別パーティー・進行、共通ポケエネ、ジム・シルバー・四天王・伝説戦、仮タマゴ・イベントを遊べる試作版として実装。</p><hr class="separator"><p class="small"><b>v6.7：</b>ジョウト戦闘の確定仕様（全トレーナー3匹、シルバー固定Lv25、特別戦の再挑戦・仲間化、8匹の優先技）を設計データとプレビューに反映。実戦接続は今後。</p><hr class="separator"><p class="small"><b>v5.8：</b>ジョウトのジム・シルバー・四天王・ワタルの戦闘前後セリフと、伝説イベントの演出文を設計データ・確認画面に追加。</p><hr class="separator"><p class="small"><b>v5.8：</b>シルバーをLv25、ベイリーフ・マグマラシ・アリゲイツの3匹に変更（設計プレビュー）。</p><hr class="separator"><p class="small"><b>v5.6：</b>ジョウトのジム手持ち3組を調整。シルバーの登場位置、赤いギャラドス・三犬・ルギア・ホウオウ・セレビィの出現条件を設計データとプレビューに追加。まだ実戦未対応。</p><hr class="separator"><p class="small"><b>v5.6：</b>ジョウト編の骨子を追加。御三家、ジム8人、四天王・チャンピオン、タマゴ9種類、イベント案をプレビュー表示。実プレイ・地方切替はまだ未実装。</p><hr class="separator"><p class="small"><b>v5.6：</b>タイトル画面と地方選択を追加。ジョウトは殿堂入り後に解放（冒険本編は今後実装）。設定をタイトル画面から開く方式に変更。カントーの既存データは維持。</p><hr class="separator"><p class="small"><b>v5.3：</b>管理者テスト画面から本番データにポケエネをプレゼントできる機能を追加。</p><hr class="separator"><p class="small"><b>v5.3：</b>草原・青空・街の雰囲気を取り入れたゲーム風の背景に刷新。画面ごとの色分け、半透明パネル、立体的なボタンに変更。ゲーム進行とセーブ仕様は維持。</p><hr class="separator"><p class="small"><b>v5.3：</b>タマゴから生まれるポケモンのレベルを次のジムに合わせて変更（Lv.10〜45）。</p><hr class="separator"><p class="small"><b>v5.3：</b>すいとる・メガドレイン・ギガドレインなどの攻撃技にHP吸収効果を追加。</p><hr class="separator"><p class="small"><b>v5.3：</b>ぼうけんで受け取れるポケモンのレベルを次のジム・ボスに合わせて調整。</p><hr class="separator"><p class="small"><b>v5.3：</b>ねこだましの優先度+3、登場後最初の攻撃時だけ成功、命中時100%ひるみを実装。通常のひるみも相手が行動前のときだけ有効に修正。</p><hr class="separator">
 <p class="small"><b>v3.8：</b>攻撃技の追加効果（まひ・やけど・こおり・どく・ねむり・ひるみ）を確率で発動するよう修正。</p><hr class="separator"><p class="small"><b>v4.2：</b>倒れたときに次のポケモンを選べるよう変更。<br>すべてのタマゴの価格を10ポケエネに統一。</p>
 <hr class="separator"><p class="small"><b>v3.7：</b>ボックスから直接パーティーを入れ替えるボタンを追加。更新履歴を漢字表記に変更。</p>
 <hr class="separator"><p class="small"><b>v3.6：</b>進化演出が終了しない問題を修正。鳴き声の処理とスキップボタンを改善。</p>
@@ -1620,7 +1676,7 @@ async function fighter(id,lv,uid=null,version=moveLearnVersion()){
 async function startBattle(){if(isHoenn())return startHoennBattle();if(isJohto())return startJohtoGym();if(!state.team.length)return toast('パーティーに1匹は入れてね');if(state.cleared>=8)return;if(state.cleared===4&&!state.events.snorlax)return toast('カビゴンを たおして みちを ひらこう！');let b=BOSSES[state.cleared];showModal(`<h2>⚔️ ${b.name}にちょうせん！</h2><p>ポケモンたちが準備しているよ…</p>`);try{let allies=await Promise.all(state.team.map(uid=>byUid(uid)).filter(Boolean).map(p=>fighter(p.id,p.lv,p.uid))),enemies=await Promise.all(b.team.map(id=>fighter(id,b.lv)));battle={allies,enemies,ai:0,ei:0,turn:1,boss:b,log:[`${b.name}が勝負をしかけてきた！`],busy:true,potionUsed:false,awaitingIntro:true};showModal(`<h2>🏅 ${b.city}ジム</h2>${gymDialogueCard(state.cleared,'before')}<button class="btn gold wide" onclick="beginGymBattle()">⚔️ しょうぶする！</button>` )}catch(e){closeModal();toast('バトルの準備にしっぱいしたよ')}}
 function beginGymBattle(){if(!battle||!battle.awaitingIntro)return;const b=battle;b.awaitingIntro=false;b.busy=false;closeModal();render();battleIntro(b)}
 function activeMon(side){return battle?.[side][battle[side==='allies'?'ai':'ei']]}
-function hpHtml(p){return `<div class="progress"><i style="width:${Math.max(0,100*p.hp/p.maxHp)}%;background:${p.hp/p.maxHp<=.2?'#e34848':p.hp/p.maxHp<=.5?'#efc13b':'#31b39b'}"></i></div><div class="muted">HP ${Math.max(0,p.hp)} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ',burn:'やけど',freeze:'こおり'}[p.status]||''):''}${p.confusionTurns>0?' · こんらん':''}${p.rampage?' · あばれちゅう':''}${p.seeded?' · やどりぎ':''}</div>`}
+function hpHtml(p){return `<div class="progress"><i style="width:${Math.max(0,100*p.hp/p.maxHp)}%;background:${p.hp/p.maxHp<=.2?'#e34848':p.hp/p.maxHp<=.5?'#efc13b':'#31b39b'}"></i></div><div class="muted">HP ${Math.max(0,p.hp)} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',toxic:'もうどく',poison:'どく',paralysis:'まひ',burn:'やけど',freeze:'こおり'}[p.status]||''):''}${p.confusionTurns>0?' · こんらん':''}${p.rampage?' · あばれちゅう':''}${p.seeded?' · やどりぎ':''}</div>`}
 function stageBadges(p){
  const labels={'attack':'こうげき','defense':'ぼうぎょ','special-attack':'とくこう','special-defense':'とくぼう','speed':'すばやさ','accuracy':'めいちゅう','evasion':'かいひ'};
  const st=ensureStages(p);
@@ -1705,7 +1761,7 @@ async function animatedAttack(att,def,move,b){
  battleMessage(`${att.name}の ${move.name}！`);await battleWait(480);
  if(battle!==b)return false;
  att.rampageAction=false;attack(att,def,move);
- if(move.slug!=='petal-dance'&&att.rampageAction&&att.rampage&&att.rampage.slug===move.slug){att.rampage.remaining--;if(att.rampage.remaining<=0){att.rampage=null;if(att.hp>0){att.confusionTurns=2+Math.floor(Math.random()*3);b.log.push(`${att.name}は あばれつかれて こんらんした！`)}}}
+ if(!sharedRule(move.slug).rampage&&att.rampageAction&&att.rampage&&att.rampage.slug===move.slug){att.rampage.remaining--;if(att.rampage.remaining<=0){att.rampage=null;if(att.hp>0){att.confusionTurns=SharedMoveEffects.turns('confusion');b.log.push(`${att.name}は あばれつかれて こんらんした！`)}}}
  updateBattleStageDisplays();
  const entries=b.log.slice(logStart),hit=old-def.hp;
  if(hit>0){battleHitEffect(side,hit);animateBattleHp(side,old,def.hp,def.maxHp)}
@@ -1762,13 +1818,13 @@ function showBattleMoveInfo(i){
 }
 function openBattlePotion(){
  if(!battle||battle.busy||battle.potionUsed||petalLocked(activeMon('allies')))return;
- showModal(`<h2>🧴 かいふくのくすり</h2><p>かいふくする ポケモンを タップしてね！<br>HPと じょうたいいじょうを ぜんかいふくするよ。</p><div class="battle-heal-list">${battle.allies.map((p,i)=>`<button class="battle-heal-choice" ${p.hp<=0?'disabled':''} onclick="useBattlePotion(${i})">${img(p.id,p.shiny)}<span><b>${esc(p.name)} Lv.${p.lv}</b><small>HP ${p.hp} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',poison:'どく',paralysis:'まひ',burn:'やけど',freeze:'こおり'}[p.status]||p.status):''}</small></span><span>${p.hp<=0?'ひんし':'えらぶ →'}</span></button>`).join('')}</div><p class="muted small">1バトルに 1こだけ。つかうと あいても こうどうするよ。</p><button class="btn alt wide" onclick="closeModal()">やめる</button>`);
+ showModal(`<h2>🧴 かいふくのくすり</h2><p>かいふくする ポケモンを タップしてね！<br>HPと じょうたいいじょうを ぜんかいふくするよ。</p><div class="battle-heal-list">${battle.allies.map((p,i)=>`<button class="battle-heal-choice" ${p.hp<=0?'disabled':''} onclick="useBattlePotion(${i})">${img(p.id,p.shiny)}<span><b>${esc(p.name)} Lv.${p.lv}</b><small>HP ${p.hp} / ${p.maxHp}${p.status?' · '+({sleep:'ねむり',toxic:'もうどく',poison:'どく',paralysis:'まひ',burn:'やけど',freeze:'こおり'}[p.status]||p.status):''}</small></span><span>${p.hp<=0?'ひんし':'えらぶ →'}</span></button>`).join('')}</div><p class="muted small">1バトルに 1こだけ。つかうと あいても こうどうするよ。</p><button class="btn alt wide" onclick="closeModal()">やめる</button>`);
 }
 function useBattlePotion(i){
  if(!battle||battle.busy||battle.potionUsed||petalLocked(activeMon('allies')))return;
  const target=battle.allies[i];if(!target||target.hp<=0)return;
  battle.busy=true;battle.potionUsed=true;closeModal();
- const healed=target.maxHp-target.hp;target.hp=target.maxHp;target.status=null;target.statusTurns=0;target.confusionTurns=0;
+ const healed=target.maxHp-target.hp;target.hp=target.maxHp;target.status=null;target.toxicCounter=0;target.statusTurns=0;target.confusionTurns=0;
  battle.log.push(`${state.player}は ${target.name}に かいふくのくすりを つかった！ HPを ${healed} かいふく！`);
  let enemy=activeMon('enemies'),a=activeMon('allies');
  if(enemy.hp>0&&a.hp>0)attack(enemy,a,enemy.rampage?(enemy.moves.find(x=>x.slug===enemy.rampage.slug)||enemy.moves[0]):enemy.moves[Math.floor(Math.random()*enemy.moves.length)]);
@@ -1781,7 +1837,63 @@ const STAGE_LABELS={'attack':'こうげき','defense':'ぼうぎょ','special-at
 function ensureStages(p){if(!p.stages)p.stages={};for(const k of STAGE_KEYS)if(!Number.isFinite(p.stages[k]))p.stages[k]=0;return p.stages}
 function stageMultiplier(rank,accuracy=false){rank=Math.max(-6,Math.min(6,rank));let base=accuracy?3:2;return rank>=0?(base+rank)/base:base/(base-rank)}
 function effectiveStat(p,key){return Math.max(1,p.stats[key]*stageMultiplier(ensureStages(p)[key]))}
-function hitChance(att,def,m){let a=ensureStages(att).accuracy,d=ensureStages(def).evasion;return Math.max(0,Math.min(100,(m.accuracy??100)*stageMultiplier(a-d,true)))}
+function hitChance(att,def,m){let a=ensureStages(att).accuracy,d=ensureStages(def).evasion;return Math.max(0,Math.min(100,(m.accuracy??100)*SharedMoveEffects.accuracyFactor(a,d)))}
+function applySharedStages(target,changes){
+ for(const [stat,delta] of Object.entries(changes||{})){
+  const stages=ensureStages(target);if(!(stat in stages))continue;
+  const old=stages[stat];stages[stat]=Math.max(-6,Math.min(6,old+delta));
+  const diff=stages[stat]-old;
+  battle.log.push(target.name+'の '+(MOVE_STAT_JP[stat]||stat)+(diff?'が '+Math.abs(diff)+'だんかい '+(diff>0?'あがった':'さがった')+'！':'は もう'+(delta>0?'あがらない':'さがらない')+'！'));
+ }
+}
+function statusOn(target,status){
+ if(target.status||status==='paralysis'&&target.types.includes('electric')||status==='burn'&&target.types.includes('fire')||status==='freeze'&&target.types.includes('ice')||(status==='poison'||status==='toxic')&&target.types.some(t=>['poison','steel'].includes(t)))return false;
+ const labels={paralysis:'まひした',burn:'やけどした',freeze:'こおってしまった',poison:'どくになった',toxic:'もうどくに なった',sleep:'ねむってしまった'};
+ if(!labels[status])return false;
+ target.status=status;target.statusTurns=status==='sleep'?SharedMoveEffects.turns('sleep'):0;
+ if(status==='toxic')target.toxicCounter=0;
+ battle.log.push(target.name+'は '+labels[status]+'！');
+ return true;
+}
+function applySharedConfusion(target){
+ if(target.confusionTurns>0)return false;
+ target.confusionTurns=SharedMoveEffects.turns('confusion');
+ battle.log.push(target.name+'は こんらんした！');return true;
+}
+function applySharedOnHit(att,def,m){
+ const rule=sharedRule(m.slug);
+ if(!hasSharedStatusRule(rule))return false;
+ if((rule.chance??100)<100&&Math.random()*100>=rule.chance)return true;
+ if(att.hp>0&&rule.self)applySharedStages(att,rule.self);
+ if(def.hp>0){
+  if(rule.target)applySharedStages(def,rule.target);
+  if(rule.status)statusOn(def,rule.status);
+  if(rule.confuse&&(rule.confuse>=100||Math.random()*100<rule.confuse))applySharedConfusion(def);
+  if(rule.flinch&&!def.actedThisTurn&&(rule.flinch>=100||Math.random()*100<rule.flinch)){def.flinched=true;battle.log.push(def.name+'は ひるんだ！')}
+ }
+ return true;
+}
+function applySharedStatus(att,def,m,rule){
+ if(!hasSharedStatusRule(rule))return false;
+ if(rule.protect){
+  const odds=SharedMoveEffects.protectChance(att.protectChain||0);att.protectChain=(att.protectChain||0)+1;
+  if(odds<1&&Math.random()>=odds){att.protectChain=0;battle.log.push('しかし しっぱいした！')}
+  else{att.protecting=true;battle.log.push(att.name+'は みを まもった！')}
+  return true;
+ }
+ if(rule.recover){
+  const amount=Math.min(att.maxHp-att.hp,Math.floor(att.maxHp*rule.recover));
+  if(amount>0){att.hp+=amount;battle.log.push(att.name+'は '+amount+' HP かいふくした！')}
+  else battle.log.push('しかし HPは まんたんだ！');
+  return true;
+ }
+ if((rule.chance??100)<100&&Math.random()*100>=rule.chance){battle.log.push('しかし しっぱいした！');return true}
+ if(rule.self)applySharedStages(att,rule.self);
+ if(rule.target)applySharedStages(def,rule.target);
+ if(rule.status&&!statusOn(def,rule.status))battle.log.push('しかし こうかが なかった！');
+ if(rule.confuse&&(rule.confuse>=100||Math.random()*100<rule.confuse)&&!applySharedConfusion(def))battle.log.push(def.name+'は すでに こんらんしている！');
+ return true;
+}
 function applyStage(att,def,slug,moveName){
  let effects=[STAGE_EFFECTS[slug],...(EXTRA_STAGE_EFFECTS[slug]||[])];
  if(!effects[0])return false;
@@ -1797,13 +1909,13 @@ function applyStage(att,def,slug,moveName){
 }
 // 急所: 通常1/24、急所に当たりやすい技1/8。ダメージ1.5倍。
 const HIGH_CRIT_MOVES=new Set(['slash','night-slash','leaf-blade','psycho-cut','cross-poison','shadow-claw','stone-edge','air-cutter','crabhammer','karate-chop','razor-leaf','cross-chop','drill-run','spacial-rend','attack-order','aeroblast','blaze-kick','poison-tail',]);
-function criticalChance(m){return HIGH_CRIT_MOVES.has(m.slug)?1/8:1/24}
+function criticalChance(m){return SharedMoveEffects.critChance(m.slug)}
 function damage(att,def,m,critical=false){
  if(isLevelDamageMove(m))return eff(m,def)===0?0:Math.max(1,Math.floor(att.lv));
  let atk=m.category==='physical'?effectiveStat(att,'attack'):effectiveStat(att,'special-attack');
  if(m.category==='physical'&&att.status==='burn')atk=Math.max(1,atk/2);
  let dfs=m.category==='physical'?effectiveStat(def,'defense'):effectiveStat(def,'special-defense');
- let base=(((2*att.lv/5+2)*m.power*atk/Math.max(1,dfs))/50+2);
+ let base=SharedMoveEffects.damageBase(att.lv,m.power,atk,dfs);
  return Math.max(1,Math.floor(base*(att.types.includes(m.type)?1.5:1)*eff(m,def)*(critical?1.5:1)*(.85+Math.random()*.15)))
 }
 function applyStatusMove(att,def,m){
@@ -1812,16 +1924,17 @@ function applyStatusMove(att,def,m){
  if(slug==='leech-seed'){if(def.types.includes('grass')||def.seeded){battle.log.push('しかし うまく きまらなかった！')}else{def.seeded=true;battle.log.push(`${def.name}に タネを うえた！`)}return true}
  if(slug==='confuse-ray'){
   if(def.confusionTurns>0){battle.log.push(`${def.name}は すでに こんらんしている！`);return true}
-  def.confusionTurns=2+Math.floor(Math.random()*3);
+  def.confusionTurns=SharedMoveEffects.turns('confusion');
   battle.log.push(`${def.name}は こんらんした！`);return true
  }
  const status=['sleep-powder','hypnosis','spore'].includes(slug)?'sleep':['stun-spore','thunder-wave'].includes(slug)?'paralysis':'poison';
  if(def.status||status==='poison'&&def.types.some(t=>['poison','steel'].includes(t))||status==='paralysis'&&def.types.includes('electric')){battle.log.push('しかし こうかが なかった！');return true}
- def.status=status;def.statusTurns=status==='sleep'?2+Math.floor(Math.random()*2):0;
+ def.status=status;def.statusTurns=status==='sleep'?SharedMoveEffects.turns('sleep'):0;
  battle.log.push(`${def.name}は ${status==='sleep'?'ねむってしまった':status==='poison'?'どくになった':'まひした'}！`);return true
 }
 function applyAttackSecondary(att,def,m){
  m=normalizeMoveSecondary(m);
+ if(applySharedOnHit(att,def,m))return;
  if(def.hp<=0)return;
  const ail=m.ailment||'none',chance=Number(m.effectChance)||0;
  if(TRAPPING_MOVES.has(m.slug)&&!def.trapped){def.trapped={name:m.name,turns:4+Math.floor(Math.random()*2)};battle.log.push(`${def.name}は ${m.name}に とじこめられた！`)}
@@ -1837,7 +1950,7 @@ function applyAttackSecondary(att,def,m){
  if(status==='burn'&&def.types.includes('fire'))return;
  if(status==='freeze'&&def.types.includes('ice'))return;
  if(status==='poison'&&def.types.some(t=>['poison','steel'].includes(t)))return;
- def.status=status;def.statusTurns=status==='sleep'?2+Math.floor(Math.random()*2):0;
+ def.status=status;def.statusTurns=status==='sleep'?SharedMoveEffects.turns('sleep'):0;
  const label={paralysis:'まひした',burn:'やけどした',freeze:'こおってしまった',poison:'どくになった',sleep:'ねむってしまった'}[status];
  battle.log.push(`${def.name}は ${label}！`);
 }
@@ -1846,10 +1959,10 @@ function canAct(p){
  if(p.status==='sleep'){p.statusTurns--;if(p.statusTurns>0){battle.log.push(`${p.name}は ねむっている…`);return false}p.status=null;battle.log.push(`${p.name}は めを さました！`)}
  if(p.status==='freeze'){if(Math.random()<.2){p.status=null;battle.log.push(`${p.name}の こおりが とけた！`)}else{battle.log.push(`${p.name}は こおって うごけない！`);return false}}
  if(p.status==='paralysis'&&Math.random()<.25){battle.log.push(`${p.name}は まひして うごけない！`);return false}
- if(p.confusionTurns>0){p.confusionTurns--;battle.log.push(`${p.name}は こんらんしている！`);if(Math.random()<1/3){const n=Math.max(1,Math.floor(p.maxHp/12));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は わけもわからず じぶんを こうげき！ ${n}ダメージ！`);if(!p.confusionTurns)battle.log.push(`${p.name}の こんらんが とけた！`);return false}if(!p.confusionTurns)battle.log.push(`${p.name}の こんらんが とけた！`)}
+ if(p.confusionTurns>0){p.confusionTurns--;battle.log.push(`${p.name}は こんらんしている！`);if(SharedMoveEffects.confusionSelfHit()){const n=SharedMoveEffects.confusionDamage(p.maxHp);p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は わけもわからず じぶんを こうげき！ ${n}ダメージ！`);if(!p.confusionTurns)battle.log.push(`${p.name}の こんらんが とけた！`);return false}if(!p.confusionTurns)battle.log.push(`${p.name}の こんらんが とけた！`)}
  return true
 }
-function endTurnEffects(){for(const p of [activeMon('allies'),activeMon('enemies')])if(p)p.flinched=false;for(const p of [activeMon('allies'),activeMon('enemies')]){if(!p||p.hp<=0)continue;if(p.status==='poison'){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は どくで ${n}ダメージ！`)}if(p.status==='burn'&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/16));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は やけどで ${n}ダメージ！`)}if(p.trapped&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は ${p.trapped.name}で ${n}ダメージ！`);p.trapped.turns--;if(p.trapped.turns<=0){battle.log.push(`${p.name}は とじこめから かいほうされた！`);p.trapped=null}}if(p.seeded&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);const other=p===activeMon('allies')?activeMon('enemies'):activeMon('allies');if(other&&other.hp>0)other.hp=Math.min(other.maxHp,other.hp+n);battle.log.push(`${p.name}は やどりぎで ${n}HP すいとられた！`)}}}
+function endTurnEffects(){for(const p of [activeMon('allies'),activeMon('enemies')])if(p){p.flinched=false;p.protecting=false}for(const p of [activeMon('allies'),activeMon('enemies')]){if(!p||p.hp<=0)continue;if(p.status==='toxic'){p.toxicCounter=Math.min(15,(p.toxicCounter||0)+1);const n=SharedMoveEffects.toxicTick(p.maxHp,p.toxicCounter);p.hp=Math.max(0,p.hp-n);battle.log.push(p.name+'は もうどくで '+n+'ダメージ！')}if(p.status==='poison'){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は どくで ${n}ダメージ！`)}if(p.status==='burn'&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/16));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は やけどで ${n}ダメージ！`)}if(p.trapped&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);battle.log.push(`${p.name}は ${p.trapped.name}で ${n}ダメージ！`);p.trapped.turns--;if(p.trapped.turns<=0){battle.log.push(`${p.name}は とじこめから かいほうされた！`);p.trapped=null}}if(p.seeded&&p.hp>0){const n=Math.max(1,Math.floor(p.maxHp/8));p.hp=Math.max(0,p.hp-n);const other=p===activeMon('allies')?activeMon('enemies'):activeMon('allies');if(other&&other.hp>0)other.hp=Math.min(other.maxHp,other.hp+n);battle.log.push(`${p.name}は やどりぎで ${n}HP すいとられた！`)}}}
 // 技の特殊効果（相手への攻撃が命中した場合に適用）
 const MULTI_HIT_FIXED={'double-kick':2,'bonemerang':2,'double-hit':2,'twineedle':2,'dual-chop':2,'double-iron-bash':2,'surging-strikes':3,'triple-kick':3,'triple-axel':3,'population-bomb':10};
 const MULTI_HIT_VARIABLE=new Set(['fury-swipes','fury-attack','pin-missile','bullet-seed','rock-blast','icicle-spear','spike-cannon','barrage','comet-punch','double-slap','arm-thrust','bone-rush','water-shuriken','scale-shot']);
@@ -1857,42 +1970,45 @@ const RECOIL_RATIOS={'take-down':25,'double-edge':33,'submission':25,'volt-tackl
 const SELF_KO_MOVES=new Set(['self-destruct','explosion','misty-explosion','memento','final-gambit']);
 function hitCount(m){const slug=m.slug;if(MULTI_HIT_FIXED[slug])return MULTI_HIT_FIXED[slug];const min=Number(m.minHits),max=Number(m.maxHits);if((min>=2&&max>=min)||MULTI_HIT_VARIABLE.has(slug)){if(min===max&&min>=2)return min;const lo=min>=2?min:2,hi=max>=lo?max:5;if(lo===2&&hi===5){let r=Math.random();return r<.35?2:r<.70?3:r<.85?4:5}return lo+Math.floor(Math.random()*(hi-lo+1))}return 1}
 function hitCountDescription(m){if(MULTI_HIT_FIXED[m.slug])return `${MULTI_HIT_FIXED[m.slug]}かい れんぞくで こうげきする`;if(MULTI_HIT_VARIABLE.has(m.slug)||Number(m.minHits)>=2)return '2〜5かい れんぞくで こうげきする';return ''}
-function recoilRatio(m){return RECOIL_RATIOS[m.slug]||Math.max(0,-Number(m.drain)||0)}
+function recoilRatio(m){return sharedRule(m.slug).recoil!=null?sharedRule(m.slug).recoil*100:RECOIL_RATIOS[m.slug]||Math.max(0,-Number(m.drain)||0)}
 function selfKoMove(m){return SELF_KO_MOVES.has(m.slug)}
 const DRAIN_MOVE_RATIOS={'absorb':50,'mega-drain':50,'giga-drain':50,'drain-punch':50,'horn-leech':50,'parabolic-charge':50,'oblivion-wing':75,'dream-eater':50};
-function drainRatio(m){return Number(m.drain)>0?Number(m.drain):(DRAIN_MOVE_RATIOS[m.slug]||0)}
-function petalLocked(p){return p?.rampage?.slug==='petal-dance'}
+function drainRatio(m){return sharedRule(m.slug).drain!=null?sharedRule(m.slug).drain*100:Number(m.drain)>0?Number(m.drain):(DRAIN_MOVE_RATIOS[m.slug]||0)}
+function petalLocked(p){return !!sharedRule(p?.rampage?.slug).rampage}
 function endPetalDance(att,confuse){
  att.rampage=null;
  if(confuse&&att.hp>0&&!att.confusionTurns){
-  att.confusionTurns=2+Math.floor(Math.random()*3);
+  att.confusionTurns=SharedMoveEffects.turns('confusion');
   battle.log.push(att.name+'は あばれつかれて こんらんした！');
  }
 }
 function attack(att,def,m){
- const petal=m.slug==='petal-dance';
- if(petal)m=normalizeMoveSecondary(m);
+ const rule=sharedRule(m.slug),petal=!!rule.rampage;
+ m=normalizeMoveSecondary(m);
+ if(!rule.protect)att.protectChain=0;
  const cancelPetal=()=>{if(petalLocked(att))endPetalDance(att,att.rampage.remaining===1)};
 
  const fakeOut=m.slug==='fake-out';
  if(fakeOut&&att.fakeOutUsed){battle.log.push(`${att.name}の ${m.name}！ しかし しっぱいした！`);return}
  if(fakeOut)att.fakeOutUsed=true;
- if(!canAct(att)){if(petal)cancelPetal();return}
+ if(!canAct(att)){if(rule.protect)att.protectChain=0;if(petal)cancelPetal();return}
  att.rampageAction=true;
- if((m.slug==='outrage'||m.slug==='thrash')&&!att.rampage){att.rampage={slug:m.slug,remaining:2+Math.floor(Math.random()*2)};}
+
  if(m.slug==='sucker-punch'&&(!battle?.turnMoveChoices?.get(def)||battle.turnMoveChoices.get(def).category==='status'||def.actedThisTurn)){
   battle.log.push(`${att.name}の ${m.name}！ しかし しっぱいした！`);return;
  }
- if(m.slug==='dream-eater'&&def.status!=='sleep'){battle.log.push(`${att.name}の ${m.name}！ あいてが ねむっていないので しっぱいした！`);return}
+ if((rule.requiresSleep||m.slug==='dream-eater')&&def.status!=='sleep'){battle.log.push(`${att.name}の ${m.name}！ あいてが ねむっていないので しっぱいした！`);return}
+ if(def.protecting&&!(rule.protect||rule.recover||(m.category==='status'&&(rule.self&&!rule.target&&!rule.status&&!rule.confuse||!hasSharedStatusRule(rule)&&STAGE_EFFECTS[m.slug]?.[2])))){battle.log.push(def.name+'は こうげきを まもった！');if(petal)cancelPetal();return}
  if(Math.random()*100>=hitChance(att,def,m)){battle.log.push(`${att.name}の ${m.name}！ しかし外れた！`);if(petal)cancelPetal();return}
  if(m.category==='status'){
+  if(hasSharedStatusRule(rule)){battle.log.push(att.name+'の '+m.name+'！');applySharedStatus(att,def,m,rule);return}
   if(applyStatusMove(att,def,m))return;
   if(applyStage(att,def,m.slug,m.name))return;
   battle.log.push(`${att.name}の ${m.name}！ しかし効果がなかった！`);return
  }
  let mult=eff(m,def);
  if(mult===0){battle.log.push(`${att.name}の ${m.name}！ 効果がない…`);if(petal)cancelPetal();return}
- if(petal&&!petalLocked(att))att.rampage={slug:m.slug,remaining:2+Math.floor(Math.random()*2)};
+ if(petal&&!petalLocked(att))att.rampage={slug:m.slug,remaining:SharedMoveEffects.turns('rampage')};
  const count=hitCount(m);let total=0,landed=0;
  for(let i=0;i<count&&def.hp>0;i++){
   const critical=!isLevelDamageMove(m)&&Math.random()<criticalChance(m);const n=damage(att,def,m,critical),actual=Math.min(def.hp,n);
@@ -1917,6 +2033,7 @@ function attack(att,def,m){
  if(def.hp===0)battle.log.push(`${def.name}は倒れた！`);
  else if(fakeOut){if(!def.actedThisTurn){def.flinched=true;battle.log.push(`${def.name}は ひるんだ！`)}}
  else applyAttackSecondary(att,def,m);
+ if(def.hp<=0)applySharedOnHit(att,def,m);
  if(petalLocked(att)&&petal&&--att.rampage.remaining<=0)endPetalDance(att,true);
  if(att.hp===0&&!selfKoMove(m))battle.log.push(`${att.name}は倒れた！`);
 }
@@ -1938,7 +2055,7 @@ async function chooseVictorySwitch(i){
 }
 function battleSpeed(p){const speed=effectiveStat(p,'speed');return p.status==='paralysis'?speed/2:speed}
 function battlePriority(m){return m.slug==='fake-out'?3:Number(m.priority)||0}
-function enterBattleMon(p){p.rampage=null;p.confusionTurns=0;p.fakeOutUsed=false;p.flinched=false;p.actedThisTurn=false;p.trapped=null}
+function enterBattleMon(p){p.toxicCounter=0;p.protecting=false;p.protectChain=0;p.rampage=null;p.confusionTurns=0;p.fakeOutUsed=false;p.flinched=false;p.actedThisTurn=false;p.trapped=null}
 function resetStages(p){p.stages=Object.fromEntries(STAGE_KEYS.map(k=>[k,0]))}
 function nextAlive(arr){return arr.findIndex(p=>p.hp>0)}
 function endCheck(){if(activeMon('enemies').hp<=0){let n=nextAlive(battle.enemies);if(n<0){winBattle();return true}battle.ei=n;resetStages(activeMon('enemies'));enterBattleMon(activeMon('enemies'));battle.log.push(`${battle.boss.name}は ${activeMon('enemies').name}をくりだした！`);if(activeMon('allies').hp>0&&!petalLocked(activeMon('allies')))battle.awaitingVictorySwitch=true;}if(activeMon('allies').hp<=0){let n=nextAlive(battle.allies);if(n<0){loseBattle();return true}battle.awaitingReplacement=true;battle.awaitingVictorySwitch=false;}return false}
@@ -1946,7 +2063,7 @@ async function playerAttack(i){
  const b=battle;if(!b||b.busy)return;
  await playAttackTurn(i);
  while(battle===b&&!b.busy&&!b.awaitingReplacement&&!b.awaitingVictorySwitch&&petalLocked(activeMon('allies'))){
-  battleMessage('はなびらのまいが つづいている！');
+  battleMessage('れんぞくこうげきが つづいている！');
   await playAttackTurn(-1);
  }
 }
